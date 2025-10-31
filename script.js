@@ -1,6 +1,7 @@
 function handlerDomContentLoaded() {
     console.log('DOM fully loaded and parsed');
     const elProject = document.getElementById('projects');
+    const elcursorImage = document.getElementById('cursorImage');
 
     function updateClock() {
         const now = new Date();
@@ -92,12 +93,11 @@ function handlerDomContentLoaded() {
             left: '0',
             top: '0',
             overflow: 'visible',
-            zIndex: 9999,
             width: '100%',
             height: '80vh',
-            pointerEvents: 'none'
+            
         });
-        document.body.appendChild(container);
+        elcursorImage.appendChild(container);
 
         function createTrail(x, y, src) {
             const el = document.createElement('img');
