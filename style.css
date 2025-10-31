@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 * {
     border: 0;
     box-sizing: border-box;
@@ -15,7 +16,7 @@ html,
 body {
     background-color: #000;
     color: #fff;
-    font-family: "Arial", sans-serif;
+    font-family: "Inter", sans-serif;
     margin: 0;
     height: 100%;
 }
@@ -35,7 +36,7 @@ body {
 
 .navbar {
     padding: 20px 10px;
-    border-bottom: 2px solid #fff ;
+    /*border-bottom: 2px solid #fff ;*/
     display: flex;
     justify-content: space-between;
 
@@ -46,12 +47,10 @@ body {
     gap: 20px;
     align-items: center;
     font-size: 18px;
-    font-weight: bold;
 }
 
 #clock {
     font-size: 18px;
-    font-weight: bold;
 }
 
 
@@ -73,9 +72,8 @@ html {
 #progress {
     position: fixed;
     left: 0; top: 0;
-    width: 100%; height: .5em;
+    width: 100%; height: .2em;
     background: #faa1d4;
-
     transform-origin: 0 50%;
     animation: grow-progress auto linear;
     animation-timeline: --page-scroll;
@@ -93,8 +91,7 @@ html {
 }
 
 .title{
-    font-size: 45px;
-    font-weight: bold;
+    font-size: 70px;
     color: #faa1d4;
     text-align: center;
     width: 1fr;
@@ -105,9 +102,10 @@ html {
     text-align: center;
     margin-bottom: 30px;
     width: 1fr;
-
 }
-
+p{
+    font-size: 20px;
+}
 .containerTitle{
     display: flex;
     flex-direction: column;
@@ -118,13 +116,13 @@ html {
 
 .separator {
     width: 80%;
-    height: 2px;
+    height: 1px;
     background-color: #fff;
     margin: 40px auto;
 }
 .titleProjet {
     font-size: 30px;
-    font-weight: bold;
+    
     text-align: center;
     margin-top: 25px;
 
@@ -137,20 +135,11 @@ html {
     border-radius: 8px;
 }
 .section2 > div{
-    background-color: hsl(0, 0%, 10%);
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: rgba(178, 178, 186, 0.2) 0px 7px 29px 0px;
-    margin-top: 25px;
-    margin-bottom: 25px;
-    max-width: 398px;
+ margin: 40px 0;
 }
 
 
-img{
-    border-radius: 8px;
 
-}
 .section2 >div:hover{
     cursor: pointer;
     transform: scale(1.05);
@@ -174,7 +163,7 @@ img{
     gap: 20px;
     align-items: center;
     font-size: 18px;
-    font-weight: bold;
+    
 }
 
 /*.waveContainer {*/

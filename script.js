@@ -45,7 +45,7 @@ function handlerDomContentLoaded() {
 //     </div>
 // </>
 
-    Projet.slice(0,6).forEach(proj => {
+    Projet.slice(0,4).forEach(proj => {
         const projetDiv = document.createElement('div');
         projetDiv.className = 'containerProjet';
 
