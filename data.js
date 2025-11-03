@@ -45,7 +45,14 @@ Projet = [
 ]
 
 imageListe = [
-    "./img/Capture d’écran 2025-10-30 223154.png",
-    "./img/Capture d’écran 2025-10-30 231249.png",
-    "./img/Capture d’écran 2025-10-30 231312.png",
+    "./img/1.webp",
+    "./img/2.webp",
+    "./img/3.webp",
+    "./img/4.webp",
+    "./img/5.webp",
+    "./img/6.webp",
+    "./img/7.webp",
+    "./img/8.webp",
+    "./img/9.webp",
+    "./img/10.webp"
 ]

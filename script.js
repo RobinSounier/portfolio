@@ -106,12 +106,13 @@ function handlerDomContentLoaded() {
             Object.assign(el.style, {
                 position: 'fixed',
                 left: x + 'px',
-                top: y - 61 + 'px',
+                top: y + 'px',
+                width: '179px',
+                height: '222px',
                 transform: 'translate(-50%, -50%) scale(1)',
                 transition: `opacity ${FADE_DURATION}ms linear, transform ${FADE_DURATION}ms ease-out`,
                 opacity: '1',
                 objectFit: 'cover',
-                borderRadius: '8px',
                 boxShadow: '0 4px 14px rgba(0,0,0,0.5)'
             });
             container.appendChild(el);
