@@ -2,6 +2,7 @@ function handlerDomContentLoaded() {
     console.log('DOM fully loaded and parsed');
     const elProject = document.getElementById('projects');
     const elcursorImage = document.getElementById('cursorImage');
+    const elprojectPage = document.getElementById('projectPage');
 
     function updateClock() {
         const now = new Date();
@@ -45,7 +46,7 @@ function handlerDomContentLoaded() {
 //     </div>
 // </>
 
-    Projet.slice(0,4).forEach(proj => {
+    function createProjectElement(proj) {
         const projetDiv = document.createElement('div');
         projetDiv.className = 'containerProjet';
 
@@ -72,8 +73,21 @@ function handlerDomContentLoaded() {
         innerDiv.appendChild(descDiv);
         projetDiv.appendChild(innerDiv);
 
-        elProject.appendChild(projetDiv);
-    });
+        return projetDiv;
+    }
+
+    if (elProject) {
+        Projet.slice(0, 4).forEach(proj => {
+            elProject.append(createProjectElement(proj));
+        });
+    }
+
+    // Exemple : afficher les projets sur la page "Projets"
+    if (elprojectPage) {
+        Projet.forEach(proj => {
+            elprojectPage.append(createProjectElement(proj));
+        });
+    }
 
     (function() {
         const images = Array.isArray(imageListe) ? imageListe : [];
