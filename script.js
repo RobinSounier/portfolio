@@ -95,6 +95,7 @@ function handlerDomContentLoaded() {
             overflow: 'visible',
             width: '100%',
             height: '80vh',
+            zIndex:"1"
             
         });
         elcursorImage.appendChild(container);
@@ -105,7 +106,7 @@ function handlerDomContentLoaded() {
             Object.assign(el.style, {
                 position: 'fixed',
                 left: x + 'px',
-                top: y + 'px',
+                top: y - 61 + 'px',
                 transform: 'translate(-50%, -50%) scale(1)',
                 transition: `opacity ${FADE_DURATION}ms linear, transform ${FADE_DURATION}ms ease-out`,
                 opacity: '1',
@@ -134,7 +135,7 @@ function handlerDomContentLoaded() {
             const pageY = e.clientY + window.scrollY;
 
             // n'émettre des traces que si on est dans la zone top 80vh du viewport
-            if (pageY > window.innerHeight * 0.8) return;
+            if (pageY < 61 || pageY > window.innerHeight * 0.8) return;
 
             const now = Date.now();
             if (now - lastTime < TRAIL_INTERVAL) return;
