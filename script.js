@@ -3,6 +3,9 @@ function handlerDomContentLoaded() {
     const elProject = document.getElementById('projects');
     const elcursorImage = document.getElementById('cursorImage');
     const elprojectPage = document.getElementById('projectPage');
+    const elsubtitle=document.getElementById('subtitle');
+    const elprojetContainer = document.getElementById('projetContainer');
+    const eldescriptionProjet = document.querySelectorAll('.descriptionProjet');
 
     function updateClock() {
         const now = new Date();
@@ -30,6 +33,22 @@ function handlerDomContentLoaded() {
     sections.forEach(section => {
         observer.observe(section);
     });
+
+    // script.js
+    const checkbox = document.querySelector('.checkbox');
+    checkbox.addEventListener('change', () => {
+        const isLight = checkbox.checked;
+        document.body.classList.toggle('light-mode', isLight);
+
+        elsubtitle.style.color = isLight ? "#000000" : "#ffffff";
+        elprojetContainer.style.color = isLight ? "#000000" : "#ffffff";
+
+        eldescriptionProjet.forEach(el => {
+            el.style.color = isLight ? "#000000" : "#ffffff";
+        });
+    });
+
+
 
 // <>
 //     <div className="containerProjet">
@@ -62,6 +81,7 @@ function handlerDomContentLoaded() {
 
         const descDiv = document.createElement('div');
         descDiv.className = 'descriptionProjet';
+
         const h2 = document.createElement('h2');
         h2.textContent = proj.title;
         const p = document.createElement('p');
@@ -93,7 +113,7 @@ function handlerDomContentLoaded() {
         const images = Array.isArray(imageListe) ? imageListe : [];
         if (images.length === 0) return;
 
-        const TRAIL_INTERVAL = 200;
+        const TRAIL_INTERVAL = 150;
         const TRAIL_LIFETIME = 1200;
         const FADE_DURATION = 600;
         const MAX_TRAILS = 40;

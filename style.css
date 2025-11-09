@@ -7,7 +7,19 @@
     padding: 0;
 
 }
+.title h1 {
+    animation: fadeInUp 1.5s ease-out;
+}
 
+.navbar {
+
+}
+
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
 
 button {
     background-color: transparent;
@@ -15,11 +27,10 @@ button {
 html,
 body {
     position: relative;
-    background-color: #000;
     color: #fff;
+    background: #000 radial-gradient(circle at 20% 30%, #111 0%, #000 80%);
     font-family: "Inter", sans-serif;
     margin: 0;
-    height: 100%;
     z-index: 0;
 }
 
@@ -33,16 +44,7 @@ a{
     color: inherit;
 }
 
-.section2 {
-    opacity: 0;
-    transform: translateY(50px);
-    transition: opacity 2s ease-out, transform 2s ease-out;
-}
 
-.section2.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
 
 
 .navbar {
@@ -50,6 +52,11 @@ a{
     /*border-bottom: 2px solid #fff ;*/
     display: flex;
     justify-content: space-between;
+    position: sticky;
+    top: 0;
+    background: rgba(0, 0, 0, 0);
+
+    z-index: 100;
 
 }
 
@@ -62,6 +69,7 @@ a{
 
 #clock {
     font-size: 18px;
+    line-height: 1; /* Évite que le texte tire vers le bas */
 }
 
 
@@ -113,10 +121,13 @@ html {
     text-align: center;
     margin-bottom: 30px;
     width: 1fr;
-}
-p{
     font-size: 20px;
 }
+p{
+    font-size: 18px;
+}
+
+
 .containerTitle{
     display: flex;
     flex-direction: column;
@@ -143,10 +154,18 @@ p{
     flex-wrap: wrap;
     gap: 50px;
     justify-content: center;
-    border-radius: 8px;
+
+}
+
+.portfolio{
+    display: flex;
+    text-align: center;
+    flex-wrap: wrap;
+    align-content: center;
+    font-size: 18px;
 }
 .section2 > div{
- margin: 40px 0;
+    margin: 40px 0;
 }
 
 
@@ -155,6 +174,28 @@ p{
     cursor: pointer;
     transform: scale(1.05);
     transition: transform 0.1s ease-in-out;
+    .img{
+        transform: scale(1.1);
+    }
+
+}
+
+body.light-mode {
+    background: #f1e1e1;
+    color: #000;
+}
+
+body.light-mode .navbar,
+body.light-mode footer {
+    border-color: #000;
+}
+
+.section2 >div:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: transform 0.1s ease-in-out;;
+
+
     .img{
         transform: scale(1.1);
     }
@@ -175,6 +216,77 @@ p{
     align-items: center;
     font-size: 18px;
     
+}
+.navRight{
+    display: flex;
+    align-items: center; /* Aligne verticalement le clock et le toggle */
+    gap: 10px; /* Espace horizontal entre les deux */
+}
+/* From Uiverse.io by Madflows */
+.toggle-switch {
+    position: relative;
+    width: 100px;
+    height: 50px;
+    --light: #d8dbe0;
+    --dark: #28292c;
+    --link: rgb(27, 129, 112);
+    --link-hover: rgb(24, 94, 82);
+}
+
+.switch-label {
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    background-color: var(--dark);
+    border-radius: 25px;
+    cursor: pointer;
+    border: 3px solid var(--dark);
+    transform: scale(.5);
+}
+
+.checkbox {
+    position: absolute;
+    display: none;
+
+}
+
+.slider {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+
+
+}
+
+.checkbox:checked ~ .slider {
+    background-color: var(--light);
+}
+
+.slider::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    -webkit-box-shadow: inset 12px -4px 0px 0px var(--light);
+    box-shadow: inset 12px -4px 0px 0px var(--light);
+    background-color: var(--dark);
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+}
+
+.checkbox:checked ~ .slider::before {
+    -webkit-transform: translateX(50px);
+    -ms-transform: translateX(50px);
+    transform: translateX(50px);
+    background-color: var(--dark);
+    -webkit-box-shadow: none;
+    box-shadow: none;
 }
 
 /*.waveContainer {*/

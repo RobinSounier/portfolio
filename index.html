@@ -14,13 +14,23 @@
             <div class="Page1 section" src="" alt="">
 
                 <nav class="navbar">
-                    <p>Portfolio</p>
+                    <a href="index.html" class="portfolio">Portfolio</a>
                     <div class="navbarElement">
                         <p>PRÉSENTATION</p>
                         <p><a href="project.html">PROJETS</a></p>
                         <p>CONTACT</p>
                     </div>
-                    <div id="clock">--:--:--</div>
+                    <div class="navRight">
+                    <div id="clock">
+                        --:--:--
+                    </div>
+                        <div class="toggle-switch">
+                            <label class="switch-label">
+                                <input type="checkbox" class="checkbox">
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                    </div>
                 </nav>
                 <div id="progress"></div>
                 <div class="containerTitle">
@@ -29,7 +39,7 @@
                         <H1>ANOUK THOMAS</H1>
                     </div>
                     <div class="subtitle">
-                        <p>CHARGEE DE COMMUNICATION (JUNIOR)</p>
+                        <p id="subtitle">CHARGEE DE COMMUNICATION (JUNIOR)</p>
                     </div>
                 </div>
                 <div class="waveContainer">
@@ -41,10 +51,11 @@
             </div>
 
         </header>
-
-        <H2 class="titleProjet">Projets</H2>
-        <div class="Page2 section2" id="projects">
-            <!-- Remplir les projets via JavaScript -->
+            <H2 class="titleProjet">Projets</H2>
+        <div id="projetContainer">
+            <div class="Page2 section2" id="projects">
+                <!-- Remplir les projets via JavaScript -->
+            </div>
         </div>
         <footer>
             <nav class="footerNavbar">
