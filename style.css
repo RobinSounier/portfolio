@@ -294,3 +294,32 @@ body.light-mode footer {
 /*   width: 100%;*/
 /*}*/
 
+
+.presentationContainer {
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.passport{
+    width: 550px;
+    height: auto;
+    margin-right: 20px;
+    transform: rotate(4deg);
+    transition: transform 0.2s ease-in-out;
+}
+
+.passport:hover{
+    transform: rotate(10deg) scale(1.5);
+    transition: transform 0.2s ease-in-out;
+}
+
+.PagePres {
+    height: 100vh;
+}
+
+.presentationText {
+    max-width: 600px;
+    font-size: 20px;
+    line-height: 1.6;
+}
