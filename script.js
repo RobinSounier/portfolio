@@ -8,6 +8,12 @@ function handlerDomContentLoaded() {
     const elsubtitle = document.getElementById('subtitle');
     const elprojetContainer = document.getElementById('projetContainer');
     const eldescriptionProjet = document.querySelectorAll('.descriptionProjet');
+    const elcarouselbtnprev = document.getElementById("prevBtn")
+    const elcarouselbtnnext = document.getElementById("nextBtn")
+
+    console.log(elcarouselbtnnext);
+    console.log(elcarouselbtnprev);
+
 
     // ===== Horloge =====
     function updateClock() {
@@ -17,6 +23,7 @@ function handlerDomContentLoaded() {
         const s = String(now.getSeconds()).padStart(2, '0');
         document.getElementById('clock').textContent = `${h} : ${m} : ${s}`;
     }
+
     updateClock();
     setInterval(updateClock, 1000);
 
@@ -26,7 +33,7 @@ function handlerDomContentLoaded() {
         entries.forEach(entry => {
             if (entry.isIntersecting) entry.target.classList.add('visible');
         });
-    }, { threshold: 0.3 });
+    }, {threshold: 0.3});
     sections.forEach(section => observer.observe(section));
 
     // ===== Mode clair / sombre =====
@@ -36,14 +43,27 @@ function handlerDomContentLoaded() {
             const isLight = checkbox.checked;
             document.body.classList.toggle('light-mode', isLight);
 
-            elsubtitle.style.color = isLight ? "#000" : "#fff";
-            elprojetContainer.style.color = isLight ? "#000" : "#fff";
+            // Textes principaux
+            if (elsubtitle) elsubtitle.style.color = isLight ? "#000" : "#fff";
+            if (elprojetContainer) elprojetContainer.style.color = isLight ? "#000" : "#fff";
 
-            eldescriptionProjet.forEach(el => {
-                el.style.color = isLight ? "#000" : "#fff";
-            });
+            // Descriptions des projets
+            if (eldescriptionProjet.length > 0) {
+                eldescriptionProjet.forEach(el => {
+                    el.style.color = isLight ? "#000" : "#fff";
+                });
+            }
+
+            // Boutons du carrousel
+            if (elcarouselbtnprev && elcarouselbtnnext) {
+                const color = isLight ? "#000" : "#fff";
+                elcarouselbtnprev.style.color = color;
+                elcarouselbtnnext.style.color = color;
+            }
         });
     }
+
+
 
     // ===== Création dynamique de projets =====
     function createProjectElement(proj) {
@@ -85,7 +105,7 @@ function handlerDomContentLoaded() {
     }
 
     // ===== Effet trail du curseur =====
-    (function() {
+    (function () {
         const images = Array.isArray(imageListe) ? imageListe : [];
         if (images.length === 0) return;
 
@@ -173,6 +193,51 @@ function handlerDomContentLoaded() {
 
     // Ajouter slide-in à la page courante
     document.body.classList.add('slide-in');
+
+    const track = document.querySelector('.carousel-track');
+    const slides = Array.from(track.children);
+    const prevButton = document.getElementById('prevBtn');
+    const nextButton = document.getElementById('nextBtn');
+
+    const slideWidth = slides[0].getBoundingClientRect().width;
+
+// Positionner les slides côte à côte
+    slides.forEach((slide, index) => {
+        slide.style.left = slideWidth * index + 'px';
+    });
+
+    let currentIndex = 0;
+    const visibleSlides = 3;
+
+    nextButton.addEventListener('click', () => {
+        if (currentIndex < slides.length - visibleSlides) {
+            currentIndex++;
+            track.style.transform = `translateX(-${slideWidth * currentIndex}px)`;
+        }
+    });
+
+    prevButton.addEventListener('click', () => {
+        if (currentIndex > 0) {
+            currentIndex--;
+            track.style.transform = `translateX(-${slideWidth * currentIndex}px)`;
+        }
+    });
+
+    const elnomLogo = document.getElementById('nomLogo');
+
+// Sélectionne toutes les images
+    const logos = document.querySelectorAll('#canva, #capcut, #photoshop, #wordpress, #Indesign, #trello, #word');
+
+// Pour chaque logo, ajoute un event listener
+    logos.forEach(logo => {
+        logo.addEventListener('mouseover', () => {
+            elnomLogo.textContent = logo.id; // Affiche l’ID du logo sur hover
+        });
+
+        logo.addEventListener('mouseout', () => {
+            elnomLogo.textContent = ''; // Efface le texte quand la souris part
+        });
+    });
 }
 
 // ===== Événement DOMContentLoaded =====

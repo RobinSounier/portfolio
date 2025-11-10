@@ -1,4 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+@font-face {
+    font-family: 'holiday'; /* le nom que tu choisis pour la police */
+    src: url('./fonts/HolidayFree.otf') format('opentype'); /* chemin vers ton fichier */
+    font-weight: normal;
+    font-style: normal;
+}
 * {
     border: 0;
     box-sizing: border-box;
@@ -243,6 +250,7 @@ body.light-mode footer {
     display: flex;
     align-items: center; /* Aligne verticalement le clock et le toggle */
     gap: 10px; /* Espace horizontal entre les deux */
+    font-family: "holiday", sans-serif;
 }
 /* From Uiverse.io by Madflows */
 .toggle-switch {
@@ -349,3 +357,76 @@ body.light-mode footer {
     font-size: 20px;
     line-height: 1.6;
 }
+.carousel-container {
+    position: relative;
+    width: 257px;
+    /* ajuste selon ton design */
+    margin: 30px auto;
+    overflow: hidden;
+}
+
+.carousel-track-container {
+    overflow: hidden;
+    width: 97%;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.4s ease;
+}
+
+.carousel-slide {
+    min-width: calc(30%); /* 3 logos visibles */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-slide img {
+    width: 50px;
+    height: auto;
+    transition: transform 0.3s;
+}
+
+.carousel-slide img:hover {
+    transform: scale(1.1);
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background 0.3s;
+}
+
+
+
+.carousel-btn.left {
+    left: 10px;
+
+}
+
+.carousel-btn.right {
+    right: -2px;
+
+}
+#nomLogo{
+    display: flex;
+    justify-content: center;
+
+}
+
+.competencetitle{
+    font-family: "holiday", sans-serif;
+    font-weight: 100;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
