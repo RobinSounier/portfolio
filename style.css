@@ -11,7 +11,27 @@
     animation: fadeInUp 3s ease-out;
 }
 
+body.slide-in {
+    transform: translateY(-100%);
+    animation: slideDown 0.5s forwards ease-out;
+}
 
+@keyframes slideDown {
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUp {
+    to {
+        transform: translateY(100%);
+    }
+}
+
+h1 {
+    text-align: center;
+    margin-top: 50px;
+}
 
 @keyframes fadeInUp {
     from { opacity: 0; transform: translateY(20px); }
@@ -183,7 +203,7 @@ p{
 }
 
 body.light-mode {
-    background: #f1e1e1;
+    background: #fdfdfd;
     color: #000;
 }
 
@@ -229,7 +249,7 @@ body.light-mode footer {
     position: relative;
     width: 100px;
     height: 50px;
-    --light: #d8dbe0;
+    --light: #ffffff;
     --dark: #28292c;
     --link: rgb(27, 129, 112);
     --link-hover: rgb(24, 94, 82);
@@ -308,7 +328,7 @@ body.light-mode footer {
 }
 
 .passport{
-    width: 650px;
+    width: 550px;
     height: auto;
     margin-right: 20px;
     transform: rotate(4deg);

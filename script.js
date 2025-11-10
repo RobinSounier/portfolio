@@ -1,70 +1,51 @@
 function handlerDomContentLoaded() {
     console.log('DOM fully loaded and parsed');
+
+    // ===== Elements =====
     const elProject = document.getElementById('projects');
     const elcursorImage = document.getElementById('cursorImage');
     const elprojectPage = document.getElementById('projectPage');
-    const elsubtitle=document.getElementById('subtitle');
+    const elsubtitle = document.getElementById('subtitle');
     const elprojetContainer = document.getElementById('projetContainer');
     const eldescriptionProjet = document.querySelectorAll('.descriptionProjet');
 
+    // ===== Horloge =====
     function updateClock() {
         const now = new Date();
         const h = String(now.getHours()).padStart(2, '0');
         const m = String(now.getMinutes()).padStart(2, '0');
         const s = String(now.getSeconds()).padStart(2, '0');
-        document.getElementById('clock').textContent = h + ' : ' + m + ' : ' + s;
+        document.getElementById('clock').textContent = `${h} : ${m} : ${s}`;
     }
-
     updateClock();
     setInterval(updateClock, 1000);
 
+    // ===== Intersection Observer pour sections =====
     const sections = document.querySelectorAll('.section2');
-
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-            }
+            if (entry.isIntersecting) entry.target.classList.add('visible');
         });
-    }, {
-        threshold: 0.3 // déclenche quand 30% de la section est visible
-    });
+    }, { threshold: 0.3 });
+    sections.forEach(section => observer.observe(section));
 
-    sections.forEach(section => {
-        observer.observe(section);
-    });
-
-    // script.js
+    // ===== Mode clair / sombre =====
     const checkbox = document.querySelector('.checkbox');
-    checkbox.addEventListener('change', () => {
-        const isLight = checkbox.checked;
-        document.body.classList.toggle('light-mode', isLight);
+    if (checkbox) {
+        checkbox.addEventListener('change', () => {
+            const isLight = checkbox.checked;
+            document.body.classList.toggle('light-mode', isLight);
 
-        elsubtitle.style.color = isLight ? "#000000" : "#ffffff";
-        elprojetContainer.style.color = isLight ? "#000000" : "#ffffff";
+            elsubtitle.style.color = isLight ? "#000" : "#fff";
+            elprojetContainer.style.color = isLight ? "#000" : "#fff";
 
-        eldescriptionProjet.forEach(el => {
-            el.style.color = isLight ? "#000000" : "#ffffff";
+            eldescriptionProjet.forEach(el => {
+                el.style.color = isLight ? "#000" : "#fff";
+            });
         });
-    });
+    }
 
-
-
-// <>
-//     <div className="containerProjet">
-//         <div className="projet">
-//             <div className="imageProjet">
-//                 <img src="./img/Capture%20d’écran%202025-10-30%20223154.png" alt="Projet 1"/>
-//             </div>
-//             <div className="descriptionProjet">
-//                 <h2>Projet 1</h2>
-//                 <p>Description du projet 1.</p>
-//             </div>
-//
-//         </div>
-//     </div>
-// </>
-
+    // ===== Création dynamique de projets =====
     function createProjectElement(proj) {
         const projetDiv = document.createElement('div');
         projetDiv.className = 'containerProjet';
@@ -77,47 +58,33 @@ function handlerDomContentLoaded() {
         const img = document.createElement('img');
         img.src = proj.imageUrl;
         img.alt = proj.title;
-        imageDiv.appendChild(img);
-
         if (proj.link) {
-            img.style.cursor = "pointer";
-            img.addEventListener('click', () => {
-                window.location.href = proj.link;
-            });
+            img.style.cursor = 'pointer';
+            img.addEventListener('click', () => window.location.href = proj.link);
         }
         imageDiv.appendChild(img);
+
         const descDiv = document.createElement('div');
         descDiv.className = 'descriptionProjet';
-
         const h2 = document.createElement('h2');
         h2.textContent = proj.title;
         const p = document.createElement('p');
         p.textContent = proj.description;
-        descDiv.appendChild(h2);
-        descDiv.appendChild(p);
+        descDiv.append(h2, p);
 
-        innerDiv.appendChild(imageDiv);
-        innerDiv.appendChild(descDiv);
+        innerDiv.append(imageDiv, descDiv);
         projetDiv.appendChild(innerDiv);
-
         return projetDiv;
     }
 
-
-
-    if (elProject) {
-        Projet.slice(0, 4).forEach(proj => {
-            elProject.append(createProjectElement(proj));
-        });
+    if (elProject && typeof Projet !== 'undefined') {
+        Projet.slice(0, 4).forEach(proj => elProject.append(createProjectElement(proj)));
+    }
+    if (elprojectPage && typeof Projet !== 'undefined') {
+        Projet.forEach(proj => elprojectPage.append(createProjectElement(proj)));
     }
 
-    // Exemple : afficher les projets sur la page "Projets"
-    if (elprojectPage) {
-        Projet.forEach(proj => {
-            elprojectPage.append(createProjectElement(proj));
-        });
-    }
-
+    // ===== Effet trail du curseur =====
     (function() {
         const images = Array.isArray(imageListe) ? imageListe : [];
         if (images.length === 0) return;
@@ -129,6 +96,7 @@ function handlerDomContentLoaded() {
 
         let lastTime = 0;
         let currentIndex = 0;
+
         const container = document.createElement('div');
         container.id = 'trailContainer';
         Object.assign(container.style, {
@@ -138,18 +106,17 @@ function handlerDomContentLoaded() {
             overflow: 'visible',
             width: '100%',
             height: '80vh',
-            zIndex:"1"
-            
+            zIndex: '1'
         });
-        elcursorImage.appendChild(container);
+        elcursorImage?.appendChild(container);
 
         function createTrail(x, y, src) {
             const el = document.createElement('img');
             el.src = src;
             Object.assign(el.style, {
                 position: 'fixed',
-                left: x + 'px',
-                top: y + 'px',
+                left: `${x}px`,
+                top: `${y}px`,
                 width: '179px',
                 height: '222px',
                 transform: 'translate(-50%, -50%) scale(1)',
@@ -175,10 +142,7 @@ function handlerDomContentLoaded() {
         }
 
         document.addEventListener('mousemove', (e) => {
-            // position verticale du curseur relative au document
             const pageY = e.clientY + window.scrollY;
-
-            // n'émettre des traces que si on est dans la zone top 80vh du viewport
             if (pageY < 61 || pageY > window.innerHeight * 0.8) return;
 
             const now = Date.now();
@@ -190,6 +154,26 @@ function handlerDomContentLoaded() {
             createTrail(e.clientX, e.clientY, src);
         });
     })();
+
+    // ===== Transition page slide =====
+    const links = document.querySelectorAll('.transition-link');
+    links.forEach(link => {
+        link.addEventListener('click', e => {
+            e.preventDefault();
+            const href = link.getAttribute('href');
+
+            // animation de sortie
+            document.body.style.animation = 'slideUp 0.5s forwards ease-in';
+
+            setTimeout(() => {
+                window.location.href = href;
+            }, 500);
+        });
+    });
+
+    // Ajouter slide-in à la page courante
+    document.body.classList.add('slide-in');
 }
 
+// ===== Événement DOMContentLoaded =====
 document.addEventListener('DOMContentLoaded', handlerDomContentLoaded);
