@@ -79,6 +79,13 @@ function handlerDomContentLoaded() {
         img.alt = proj.title;
         imageDiv.appendChild(img);
 
+        if (proj.link) {
+            img.style.cursor = "pointer";
+            img.addEventListener('click', () => {
+                window.location.href = proj.link;
+            });
+        }
+        imageDiv.appendChild(img);
         const descDiv = document.createElement('div');
         descDiv.className = 'descriptionProjet';
 
@@ -95,6 +102,8 @@ function handlerDomContentLoaded() {
 
         return projetDiv;
     }
+
+
 
     if (elProject) {
         Projet.slice(0, 4).forEach(proj => {

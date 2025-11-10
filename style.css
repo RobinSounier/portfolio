@@ -8,18 +8,18 @@
 
 }
 .title h1 {
-    animation: fadeInUp 1.5s ease-out;
+    animation: fadeInUp 3s ease-out;
 }
 
-.navbar {
-
-}
 
 
 @keyframes fadeInUp {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
 }
+
+
+
 
 button {
     background-color: transparent;
@@ -52,11 +52,6 @@ a{
     /*border-bottom: 2px solid #fff ;*/
     display: flex;
     justify-content: space-between;
-    position: sticky;
-    top: 0;
-    background: rgba(0, 0, 0, 0);
-
-    z-index: 100;
 
 }
 
@@ -122,6 +117,7 @@ html {
     margin-bottom: 30px;
     width: 1fr;
     font-size: 20px;
+    animation: fadeInUp 3s ease-out;
 }
 p{
     font-size: 18px;
@@ -164,10 +160,16 @@ p{
     align-content: center;
     font-size: 18px;
 }
+
+.portfolio:hover{
+    cursor: pointer;
+    color: #faa1d4;
+    transform: scale(1.1);
+}
+
 .section2 > div{
     margin: 40px 0;
 }
-
 
 
 .section2 >div:hover{
@@ -289,29 +291,33 @@ body.light-mode footer {
     box-shadow: none;
 }
 
-/*.waveContainer {*/
-/*    position: relative;*/
-/*   width: 100%;*/
-/*}*/
+.waveContainer svg {
+    display: block;
+    margin: 0;
+    padding: 0;
+    animation: fadeInUp 3s ease-out;
+}
 
 
-.presentationContainer {
+
+
+.presentationContainer{
     display: flex;
     justify-content: space-around;
-
+    animation: fadeInUp 3s ease-out;
 }
 
 .passport{
-    width: 550px;
+    width: 650px;
     height: auto;
     margin-right: 20px;
     transform: rotate(4deg);
-    transition: transform 0.2s ease-in-out;
+    transition: transform 0.5s ease-in-out;
 }
 
 .passport:hover{
-    transform: rotate(10deg) scale(1.5);
-    transition: transform 0.2s ease-in-out;
+    transform: rotate(10deg) scale(1.5) translateY(-150px);
+    transition: transform 0.5s ease-in-out;
 }
 
 .PagePres {

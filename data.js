@@ -19,9 +19,10 @@ Projet = [
     },
     {
         id: 4,
-        title: "Projet 4",
+        title: "Union Basket Des Aspres",
         description: "Description du projet 4.",
-        imageUrl: "./img/Capture%20d’écran%202025-10-30%20231332.png"
+        imageUrl: "./img/bages/logo.webp",
+        link: "./projects/basket.html"
     },
     {
         id: 5,
