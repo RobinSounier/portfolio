@@ -28,19 +28,19 @@ Projet = [
         id: 5,
         title: "Projet 5",
         description: "Description du projet 5.",
-        imageUrl: "./img/Capture%20d’écran%202025-10-30%20231400.png"
+        imageUrl: "./img/bages/logo.webp"
     },
     {
         id: 6,
         title: "Projet 6",
         description: "Description du projet 6.",
-        imageUrl: "./img/Capture%20d’écran%202025-10-30%20231420.png"
+        imageUrl: "./img/bages/logo.webp"
     },
     {
         id: 7,
         title: "Projet 7",
         description: "Description du projet 7.",
-        imageUrl: "./img/Capture%20d’écran%202025-10-30%20231440.png"
+        imageUrl: "./img/bages/logo.webp"
     }
 
 ]

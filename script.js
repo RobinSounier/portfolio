@@ -207,7 +207,7 @@ function handlerDomContentLoaded() {
     });
 
     let currentIndex = 0;
-    const visibleSlides = 3;
+    const visibleSlides = 4;
 
     nextButton.addEventListener('click', () => {
         if (currentIndex < slides.length - visibleSlides) {
@@ -223,19 +223,25 @@ function handlerDomContentLoaded() {
         }
     });
 
+
+
     const elnomLogo = document.getElementById('nomLogo');
 
 // Sélectionne toutes les images
-    const logos = document.querySelectorAll('#canva, #capcut, #photoshop, #wordpress, #Indesign, #trello, #word');
+    const logos = document.querySelectorAll('#Photoshop, #CapIndesigncut, #Illustrator, #Word, #Excel, #Wordpress, #Drive, #Trello, #Capcut, #Canva, #Pinterest, #Linkedin, #Tiktok, #Instagram, #Facebook');
 
 // Pour chaque logo, ajoute un event listener
     logos.forEach(logo => {
         logo.addEventListener('mouseover', () => {
             elnomLogo.textContent = logo.id; // Affiche l’ID du logo sur hover
+            elcarouselbtnprev.style.transform = 'translateY(-87%)';
+            elcarouselbtnnext.style.transform = 'translateY(-87%)';
         });
 
         logo.addEventListener('mouseout', () => {
             elnomLogo.textContent = ''; // Efface le texte quand la souris part
+            elcarouselbtnprev.style.transform = 'translateY(-50%)';
+            elcarouselbtnnext.style.transform = 'translateY(-50%)';
         });
     });
 }
