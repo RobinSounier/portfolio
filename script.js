@@ -98,7 +98,7 @@ function handlerDomContentLoaded() {
     }
 
     if (elProject && typeof Projet !== 'undefined') {
-        Projet.slice(0, 4).forEach(proj => elProject.append(createProjectElement(proj)));
+        Projet.slice(0, 3).forEach(proj => elProject.append(createProjectElement(proj)));
     }
     if (elprojectPage && typeof Projet !== 'undefined') {
         Projet.forEach(proj => elprojectPage.append(createProjectElement(proj)));
