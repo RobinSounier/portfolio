@@ -10,6 +10,8 @@ function handlerDomContentLoaded() {
     const eldescriptionProjet = document.querySelectorAll('.descriptionProjet');
     const elcarouselbtnprev = document.getElementById("prevBtn")
     const elcarouselbtnnext = document.getElementById("nextBtn")
+    const elLinkedin = document.querySelector('.linkedinFooter');
+    const elFooterElements = document.querySelectorAll('#footerElement');
 
     console.log(elcarouselbtnnext);
     console.log(elcarouselbtnprev);
@@ -38,30 +40,55 @@ function handlerDomContentLoaded() {
 
     // ===== Mode clair / sombre =====
     const checkbox = document.querySelector('.checkbox');
+
+// 1️⃣ Charger l'état du thème au démarrage
+    const savedTheme = localStorage.getItem("lightMode");
+    if (savedTheme === "true") {
+        checkbox.checked = true;
+        document.body.classList.add("light-mode");
+    }
+
+// 2️⃣ Appliquer l'état du thème (texte, couleurs, etc.)
+    function applyTheme(isLight) {
+        document.body.classList.toggle('light-mode', isLight);
+
+        // Textes principaux
+        if (elsubtitle) elsubtitle.style.color = isLight ? "#000" : "#fff";
+        if (elprojetContainer) elprojetContainer.style.color = isLight ? "#000" : "#fff";
+
+        // Descriptions des projets
+        if (eldescriptionProjet.length > 0) {
+            eldescriptionProjet.forEach(el => {
+                el.style.color = isLight ? "#000" : "#fff";
+            });
+        }
+
+        // Boutons du carrousel
+        if (elcarouselbtnprev && elcarouselbtnnext) {
+            const color = isLight ? "#000" : "#fff";
+            elcarouselbtnprev.style.color = color;
+            elcarouselbtnnext.style.color = color;
+        }
+        // Icône LinkedIn dans le footer
+
+    }
+
+// 3️⃣ Gérer le changement de thème
     if (checkbox) {
         checkbox.addEventListener('change', () => {
             const isLight = checkbox.checked;
-            document.body.classList.toggle('light-mode', isLight);
 
-            // Textes principaux
-            if (elsubtitle) elsubtitle.style.color = isLight ? "#000" : "#fff";
-            if (elprojetContainer) elprojetContainer.style.color = isLight ? "#000" : "#fff";
+            // Sauvegarder dans localStorage
+            localStorage.setItem("lightMode", isLight);
 
-            // Descriptions des projets
-            if (eldescriptionProjet.length > 0) {
-                eldescriptionProjet.forEach(el => {
-                    el.style.color = isLight ? "#000" : "#fff";
-                });
-            }
-
-            // Boutons du carrousel
-            if (elcarouselbtnprev && elcarouselbtnnext) {
-                const color = isLight ? "#000" : "#fff";
-                elcarouselbtnprev.style.color = color;
-                elcarouselbtnnext.style.color = color;
-            }
+            // Appliquer le thème
+            applyTheme(isLight);
         });
     }
+
+// Au chargement de la page, appliquer le thème sauvegardé
+    applyTheme(savedTheme === "true");
+
 
 
 
@@ -228,7 +255,7 @@ function handlerDomContentLoaded() {
     const elnomLogo = document.getElementById('nomLogo');
 
 // Sélectionne toutes les images
-    const logos = document.querySelectorAll('#Photoshop, #CapIndesigncut, #Illustrator, #Word, #Excel, #Wordpress, #Drive, #Trello, #Capcut, #Canva, #Pinterest, #Linkedin, #Tiktok, #Instagram, #Facebook');
+    const logos = document.querySelectorAll('#Photoshop, #Indesign, #Illustrator, #Word, #Excel, #Wordpress, #Drive, #Trello, #Capcut, #Canva, #Pinterest, #Linkedin, #Tiktok, #Instagram, #Facebook');
 
 // Pour chaque logo, ajoute un event listener
     logos.forEach(logo => {
