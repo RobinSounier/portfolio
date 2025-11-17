@@ -178,6 +178,8 @@ h1 {
     height: 75px;
     object-fit: contain;
     transform: rotateZ(229deg);
+    color : #ffffff;
+    filter: invert(1);
 }
 
 .TextLogo {
@@ -185,4 +187,7 @@ h1 {
     letter-spacing: 4px;
     font-size: 34px;
     margin-top: 10px;
+}
+.light-mode .imgFleche {
+    filter: invert(0);
 }
