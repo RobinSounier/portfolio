@@ -12,6 +12,8 @@ function handlerDomContentLoaded() {
     const elcarouselbtnnext = document.getElementById("nextBtn")
     const elLinkedin = document.querySelector('.linkedinFooter');
     const elFooterElements = document.querySelectorAll('#footerElement');
+    const elPath = document.getElementById('path');
+    const elBtn = document.querySelectorAll('.btn')
 
     console.log(elcarouselbtnnext);
     console.log(elcarouselbtnprev);
@@ -69,7 +71,11 @@ function handlerDomContentLoaded() {
             elcarouselbtnprev.style.color = color;
             elcarouselbtnnext.style.color = color;
         }
-        // Icône LinkedIn dans le footer
+        if (elPath) {
+            elPath.removeAttribute("stroke");      // supprime totalement le stroke
+            elPath.setAttribute("stroke", isLight ? "#000" : "#fff"); // ajoute le nouveau
+        }
+
 
     }
 

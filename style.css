@@ -121,8 +121,9 @@ a{
 
 #clock {
     font-size: 18px;
-    line-height: 1; /* Évite que le texte tire vers le bas */
+    text-align: center;
     width: 135px;
+    transform: translatey(2px);
 }
 
 
@@ -415,6 +416,15 @@ body.light-mode footer {
     transform: translateX(30%);
     animation: none;
 }
+
+.light-mode .btn {
+    color: #000 !important;
+}
+
+.light-mode .btn::after {
+    border-bottom: 3px double #000 !important;
+}
+
 
 @keyframes attention {
     0% {

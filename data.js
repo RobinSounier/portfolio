@@ -1,9 +1,10 @@
 Projet = [
     {
         id: 1,
-        title: "Projet 1",
+        title: "Grizzlys",
         description: "Description du projet 1.",
-        imageUrl: "./img/Capture%20d’écran%202025-10-30%20223154.png"
+        imageUrl: "./img/Capture%20d’écran%202025-10-30%20223154.png",
+        link: "./projects/grizzlys.html"
     },
     {
         id: 2,
@@ -46,14 +47,14 @@ Projet = [
 ]
 
 imageListe = [
-    "./img/1.webp",
-    "./img/2.webp",
-    "./img/3.webp",
-    "./img/4.webp",
-    "./img/5.webp",
-    "./img/6.webp",
-    "./img/7.webp",
-    "./img/8.webp",
-    "./img/9.webp",
-    "./img/10.webp"
+    "./img/animationSouris/1.webp",
+    "./img/animationSouris/2.webp",
+    "./img/animationSouris/3.webp",
+    "./img/animationSouris/4.webp",
+    "./img/animationSouris/5.webp",
+    "./img/animationSouris/6.webp",
+    "./img/animationSouris/7.webp",
+    "./img/animationSouris/8.webp",
+    "./img/animationSouris/9.webp",
+    "./img/animationSouris/10.webp"
 ]
