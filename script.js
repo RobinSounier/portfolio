@@ -16,8 +16,6 @@ function handlerDomContentLoaded() {
     const elBtn = document.querySelectorAll('.btn')
 
 
-    document.getElementById('video1').volume=50;
-    document.getElementById('video2').volume=50;
 
 
 
