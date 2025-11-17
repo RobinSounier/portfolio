@@ -15,8 +15,11 @@ function handlerDomContentLoaded() {
     const elPath = document.getElementById('path');
     const elBtn = document.querySelectorAll('.btn')
 
-    console.log(elcarouselbtnnext);
-    console.log(elcarouselbtnprev);
+
+    document.getElementById('video1').volume=50;
+    document.getElementById('video2').volume=50;
+
+
 
 
     // ===== Horloge =====

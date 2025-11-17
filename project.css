@@ -99,7 +99,7 @@ h1 {
     margin-top: 40px;
     margin-right: 250px;
     font-family: 'Oswald', sans-serif;
-    padding: 0 20px 200px;
+    padding: 0 20px;
 }
 
 .informationsProjectLeft {
@@ -166,9 +166,13 @@ h1 {
     display: flex;
     gap: 30px;
     margin-top: 10px;
-    position: absolute;
-    right: 333px;
-    bottom: 30px;
+}
+
+.projectContentGrizzlys{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 280px;
+    margin-top: 25px;
 }
 
 
@@ -191,3 +195,54 @@ h1 {
 .light-mode .imgFleche {
     filter: invert(0);
 }
+
+.projectGalleryGrizzlys{
+    display: flex;
+    gap: 40px;
+    margin-top: 60px;
+    margin-bottom: 100px;
+    justify-content: space-between;
+    margin-left: 100px;
+}
+
+.appareilPhoto {
+    width: 515px;
+    height: 818px;
+    object-fit: cover;
+    transform: translateY(-193px);
+}
+
+
+.textUnderPhone {
+    font-family: 'Oswald', sans-serif;
+    font-size: 18px;
+    margin-top: 15px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px ;
+    width: 413px;
+}
+
+.tel {
+    position: absolute;
+    z-index: 1;
+    pointer-events: none;
+}
+#video1 {
+    position: relative;
+    width: 260px;
+    height: 547px;
+    left: 75px;
+    border-radius: 42px
+}
+
+#video2 {
+    position: relative;
+    width: 264px;
+    height: 547px;
+    left: 75px;
+    border-radius: 42px;
+    object-fit: cover;
+}
+
