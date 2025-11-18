@@ -246,3 +246,43 @@ h1 {
     object-fit: cover;
 }
 
+.carousel {
+    position: absolute;
+    margin: 0 auto;
+    padding: 20px 0;
+    max-width: 151px; /* largeur d'une seule image */
+    overflow: hidden;
+    display: flex;
+    top: 1608px;
+    right: 196px;
+    transform: rotateZ(359deg);
+}
+
+.carousel:hover .group {
+    animation-play-state: paused;
+}
+
+.card,
+.imgCard {
+    flex: 0 0 auto;
+    width: 151px;
+    height: 209px;
+    border-radius: 8px;
+}
+
+.group {
+    display: flex;
+    gap: 0; /* On colle les images */
+    animation: scrolling 6s steps(3) infinite; /* 3 images, 2s par image */
+}
+
+@keyframes scrolling {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+
