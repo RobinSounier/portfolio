@@ -205,11 +205,17 @@ h1 {
     margin-left: 100px;
 }
 
+.appareil-wrapper {
+    position: relative; /* Référence pour le carrousel */
+    display: inline-block;
+}
+
 .appareilPhoto {
     width: 515px;
-    height: 818px;
+    height: 670px;
     object-fit: cover;
-    transform: translateY(-193px);
+    display: block;
+    object-position: bottom;
 }
 
 
@@ -231,10 +237,10 @@ h1 {
 }
 #video1 {
     position: relative;
-    width: 260px;
-    height: 547px;
-    left: 75px;
-    border-radius: 42px
+    width: 241px;
+    height: 544px;
+    left: 86px;
+    border-radius: 42px;
 }
 
 #video2 {
@@ -248,14 +254,13 @@ h1 {
 
 .carousel {
     position: absolute;
-    margin: 0 auto;
-    padding: 20px 0;
-    max-width: 151px; /* largeur d'une seule image */
+    top: 296px;
+    left: 240px;
+    transform: translateX(-50%) rotateZ(359deg);
+    max-width: 151px;
     overflow: hidden;
     display: flex;
-    top: 1608px;
-    right: 196px;
-    transform: rotateZ(359deg);
+    padding: 0;
 }
 
 .carousel:hover .group {
