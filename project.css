@@ -277,7 +277,7 @@ h1 {
 .group {
     display: flex;
     gap: 0; /* On colle les images */
-    animation: scrolling 6s steps(3) infinite; /* 3 images, 2s par image */
+    animation: scrolling 8s steps(4) infinite; /* 3 images, 2s par image */
 }
 
 @keyframes scrolling {
@@ -289,4 +289,72 @@ h1 {
     }
 }
 
+.imgFlyerGrizzlys1 {
+    width: 400px;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    object-position: top;
+    transform: rotate(-13.5deg) translateX(51px) translateY(54px);
+    position: relative;
+    z-index: 1;
+}
 
+.imgFlyerGrizzlys2 {
+    width: 400px;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    object-position: top;
+    position: relative;
+    z-index: 2;
+}
+
+.imgFlyerGrizzlys3 {
+    width: 400px;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    object-position: top;
+    transform: rotate(13.5deg) translateX(-51px) translateY(54px);
+    position: relative;
+    z-index: 3;
+}
+
+.flyers{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 100px;
+}
+
+.textFlyerGrizzlys {
+    font-family: 'Oswald', sans-serif;
+    font-size: 18px;
+    margin-top: 15px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 500px;
+    padding-bottom: 100px;
+}
+
+.imgGrid{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 100px;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.creaGrid {
+    width: 300px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.creaGrid:hover {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), transparent);
+    opacity: 50%;
+}
