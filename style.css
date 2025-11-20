@@ -448,9 +448,11 @@ body.light-mode footer {
 #projectPage{
     display: flex;
     flex-wrap: wrap;
-    gap: 96px;
+    gap: 100px;
     justify-content: center;
     padding-top: 34px;
+    max-width: 1535px;
+    margin: 0 auto;
 }
 
 .titleProjectList{
