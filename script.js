@@ -278,6 +278,11 @@ function handlerDomContentLoaded() {
             elcarouselbtnnext.style.transform = 'translateY(-50%)';
         });
     });
+
+
+
+
+
 }
 
 // ===== Événement DOMContentLoaded =====

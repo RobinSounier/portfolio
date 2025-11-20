@@ -196,6 +196,17 @@ h1 {
     filter: invert(0);
 }
 
+.light-mode .grandeFleche{
+    filter: invert(0);
+}
+
+.grandeFleche {
+    filter: invert(1);
+    width: 8vw; /* Image responsive */
+    margin-left: 30vw;
+    transform: translateY(8vw) rotate(304deg) scale(1.6);
+}
+
 .projectGalleryGrizzlys{
     display: flex;
     gap: 40px;
@@ -277,7 +288,7 @@ h1 {
 .group {
     display: flex;
     gap: 0; /* On colle les images */
-    animation: scrolling 8s steps(4) infinite; /* 3 images, 2s par image */
+    animation: scrolling 6s steps(3) infinite; /* 3 images, 2s par image */
 }
 
 @keyframes scrolling {
@@ -289,6 +300,30 @@ h1 {
     }
 }
 
+
+.iWanna{
+    width: 445px;
+    height: 700px;
+    object-fit: cover;
+    position: relative;
+}
+
+.videoInsta {
+    display: flex;
+    flex-direction: column;
+    margin-left: 200px;
+    position: relative; /* IMPORTANT : pour que le bouton se positionne par rapport à la vidéo */
+    width: 445px;
+}
+
+.hautInsta {
+    width: 445px;
+    transform: translateY(4px);
+}
+
+
+
+
 .imgFlyerGrizzlys1 {
     width: 400px;
     height: auto;
@@ -298,6 +333,7 @@ h1 {
     transform: rotate(-13.5deg) translateX(51px) translateY(54px);
     position: relative;
     z-index: 1;
+
 }
 
 .imgFlyerGrizzlys2 {
@@ -325,6 +361,7 @@ h1 {
     display: flex;
     justify-content: center;
     padding-bottom: 100px;
+    padding-top: 50px;
 }
 body.light-mode .flyers img {
     box-shadow: 0 5px 15px rgba(0,0,0,0.35);
@@ -369,3 +406,34 @@ body.light-mode .flyers img {
     display: flex;
     padding-top: 50px;
 }
+
+.hidden {
+    display: none;
+    pointer-events: none;
+}
+
+/* Conteneur du bouton son */
+.boutonSon {
+    background-color: rgba(0, 0, 0, 0.5); /* gris foncé semi-transparent */
+    border-radius: 50%;   /* cercle */
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s;
+    position: absolute;
+    bottom : 10px;
+    right : 10px;
+}
+
+.boutonSon:hover {
+    background-color: rgba(0,0,0,0.7);
+    transform: scale(1.1);
+}
+
+.boutonSon svg {
+    color: white; /* pour que le SVG soit visible sur fond sombre */
+}
+
