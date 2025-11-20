@@ -47,11 +47,11 @@
     <div class="informationsProjectLeft">
         <div>
             <h2 class="infoMiniTitle">ASSOCIATION</h2>
-            <p class="infoMiniText">Les Grizzlys Catalans</p>
+            <p class="infoMiniText">LES GRIZZLYS CATALANS</p>
         </div>
         <div>
             <h2 class="infoMiniTitle">LOCALISATION</h2>
-            <p class="infoMiniText">Perpignan</p>
+            <p class="infoMiniText">PERPIGNAN</p>
         </div>
         <div>
             <h2 class="infoMiniTitle">ANNÉE</h2>
@@ -122,72 +122,86 @@
         </div>
     </div>
 </div>
-<div class="videoInsta">
-    <a href="https://www.instagram.com/reel/DLfGkSWIBPL/" target="_blank">
-        <img src="../img/grizzlys/hautInsta.png" alt="" class="hautInsta">
+<div class="containerReel">
+    <div class="videoInsta">
+        <a href="https://www.instagram.com/reel/DLfGkSWIBPL/" target="_blank">
+            <img src="../img/grizzlys/hautInsta.png" alt="" class="hautInsta">
 
-        <video
-                id="videoInsta"
-                class="video iWanna"
-                autoplay
-                loop
-                muted
-                playsinline
-                poster="../img/grizzlys/réelchanson.MOV">
-            <source src="../img/grizzlys/réelchanson.MOV" type="video/mp4">
-        </video>
-    </a>
-    <!-- Un seul SVG pour le son -->
-    <div class="boutonSon">
-        <svg id="iconeSon" aria-label="L’audio est en cours de lecture"
-             onclick="activerson()"
-             class="hidden"
-             fill="currentColor"
-             height="16"
-             role="img"
-             viewBox="0 0 24 24"
-             width="16">
-            <title>L’audio est en cours de lecture</title>
-            <path d="M16.636 7.028a1.5 1.5 0 10-2.395 1.807 5.365 5.365 0 011.103 3.17 5.378 5.378 0 01-1.105 3.176 1.5 1.5 0 102.395 1.806 8.396 8.396 0 001.71-4.981 8.39 8.39 0 00-1.708-4.978zm3.73-2.332A1.5 1.5 0 1018.04 6.59 8.823 8.823 0 0120 12.007a8.798 8.798 0 01-1.96 5.415 1.5 1.5 0 002.326 1.894 11.672 11.672 0 002.635-7.31 11.682 11.682 0 00-2.635-7.31zm-8.963-3.613a1.001 1.001 0 00-1.082.187L5.265 6H2a1 1 0 00-1 1v10.003a1 1 0 001 1h3.265l5.01 4.682.02.021a1 1 0 001.704-.814L12.005 2a1 1 0 00-.602-.917z"></path>
-        </svg>
+            <video
+                    id="videoInsta"
+                    class="video iWanna"
+                    autoplay
+                    loop
+                    muted
+                    playsinline
+                    poster="../img/grizzlys/réelchanson.MOV">
+                <source src="../img/grizzlys/réelchanson.MOV" type="video/mp4">
+            </video>
+        </a>
+        <!-- Un seul SVG pour le son -->
+        <div class="boutonSon">
+            <svg id="iconeSon" aria-label="L’audio est en cours de lecture"
+                 onclick="activerson()"
+                 class="hidden"
+                 fill="currentColor"
+                 height="16"
+                 role="img"
+                 viewBox="0 0 24 24"
+                 width="16">
+                <title>L’audio est en cours de lecture</title>
+                <path d="M16.636 7.028a1.5 1.5 0 10-2.395 1.807 5.365 5.365 0 011.103 3.17 5.378 5.378 0 01-1.105 3.176 1.5 1.5 0 102.395 1.806 8.396 8.396 0 001.71-4.981 8.39 8.39 0 00-1.708-4.978zm3.73-2.332A1.5 1.5 0 1018.04 6.59 8.823 8.823 0 0120 12.007a8.798 8.798 0 01-1.96 5.415 1.5 1.5 0 002.326 1.894 11.672 11.672 0 002.635-7.31 11.682 11.682 0 00-2.635-7.31zm-8.963-3.613a1.001 1.001 0 00-1.082.187L5.265 6H2a1 1 0 00-1 1v10.003a1 1 0 001 1h3.265l5.01 4.682.02.021a1 1 0 001.704-.814L12.005 2a1 1 0 00-.602-.917z"></path>
+            </svg>
 
-        <!-- Icône Son coupé (cachée par défaut) -->
-        <svg id="iconeNoSon" aria-label="Le son est coupé"
-             onclick="activerson()"
-             fill="currentColor"
-             height="16"
-             role="img"
-             viewBox="0 0 48 48"
-             width="16">
-            <title>Le son est coupé</title>
-            <path clip-rule="evenodd"
-                  d="M1.5 13.3c-.8 0-1.5.7-1.5 1.5v18.4c0 .8.7 1.5 1.5 1.5h8.7l12.9 12.9c.9.9 2.5.3 2.5-1v-9.8c0-.4-.2-.8-.4-1.1l-22-22c-.3-.3-.7-.4-1.1-.4h-.6zm46.8 31.4-5.5-5.5C44.9 36.6 48 31.4 48 24c0-11.4-7.2-17.4-7.2-17.4-.6-.6-1.6-.6-2.2 0L37.2 8c-.6.6-.6 1.6 0 2.2 0 0 5.7 5 5.7 13.8 0 5.4-2.1 9.3-3.8 11.6L35.5 32c1.1-1.7 2.3-4.4 2.3-8 0-6.8-4.1-10.3-4.1-10.3-.6-.6-1.6-.6-2.2 0l-1.4 1.4c-.6.6-.6 1.6 0 2.2 0 0 2.6 2 2.6 6.7 0 1.8-.4 3.2-.9 4.3L25.5 22V1.4c0-1.3-1.6-1.9-2.5-1L13.5 10 3.3-.3c-.6-.6-1.5-.6-2.1 0L-.2 1.1c-.6.6-.6 1.5 0 2.1L4 7.6l26.8 26.8 13.9 13.9c.6.6 1.5.6 2.1 0l1.4-1.4c.7-.6.7-1.6.1-2.2z"
-                  fill-rule="evenodd"></path>
-        </svg>
-    </div>
+            <!-- Icône Son coupé (cachée par défaut) -->
+            <svg id="iconeNoSon" aria-label="Le son est coupé"
+                 onclick="activerson()"
+                 fill="currentColor"
+                 height="16"
+                 role="img"
+                 viewBox="0 0 48 48"
+                 width="16">
+                <title>Le son est coupé</title>
+                <path clip-rule="evenodd"
+                      d="M1.5 13.3c-.8 0-1.5.7-1.5 1.5v18.4c0 .8.7 1.5 1.5 1.5h8.7l12.9 12.9c.9.9 2.5.3 2.5-1v-9.8c0-.4-.2-.8-.4-1.1l-22-22c-.3-.3-.7-.4-1.1-.4h-.6zm46.8 31.4-5.5-5.5C44.9 36.6 48 31.4 48 24c0-11.4-7.2-17.4-7.2-17.4-.6-.6-1.6-.6-2.2 0L37.2 8c-.6.6-.6 1.6 0 2.2 0 0 5.7 5 5.7 13.8 0 5.4-2.1 9.3-3.8 11.6L35.5 32c1.1-1.7 2.3-4.4 2.3-8 0-6.8-4.1-10.3-4.1-10.3-.6-.6-1.6-.6-2.2 0l-1.4 1.4c-.6.6-.6 1.6 0 2.2 0 0 2.6 2 2.6 6.7 0 1.8-.4 3.2-.9 4.3L25.5 22V1.4c0-1.3-1.6-1.9-2.5-1L13.5 10 3.3-.3c-.6-.6-1.5-.6-2.1 0L-.2 1.1c-.6.6-.6 1.5 0 2.1L4 7.6l26.8 26.8 13.9 13.9c.6.6 1.5.6 2.1 0l1.4-1.4c.7-.6.7-1.6.1-2.2z"
+                      fill-rule="evenodd"></path>
+            </svg>
+        </div>
 
-    <script>
-        const video = document.getElementById('videoInsta');
-        const iconeSon = document.getElementById('iconeSon');
-        const iconeNoSon = document.getElementById('iconeNoSon');
+        <script>
+            const video = document.getElementById('videoInsta');
+            const iconeSon = document.getElementById('iconeSon');
+            const iconeNoSon = document.getElementById('iconeNoSon');
 
-        function activerson() {
-            video.muted = !video.muted; // toggle son
+            function activerson() {
+                video.muted = !video.muted; // toggle son
 
-            if (video.muted) {
-                iconeSon.classList.add('hidden');   // cacher son activé
-                iconeNoSon.classList.remove('hidden'); // montrer son coupé
-            } else {
-                iconeNoSon.classList.add('hidden'); // cacher son coupé
-                iconeSon.classList.remove('hidden');   // montrer son activé
+                if (video.muted) {
+                    iconeSon.classList.add('hidden');   // cacher son activé
+                    iconeNoSon.classList.remove('hidden'); // montrer son coupé
+                } else {
+                    iconeNoSon.classList.add('hidden'); // cacher son coupé
+                    iconeSon.classList.remove('hidden');   // montrer son activé
+                }
+
+                console.log(video.muted ? '🔇 Muted' : '🔊 Unmuted');
             }
+        </script>
 
-            console.log(video.muted ? '🔇 Muted' : '🔊 Unmuted');
-        }
-    </script>
+    </div>
+    <div class="containerTextTrophy"><p class="textReel">Réel Instagram d’une trend avec les joueurs...(chercher description)</p>
+        <div class="containerTrophy">
+            <div style="width: 200px">
 
+            </div>
+            <div class="trophy">
+                <img class="imgTrophy" src="../img/grizzlys/trophy.webp" alt="Trophée Grizzlys Catalans"/>
+                <img class="imgFleche" src="../img/grizzlys/petiteFleche.webp">
+                <p class="textTrophy">Trophée remporté par les Grizzlys Catalans en 2018 lors de leur victoire au
+                    championnat de France de Division 3.</p>
 
-
+            </div>
+        </div>
+    </div>
 </div>
 <div class="flyers">
     <img class="imgFlyerGrizzlys1" src="../img/grizzlys/flyers1.webp" alt="Flyer Grizzlys Catalans">
@@ -195,17 +209,44 @@
     <img class="imgFlyerGrizzlys3" src="../img/grizzlys/flyers3.webp" alt="Flyer Grizzlys Catalans">
 </div>
 <p class ="textFlyerGrizzlys">Flyers pour l’évènement du Vitalsport, dont les Grizzlys Catalans participent pour promouvoir le football américain. Ce sont 3 flyers différents en fonction des trois catégories qu’accueille le club.</p>
-
+<h2 class="titlePublication">Publications Instagram</h2>
 <div class="imgGrid">
-    <img class="creaGrid" src="../img/grizzlys/imageGrid/1.webp" alt="Création Grizzlys Catalans">
-    <img class="creaGrid" src="../img/grizzlys/imageGrid/2.webp" alt="Création Grizzlys Catalans">
-    <img class="creaGrid" src="../img/grizzlys/imageGrid/3.webp" alt="Création Grizzlys Catalans">
-    <img class="creaGrid" src="../img/grizzlys/imageGrid/4.webp" alt="Création Grizzlys Catalans">
-    <img class="creaGrid" src="../img/grizzlys/imageGrid/5.webp" alt="Création Grizzlys Catalans">
-    <img class="creaGrid" src="../img/grizzlys/imageGrid/6.webp" alt="Création Grizzlys Catalans">
-    <img class="creaGrid" src="../img/grizzlys/imageGrid/7.webp" alt="Création Grizzlys Catalans">
-    <img class="creaGrid" src="../img/grizzlys/imageGrid/8.webp" alt="Création Grizzlys Catalans">
-    <img class="creaGrid" src="../img/grizzlys/imageGrid/9.webp" alt="Création Grizzlys Catalans">
+    <div class="divCreaGrid">
+        <p class="textHover ">description image 1</p>
+        <img class="creaGrid" src="../img/grizzlys/imageGrid/1.webp" alt="Création Grizzlys Catalans">
+    </div>
+    <div class="divCreaGrid">
+        <p class="textHover ">description image 2</p>
+        <img class="creaGrid" src="../img/grizzlys/imageGrid/2.webp" alt="Création Grizzlys Catalans">
+    </div>
+    <div class="divCreaGrid">
+        <p class="textHover ">description image 3</p>
+        <img class="creaGrid" src="../img/grizzlys/imageGrid/3.webp" alt="Création Grizzlys Catalans">
+    </div>
+    <div class="divCreaGrid">
+        <p class="textHover ">description image 4</p>
+        <img class="creaGrid" src="../img/grizzlys/imageGrid/4.webp" alt="Création Grizzlys Catalans">
+    </div>
+    <div class="divCreaGrid">
+        <p class="textHover">description image 5</p>
+        <img class="creaGrid" src="../img/grizzlys/imageGrid/5.webp" alt="Création Grizzlys Catalans">
+    </div>
+    <div class="divCreaGrid">
+        <p class="textHover">description image 6</p>
+        <img class="creaGrid" src="../img/grizzlys/imageGrid/6.webp" alt="Création Grizzlys Catalans">
+    </div>
+    <div class="divCreaGrid">
+        <p class="textHover">description image 7</p>
+        <img class="creaGrid" src="../img/grizzlys/imageGrid/7.webp" alt="Création Grizzlys Catalans">
+    </div>
+    <div class="divCreaGrid">
+        <p class="textHover">description image 8</p>
+        <img class="creaGrid" src="../img/grizzlys/imageGrid/8.webp" alt="Création Grizzlys Catalans">
+    </div>
+    <div class="divCreaGrid">
+        <p class="textHover">description image 9</p>
+        <img class="creaGrid" src="../img/grizzlys/imageGrid/9.webp" alt="Création Grizzlys Catalans">
+    </div>
 </div>
 
 <img src="../img/grizzlys/logoEcrit.png" alt="" class="logoEcritGrizzlys">

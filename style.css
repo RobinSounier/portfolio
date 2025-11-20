@@ -199,10 +199,16 @@ p{
 }
 .titleProjet {
     font-size: 30px;
-    
     text-align: center;
     margin-top: 25px;
 
+}
+.projet{
+    transition: .2s ease-in-out;
+}
+.projet:hover{
+    cursor: pointer;
+    transform: scale(1.1);
 }
 .section2{
     display: flex;
@@ -213,12 +219,10 @@ p{
     margin-left: auto;
     margin-right: auto;
 }
-@media (max-width: 1768px) {
-    .section2 {
-        width: 802px;
-    }
-}
 
+.descriptionProjet{
+    max-width: 358px;
+}
 .portfolio{
     display: flex;
     text-align: center;

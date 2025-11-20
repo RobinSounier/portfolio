@@ -279,6 +279,23 @@ function handlerDomContentLoaded() {
         });
     });
 
+    // Sélectionne toutes les cartes
+    // Sélectionne toutes les cartes
+    const cards = document.querySelectorAll('.divCreaGrid');
+
+    cards.forEach(card => {
+        const textHover = card.querySelector('.textHover');
+
+        card.addEventListener('mouseover', () => {
+            textHover.classList.remove('hidden');
+        });
+
+        card.addEventListener('mouseout', () => {
+            textHover.classList.add('hidden');
+        });
+    });
+
+
 
 
 

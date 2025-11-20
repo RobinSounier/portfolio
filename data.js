@@ -2,7 +2,7 @@ Projet = [
     {
         id: 1,
         title: "Grizzlys",
-        description: "Description du projet 1.",
+        description: "Stage réalisé en première année de BTS au grizzlys catalans.",
         imageUrl: "./img/Capture%20d’écran%202025-10-30%20223154.png",
         link: "./projects/grizzlys.html"
     },
