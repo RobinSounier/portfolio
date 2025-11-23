@@ -108,6 +108,7 @@ h1 {
     gap: 20px;
     flex: 1;
     margin-left: 150px;
+    min-width: 160px;
 }
 .informationsProjectRight {
     width: 523px;
@@ -170,7 +171,7 @@ h1 {
     display: flex;
     justify-content: flex-end;
     margin-right: 280px;
-    margin-top: 25px;
+    margin-top: 55px;
 }
 
 
@@ -493,7 +494,7 @@ body.light-mode .flyers img {
 
 .containerReel{
     display: flex;
-    gap: 400px
+    gap: 20vw
 }
 
 .containerTrophy{
@@ -525,4 +526,40 @@ body.light-mode .flyers img {
     display: flex;
     flex-direction: column;
     gap: 250px
+}
+
+.imageprincipalBages {
+    border-radius: 40px;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 0;
+}
+
+.colorVert1{
+    background-color: #81b584;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+}
+
+.colorVert2{
+    background-color: #63926b;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+}
+
+.colorVert3{
+    background-color: #364c32;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+}
+
+.imgLogoBages{
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
 }
