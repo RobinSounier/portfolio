@@ -7,23 +7,24 @@ Projet = [
         link: "./projects/grizzlys.html"
     },
     {
+        id: 4,
+        title: "Union Basket Des Aspres",
+        description: "Description du projet 4.",
+        imageUrl: "./img/bages/logo.webp",
+        link: "./projects/basket.html"
+    },
+    {
         id: 2,
-        title: "Projet 2",
+        title: "lycée Aristide Maillol",
         description: "description du projet 2.",
-        imageUrl: "./img/Capture%20d’écran%202025-10-30%20231249.png"
+        imageUrl: "./img/lycee/imagePrincipal.jpg",
+        link: "./projects/lycee.html"
     },
     {
         id: 3,
         title: "Projet 3",
         description: "Description du projet 3.",
         imageUrl: "./img/Capture%20d’écran%202025-10-30%20231312.png"
-    },
-    {
-        id: 4,
-        title: "Union Basket Des Aspres",
-        description: "Description du projet 4.",
-        imageUrl: "./img/bages/logo.webp",
-        link: "./projects/basket.html"
     },
     {
         id: 5,

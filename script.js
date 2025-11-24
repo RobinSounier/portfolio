@@ -112,6 +112,7 @@ function handlerDomContentLoaded() {
         const img = document.createElement('img');
         img.src = proj.imageUrl;
         img.alt = proj.title;
+        img.classList.add('imageProjetImg');
         if (proj.link) {
             img.style.cursor = 'pointer';
             img.addEventListener('click', () => window.location.href = proj.link);

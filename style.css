@@ -566,6 +566,10 @@ body.light-mode footer {
     -moz-osx-font-smoothing: grayscale;
 }
 
-
+.imageProjetImg{
+    width: 358px;
+    height: 445px;
+    object-fit: cover;
+}
 
 

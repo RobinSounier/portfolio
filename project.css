@@ -108,7 +108,7 @@ h1 {
     gap: 20px;
     flex: 1;
     margin-left: 150px;
-    min-width: 160px;
+    min-width: 180px;
 }
 .informationsProjectRight {
     width: 523px;
@@ -247,7 +247,7 @@ h1 {
 }
 #video1 {
     position: relative;
-    width: 241px;
+    width: 251px;
     height: 544px;
     left: 86px;
     border-radius: 42px;
@@ -563,3 +563,4 @@ body.light-mode .flyers img {
     height: 100px;
     object-fit: contain;
 }
+
