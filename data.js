@@ -7,42 +7,25 @@ Projet = [
         link: "./projects/grizzlys.html"
     },
     {
-        id: 4,
+        id: 2,
         title: "Union Basket Des Aspres",
         description: "Description du projet 4.",
         imageUrl: "./img/bages/logo.webp",
         link: "./projects/basket.html"
     },
     {
-        id: 2,
+        id: 3,
         title: "lycée Aristide Maillol",
         description: "description du projet 2.",
         imageUrl: "./img/lycee/imagePrincipal.jpg",
         link: "./projects/lycee.html"
     },
     {
-        id: 3,
-        title: "Projet 3",
+        id: 4,
+        title: "Catal’attitude Groupe",
         description: "Description du projet 3.",
-        imageUrl: "./img/Capture%20d’écran%202025-10-30%20231312.png"
-    },
-    {
-        id: 5,
-        title: "Projet 5",
-        description: "Description du projet 5.",
-        imageUrl: "./img/bages/logo.webp"
-    },
-    {
-        id: 6,
-        title: "Projet 6",
-        description: "Description du projet 6.",
-        imageUrl: "./img/bages/logo.webp"
-    },
-    {
-        id: 7,
-        title: "Projet 7",
-        description: "Description du projet 7.",
-        imageUrl: "./img/bages/logo.webp"
+        imageUrl: "./img/Catal’attitude/logoPage.webp",
+        link: "./projects/catalattitude.html"
     }
 
 ]

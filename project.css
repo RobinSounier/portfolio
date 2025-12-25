@@ -564,3 +564,61 @@ body.light-mode .flyers img {
     object-fit: contain;
 }
 
+
+.pannelColor {
+    display: flex;
+    gap: 30px;
+    margin-top: 10px;
+}
+
+.colorsProjectCtalan{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 10px;
+}
+
+.colorJaune1{
+    background-color: #f2f0d3;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+}
+
+.colorRouge1{
+    background-color: #a91f32;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+}
+.colorRouge2{
+    background-color: #3d1114;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+}
+.colorRouge3{
+    background-color: #bc4b26;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+}
+.colorJaune2{
+    background-color: #fecf0e;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+}
+.colorOrange{
+    background-color: #d5bf86;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+}
+
+.colorOrange1{
+    background-color: #8c7660;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+}
