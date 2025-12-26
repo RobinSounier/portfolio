@@ -71,11 +71,20 @@ h1 {
     object-fit: cover;
 }
 
-.titletext{
-    font-family: 'Oswald', sans-serif;
-    font-size: 50px;
-    font-weight: 500;
+/* On force aussi le h1 à hériter de ces propriétés */
+.titletext h1 {
+    font-size: inherit;
+    line-height: inherit;
+    white-space: nowrap;
+}
 
+.titletext {
+    font-family: 'Oswald', sans-serif;
+    font-size: clamp(24px, 5vw, 50px); /* Taille fluide : min 24px, idéale 5% de la largeur, max 50px */
+    font-weight: 500;
+    white-space: nowrap; /* Empeche le texte d'aller à la ligne */
+    overflow: hidden;    /* Sécurité : cache ce qui dépasse si l'écran est minuscule */
+    text-overflow: ellipsis; /* Ajoute "..." si vraiment l'écran est trop petit pour le mot */
 }
 
 .subtitleProject {
@@ -95,9 +104,11 @@ h1 {
 .informationsProject {
     display: flex;
     justify-content: space-between;
-    gap: 500px;
+    /* On enlève le gap fixe de 500px qui casse tout */
+    gap: 40px;
     margin-top: 40px;
-    margin-right: 250px;
+    margin-right: 5%; /* Utilisation de % pour plus de souplesse */
+    margin-left: 150px; /* Aligné avec votre titre */
     font-family: 'Oswald', sans-serif;
     padding: 0 20px;
 }
@@ -106,12 +117,41 @@ h1 {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    flex: 1;
-    margin-left: 150px;
-    min-width: 180px;
+    flex: 0 0 200px; /* Largeur fixe de 200px pour la colonne de gauche */
+    margin-left: 0; /* On gère la marge sur le parent */
 }
+
 .informationsProjectRight {
-    width: 523px;
+    flex: 1; /* Prend tout l'espace restant */
+    max-width: 700px; /* Empêche le texte d'être trop long sur très grand écran */
+}
+
+/* LA MAGIE DU RESPONSIVE : Quand l'écran est trop petit */
+@media (max-width: 1100px) {
+    .informationsProject {
+        flex-direction: column; /* On empile les éléments verticalement */
+        margin-left: 50px;
+        margin-right: 50px;
+        gap: 40px;
+    }
+
+    .informationsProjectLeft {
+        flex-direction: row; /* Met Année, Localisation etc sur une ligne sur tablette */
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .informationsProject {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .informationsProjectLeft {
+        flex-direction: column; /* Repasse en colonne sur téléphone */
+    }
 }
 
 
@@ -621,4 +661,82 @@ body.light-mode .flyers img {
     width: 100px;
     height: 100px;
     border-radius: 100%;
+}
+
+/* Conteneur principal */
+.mainVideoWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 40px auto 100px;
+    padding: 0 20px;
+}
+
+/* Conteneur de la vidéo format Portrait */
+.fullVideoContainer {
+    width: 350px; /* Largeur fixe pour garder le format portrait */
+    max-width: 90%; /* S'adapte sur petit écran */
+    aspect-ratio: 9 / 16; /* Force le format vertical */
+    background-color: #000;
+    border-radius: 40px;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+    border: 8px solid #1a1a1a; /* Effet bordure de téléphone optionnel */
+}
+
+.fullVideoContainer video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Remplit bien le cadre */
+}
+
+/* Section description */
+.videoDetailSection {
+    margin-top: 40px;
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    max-width: 600px;
+}
+
+.detailLine {
+    width: 50px;
+    height: 4px;
+    background-color: #d5bd8f; /* Ton orange doré */
+    margin: 0 auto 25px;
+    border-radius: 2px;
+}
+
+.detailTitle {
+    font-size: 28px;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.detailText {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #555;
+    font-weight: 300;
+}
+
+/* Ajustement pour les écrans larges : Vidéo à gauche, Texte à droite */
+@media (min-width: 1024px) {
+    .mainVideoWrapper {
+        flex-direction: row;
+        gap: 80px;
+        align-items: center;
+        padding-top: 50px;
+    }
+
+    .videoDetailSection {
+        text-align: left;
+        margin-top: 0;
+    }
+
+    .detailLine {
+        margin: 0 0 25px 0;
+    }
 }
