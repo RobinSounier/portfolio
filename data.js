@@ -1,32 +1,33 @@
 Projet = [
     {
         id: 1,
-        title: "Grizzlys",
-        description: "Stage réalisé en première année de BTS au grizzlys catalans.",
+        title: "GRIZZLYS CATALANS",
+        description: "Stage",
         imageUrl: "./img/Capture%20d’écran%202025-10-30%20223154.png",
         link: "./projects/grizzlys.html"
     },
     {
         id: 2,
-        title: "Union Basket Des Aspres",
-        description: "Description du projet 4.",
+        title: "UNION BASKET DES ASPRES",
+        description: "Engagement étudiant",
         imageUrl: "./img/bages/logo.webp",
         link: "./projects/basket.html"
     },
     {
         id: 3,
-        title: "lycée Aristide Maillol",
-        description: "description du projet 2.",
+        title: "LYCEE ARISTIDE MAILLOL",
+        description: "Projet scolaire",
         imageUrl: "./img/lycee/imagePrincipal.jpg",
         link: "./projects/lycee.html"
     },
     {
         id: 4,
-        title: "Catal’attitude Groupe",
-        description: "Description du projet 3.",
+        title: "CATAL'ATTITUDE",
+        description: "Stage",
         imageUrl: "./img/Catal’attitude/logoPage.webp",
         link: "./projects/catalattitude.html"
     }
+
 
 ]
 
