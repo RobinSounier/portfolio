@@ -703,7 +703,7 @@ body.light-mode .flyers img {
 .detailLine {
     width: 50px;
     height: 4px;
-    background-color: #d5bd8f; /* Ton orange doré */
+    background-color: #25847d; /* Ton orange doré */
     margin: 0 auto 25px;
     border-radius: 2px;
 }
@@ -718,7 +718,7 @@ body.light-mode .flyers img {
 .detailText {
     font-size: 18px;
     line-height: 1.6;
-    color: #555;
+    color: #a1a1a1;
     font-weight: 300;
 }
 
