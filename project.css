@@ -195,13 +195,34 @@ h1 {
     object-fit: cover;
 }
 
+.logoCienfuegos{
+    width: 170px;
+    height: 100px;
+    object-fit: cover;
+}
+
 .imgLogoGrizzllys{
     width: 100px;
     height: 100px;
     object-fit: cover;
 }
+.imgLogoCienfuegos{
+    width: 170px;
+    height: 100px;
+    object-fit: scale-down;
+    filter: invert(1);
+}
+body.light-mode .imgLogoCienfuegos{
+
+}
 
 .colorsProjectGrizzlys {
+    display: flex;
+    gap: 30px;
+    margin-top: 10px;
+}
+
+.colorsProjectCienfuegos {
     display: flex;
     gap: 30px;
     margin-top: 10px;
@@ -253,6 +274,12 @@ h1 {
     margin-bottom: 100px;
     justify-content: space-between;
     margin-left: 100px;
+}
+
+.NoCharte{
+    font-family: 'Oswald', sans-serif;
+    font-size: 14px;
+    transform: translateX(-28px);
 }
 
 .appareil-wrapper {
@@ -407,6 +434,9 @@ body.light-mode .flyers img {
     box-shadow: 0 5px 15px rgba(0,0,0,0.35);
 }
 
+body.light-mode .imgLogoCienfuegos{
+    filter: invert(0);
+}
 
 .textFlyerGrizzlys {
     font-family: 'Oswald', sans-serif;
@@ -470,6 +500,8 @@ body.light-mode .flyers img {
     opacity: 0; /* invisible par défaut */
     transition: opacity 0.3s ease;
     pointer-events: none;
+    width: 240px;
+    text-align: center;
 }
 
 .divCreaGrid:hover .textHover {
@@ -534,12 +566,13 @@ body.light-mode .flyers img {
 
 .containerReel{
     display: flex;
-    gap: 20vw
+    gap: 12vw
 }
 
 .containerTrophy{
     display: flex;
     gap: 20px;
+    margin-left: 100px;
 
 }
 .textTrophy{
@@ -689,10 +722,10 @@ body.light-mode .flyers img {
 .fullVideoContainer video {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Remplit bien le cadre */
+    object-fit: cover;
 }
 
-/* Section description */
+
 .videoDetailSection {
     margin-top: 40px;
     text-align: center;
@@ -703,10 +736,20 @@ body.light-mode .flyers img {
 .detailLine {
     width: 50px;
     height: 4px;
-    background-color: #25847d; /* Ton orange doré */
+    background-color: #25847d;
     margin: 0 auto 25px;
     border-radius: 2px;
 }
+
+.detailLineCienfuegos {
+    width: 50px;
+    height: 4px;
+    background-color: #ff731b;
+    margin: 0 auto 25px;
+    border-radius: 2px;
+}
+
+
 
 .detailTitle {
     font-size: 28px;
@@ -739,4 +782,68 @@ body.light-mode .flyers img {
     .detailLine {
         margin: 0 0 25px 0;
     }
+
+    .detailLineCienfuegos {
+        margin: 0 0 25px 0;
+    }
+}
+
+/* Conteneur principal en 358x445 comme demandé */
+.palette-container {
+    width: 358px;
+    height: 445px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    background: transparent; /* Sans fond */
+    font-family: 'Brush Script MT', cursive; /* Police manuscrite pour le texte */
+}
+
+/* Alignement des ronds */
+.circles-group {
+    display: flex;
+    gap: 15px;
+}
+
+.circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+/* Couleurs des ronds */
+.red    { background-color: #d10a11; }
+.orange { background-color: #ff7b24; }
+.yellow { background-color: #f7e810; }
+.green  { background-color: #84d35b; }
+
+/* Groupe Logo + Texte */
+.logo-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.main-logo {
+    height: 60px; /* Ajustable selon le rendu désiré */
+    width: auto;
+}
+
+/* Positionnement de la petite flèche */
+.arrow {
+    position: absolute;
+    top: -25px; /* Ajusté pour survoler le logo */
+    right: 140px;
+    width: 30px;
+    transform: rotate(-10deg);
+}
+
+.logo-caption {
+    font-size: 22px;
+    color: #000;
+    white-space: nowrap;
+    line-height: 1.2;
 }

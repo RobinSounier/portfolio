@@ -26,7 +26,15 @@ Projet = [
         description: "Stage",
         imageUrl: "./img/Catal’attitude/logoPage.webp",
         link: "./projects/catalattitude.html"
+    },
+    {
+        id: 5,
+        title: "FESTIVAL CIENFUEGOS",
+        description: "Projet scolaire",
+        imageUrl: "./img/cienfuegos/image358.webp",
+        link: "./projects/cienfuegos.html"
     }
+
 
 
 ]
