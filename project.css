@@ -275,6 +275,10 @@ body.light-mode .imgLogoCienfuegos{
     filter: invert(0);
 }
 
+.light-mode .imgFlecheCatalattitude {
+    filter: invert(0);
+}
+
 .light-mode .grandeFleche{
     filter: invert(0);
 }
@@ -293,6 +297,13 @@ body.light-mode .imgLogoCienfuegos{
     margin-bottom: 100px;
     justify-content: space-between;
     margin-left: 100px;
+}
+
+.projectGalleryCatalattitude{
+    display: flex;
+    gap: 40px;
+    justify-content: space-between;
+    margin: 60px 100px 100px;
 }
 
 .NoCharte{
@@ -331,15 +342,18 @@ body.light-mode .imgLogoCienfuegos{
     z-index: 1;
     pointer-events: none;
 }
-#video1 {
+.video1 {
     position: relative;
-    width: 251px;
-    height: 544px;
-    left: 86px;
+    width: 325px;
+    height: 674px;
+    left: 43px;
+    object-fit: cover;
     border-radius: 42px;
+    transform: scale(0.8);
+    top: -65px;
 }
 
-#video2 {
+.video2 {
     position: relative;
     width: 264px;
     height: 547px;
@@ -363,17 +377,28 @@ body.light-mode .imgLogoCienfuegos{
     animation-play-state: paused;
 }
 
+.carousel:hover .groupCatalan {
+    animation-play-state: paused;
+}
+
 .card,
 .imgCard {
     flex: 0 0 auto;
     width: 151px;
     height: 209px;
     border-radius: 8px;
+    object-fit: cover;
 }
 .group {
     display: flex;
     gap: 0; /* On colle les images */
     animation: scrolling 6s steps(4) infinite; /* 3 images, 2s par image */
+}
+
+.groupCatalan {
+    display: flex;
+    gap: 0; /* On colle les images */
+    animation: scrolling 10s steps(5) infinite; /* 3 images, 2s par image */
 }
 
 @keyframes scrolling {
@@ -871,7 +896,23 @@ body.light-mode .imgLogoCienfuegos{
     font-family: 'Oswald', sans-serif;
     font-size: 50px;
     text-align: center;
-    margin-bottom: 150px;
+    margin-bottom: 25px;
     margin-top: 150px;
     color: #a91f32;
+}
+
+.instagram-media {
+    transform: scale(0.5);
+}
+
+.titreInsta {
+    font-family: 'holiday', cursive;
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 50px;
+    font-weight: lighter;
+}
+
+.descriptionVideo{
+    transform: translateY(-80px);
 }
