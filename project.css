@@ -851,6 +851,7 @@ body.light-mode .imgLogoCienfuegos{
     .detailLineCienfuegos {
         margin: 0 0 25px 0;
     }
+
 }
 
 /* Conteneur principal en 358x445 comme demandé */
@@ -932,4 +933,166 @@ body.light-mode .imgLogoCienfuegos{
     text-align: center;
     margin-bottom: 50px;
     font-weight: lighter;
+}
+
+.imgCarteCadeauCatalattitude{
+    width: 400px;
+    height: auto;
+    object-fit: cover;
+    object-position: top;
+}
+
+.carteCadeauCatalattitude{
+    display: flex;
+    justify-content: center;
+    padding-top: 250px;
+    gap : 150px;
+}
+
+.texteCadeau{
+    font-family: 'Oswald', sans-serif;
+    font-size: 18px;
+    margin-top: 50px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 550px;
+}
+
+.flecheCadeau {
+    filter: invert(1);
+    transform: rotateZ(260deg) scale(0.5) translateX(71px);
+
+}
+
+BODY.light-mode .flecheCadeau {
+    filter: invert(0);
+}
+
+.rectoverso {
+    display: flex;
+    gap: 100px;
+    justify-content: center;
+    font-family: 'Oswald', sans-serif;
+}
+
+.calandriergrid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 899px;
+    margin-left: 50px;
+    gap: 50px;
+    justify-content: center;
+}
+
+.ordietgridCatalattitude {
+    display: flex;
+    margin-top: 150px;
+}
+
+@media (min-width: 1700px) {
+    .ordietgridCatalattitude {
+        gap: 7vw;
+    }
+}
+
+.imageCalendrier {
+    width: 300px;
+    height: auto;
+    object-fit: cover;
+}
+
+.imageOrdiCatalattitude {
+    margin-top: 50px;
+
+}
+.texteOrdi {
+    width: 500px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 18px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.texteOrdi2 {
+    width: 500px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 18px;
+    text-align: center;
+    margin-top: 150px;
+}
+
+.ordi {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.texteOrdi, .texteOrdi2 {
+    width: 500px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 18px;
+    text-align: center;
+}
+
+.texteOrdi2 { margin-top: 150px; }
+.texteOrdi { margin-top: 277px; }
+
+.imageOrdiCatalattitude {
+    margin-top: 200px;
+    width: 600px;
+    display: block;
+    position: absolute;
+}
+
+/* Nouveau code pour l'intégration dans l'écran */
+/*.ecran-wrapper {*/
+/*    position: relative; !* Permet de positionner l'image du jeu par rapport à l'ordi *!*/
+/*}*/
+
+.imageAprendreoualaisser {
+    position: relative;
+    top: 38px;
+    width: 551px;
+    height: 309px;
+    z-index: 10;
+}
+
+.descriptionCalendrier {
+    font-family: 'Oswald', sans-serif;
+    font-size: 18px;
+    text-align: center;
+    max-width: 300px;
+    width: 300px;
+    margin: auto 0;
+}
+
+.detailLineCatalan {
+    width: 50px;
+    height: 4px;
+    background-color: #a91f32;
+    margin: 0 auto 25px;
+    border-radius: 2px;
+}
+
+.fullVideoContainerCatan{
+    max-width: 90%;
+    aspect-ratio: 9 / 16;
+
+
+    width: 350px;
+    object-fit: cover;
+}
+
+.imageBoxAperoCatalan {
+    width: 350px;
+    object-fit: cover;
+    margin-top: 60px;
+}
+
+@media (min-width: 1024px) {
+    .detailLineCatalan {
+        margin: 0 0 25px 0;
+    }
 }
