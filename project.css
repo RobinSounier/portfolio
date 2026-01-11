@@ -344,13 +344,11 @@ body.light-mode .imgLogoCienfuegos{
 }
 .video1 {
     position: relative;
-    width: 325px;
-    height: 674px;
-    left: 43px;
+    width: 256px;
+    height: 549px;
+    left: 77px;
     object-fit: cover;
     border-radius: 42px;
-    transform: scale(0.8);
-    top: -65px;
 }
 
 .video2 {
@@ -453,7 +451,7 @@ body.light-mode .imgLogoCienfuegos{
     object-fit: cover;
     display: block;
     object-position: top;
-    transform: rotate(351deg) translateX(-20px) translateY(35px);
+    transform: rotate(351deg) translateX(-44px) translateY(27px);
     position: relative;
     z-index: 1;
 
@@ -467,7 +465,7 @@ body.light-mode .imgLogoCienfuegos{
     object-position: top;
     position: relative;
     z-index: 2;
-    transform: rotate(9deg) translateX(73px) translateY(27px);
+    transform: rotate(9deg) translateX(50px) translateY(27px);
 }
 
 .imgFlyerGrizzlys2 {
@@ -934,8 +932,4 @@ body.light-mode .imgLogoCienfuegos{
     text-align: center;
     margin-bottom: 50px;
     font-weight: lighter;
-}
-
-.descriptionVideo{
-    transform: translateY(-80px);
 }
