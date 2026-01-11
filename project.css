@@ -981,7 +981,7 @@ BODY.light-mode .flecheCadeau {
     flex-direction: row;
     flex-wrap: wrap;
     width: 899px;
-    margin-left: 50px;
+    margin-left: 20px;
     gap: 50px;
     justify-content: center;
 }
