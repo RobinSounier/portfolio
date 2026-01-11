@@ -447,6 +447,29 @@ body.light-mode .imgLogoCienfuegos{
 
 }
 
+.imgFlyerCatalan1 {
+    width: 400px;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    object-position: top;
+    transform: rotate(351deg) translateX(-20px) translateY(35px);
+    position: relative;
+    z-index: 1;
+
+}
+
+.imgFlyerCatalan3 {
+    width: 400px;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    object-position: top;
+    position: relative;
+    z-index: 2;
+    transform: rotate(9deg) translateX(73px) translateY(27px);
+}
+
 .imgFlyerGrizzlys2 {
     width: 400px;
     height: auto;
