@@ -14,19 +14,20 @@ Projet = [
         link: "./projects/basket.html"
     },
     {
-        id: 3,
-        title: "LYCEE ARISTIDE MAILLOL",
-        description: "Projet scolaire",
-        imageUrl: "./img/lycee/imagePrincipal.jpg",
-        link: "./projects/lycee.html"
-    },
-    {
         id: 4,
         title: "CATAL'ATTITUDE",
         description: "Stage",
         imageUrl: "./img/Catal’attitude/logoPage.webp",
         link: "./projects/catalattitude.html"
     },
+    {
+        id: 3,
+        title: "LYCEE ARISTIDE MAILLOL",
+        description: "Projet scolaire",
+        imageUrl: "./img/lycee/imagePrincipal.jpg",
+        link: "./projects/lycee.html"
+    },
+
     {
         id: 5,
         title: "FESTIVAL CIENFUEGOS",

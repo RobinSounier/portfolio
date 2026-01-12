@@ -857,15 +857,44 @@ body.light-mode .imgLogoCienfuegos{
 /* Conteneur principal en 358x445 comme demandé */
 .palette-container {
     width: 358px;
-    height: 445px;
+    height: 225px;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    flex-direction: row;
     gap: 40px;
-    background: transparent; /* Sans fond */
-    font-family: 'Brush Script MT', cursive; /* Police manuscrite pour le texte */
+    background: transparent;
+    font-family: 'holiday', cursive;
+    align-items: center;
 }
+
+.main-logo {
+    width: auto;
+    height: 93px;
+
+}
+
+.circles-group {
+    margin-left: 7vw;
+}
+.logo-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+}
+
+.arrow {
+    transform: rotate(106deg) rotateY(174deg) translateX(53px);
+    filter: invert(1);
+    height: 93px;
+    width: 93px;
+
+}
+
+body.light-mode .arrow {
+    filter: invert(0);
+}
+
+
 
 /* Alignement des ronds */
 .circles-group {
@@ -885,34 +914,14 @@ body.light-mode .imgLogoCienfuegos{
 .yellow { background-color: #f7e810; }
 .green  { background-color: #84d35b; }
 
-/* Groupe Logo + Texte */
+
+
 .logo-wrapper {
-    position: relative;
     display: flex;
-    align-items: center;
-    gap: 20px;
 }
 
-.main-logo {
-    height: 60px; /* Ajustable selon le rendu désiré */
-    width: auto;
-}
 
-/* Positionnement de la petite flèche */
-.arrow {
-    position: absolute;
-    top: -25px; /* Ajusté pour survoler le logo */
-    right: 140px;
-    width: 30px;
-    transform: rotate(-10deg);
-}
 
-.logo-caption {
-    font-size: 22px;
-    color: #000;
-    white-space: nowrap;
-    line-height: 1.2;
-}
 
 .grostitre{
     font-family: 'Oswald', sans-serif;
@@ -1094,4 +1103,35 @@ BODY.light-mode .flecheCadeau {
     .detailLineCatalan {
         margin: 0 0 25px 0;
     }
+}
+
+.titreMerch {
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    margin-bottom: 50px;
+}
+
+.gridMerch{
+    display: flex;
+    margin: 0 auto;
+    width: 1000px;
+    gap: 116px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.imageMerch{
+    height: 250px;
+    width: auto
+}
+
+.divMerch {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.texteMerch {
+    font-family: 'Oswald', sans-serif;
+    margin-top: 5px;
 }

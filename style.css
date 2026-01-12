@@ -543,7 +543,7 @@ body.light-mode .footerLink:hover {
 }
 
 .PagePres {
-    height: 100vh;
+    height: 82vh;
 }
 
 .presentationText {
@@ -622,6 +622,7 @@ body.light-mode .footerLink:hover {
     font-weight: 100;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    margin-top: 60px;
 }
 
 .imageProjetImg{
