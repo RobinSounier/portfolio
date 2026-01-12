@@ -21,20 +21,28 @@ Projet = [
         link: "./projects/catalattitude.html"
     },
     {
-        id: 3,
-        title: "LYCEE ARISTIDE MAILLOL",
-        description: "Projet scolaire",
-        imageUrl: "./img/lycee/imagePrincipal.jpg",
-        link: "./projects/lycee.html"
-    },
-
-    {
         id: 5,
         title: "FESTIVAL CIENFUEGOS",
         description: "Projet scolaire",
         imageUrl: "./img/cienfuegos/image358.webp",
         link: "./projects/cienfuegos.html"
+    },
+    {
+        id: 3,
+        title: "RESTAURANT VINCENZO",
+        description: "Projet scolaire",
+        imageUrl: "./img/lycee/imagePrincipal.jpg",
+        link: "./projects/vincenzo.html"
+    },
+    {
+        id: 3,
+        title: "LYCEE ARISTIDE MAILLOL",
+        description: "Projet scolaire",
+        imageUrl: "./img/lycee/imagePrincipal.jpg",
+        link: "./projects/lycee.html"
     }
+
+
 
 
 

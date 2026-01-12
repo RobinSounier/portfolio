@@ -14,8 +14,7 @@ function handlerDomContentLoaded() {
     const elFooterElements = document.querySelectorAll('#footerElement');
     const elPath = document.getElementById('path');
     const elBtn = document.querySelectorAll('.btn')
-
-
+    const elModalWin = document.getElementById('modalWin')
 
 
 
