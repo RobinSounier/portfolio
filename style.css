@@ -1,0 +1,734 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+@font-face {
+    font-family: 'holiday'; /* le nom que tu choisis pour la police */
+    src: url('./fonts/HolidayFree.otf') format('opentype'); /* chemin vers ton fichier */
+    font-weight: normal;
+    font-style: normal;
+}
+* {
+    border: 0;
+    box-sizing: border-box;
+    margin: 0;
+    outline: 0;
+    padding: 0;
+
+}
+.title h1 {
+    animation: fadeInUp 3s ease-out;
+}
+body {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideInSoft 0.5s ease-out forwards;
+}
+
+.logoNav {
+    height: 50px;
+    width: 50px;
+    object-fit: scale-down;
+
+}
+
+.Logo {
+    width: 225px;
+   margin-left: 20px;
+}
+
+/* Animation d’entrée douce */
+@keyframes slideInSoft {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animation de sortie douce */
+@keyframes slideUpSoft {
+    from {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+}
+
+/* Appliquée par ton script avant de changer de page */
+.page-exit {
+    animation: slideUpSoft 0.5s ease forwards;
+}
+
+
+h1 {
+    text-align: center;
+    margin-top: 50px;
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+
+
+button {
+    background-color: transparent;
+}
+html,
+body {
+    position: relative;
+    color: #fff;
+    background: #000 radial-gradient(circle at 20% 30%, #111 0%, #000 80%);
+    font-family: "Inter", sans-serif;
+    margin: 0;
+    z-index: 0;
+}
+
+#allPage{
+    position: relative;
+    z-index: 2;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+
+
+.navbar {
+    padding: 20px 10px;
+    /*border-bottom: 2px solid #fff ;*/
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.navbarElement {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    font-size: 18px;
+}
+
+#clock {
+    font-size: 18px;
+    text-align: center;
+    width: 135px;
+    transform: translateY(4px);
+}
+
+
+.navbarElement > p:hover{
+    cursor: pointer;
+    color: #faa1d4;
+    transform: scale(1.1);
+}
+
+html {
+    scroll-timeline: --page-scroll block;
+}
+
+@keyframes grow-progress {
+    from { transform: scaleX(0); }
+    to { transform: scaleX(1); }
+}
+
+#progress {
+    position: fixed;
+    left: 0; top: 0;
+    width: 100%; height: .2em;
+    background: #faa1d4;
+    transform-origin: 0 50%;
+    animation: grow-progress auto linear;
+    animation-timeline: --page-scroll;
+}
+
+#cursorImage {
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    transition: transform 0.1s, opacity 0.1s;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.title{
+    font-size: 70px;
+    color: #faa1d4;
+    text-align: center;
+    width: 1fr;
+
+}
+.subtitle{
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 30px;
+    width: 1fr;
+    font-size: 20px;
+    animation: fadeInUp 3s ease-out;
+}
+p{
+    font-size: 18px;
+}
+
+
+.containerTitle{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 70vh;
+}
+
+.separator {
+    width: 80%;
+    height: 1px;
+    background-color: #fff;
+    margin: 40px auto;
+}
+.titleProjet {
+    font-size: 30px;
+    text-align: center;
+    margin-top: 25px;
+
+}
+.projet{
+    transition: .2s ease-in-out;
+}
+.projet:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+.section2{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 85px;
+    justify-content: center;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.descriptionProjet{
+    max-width: 358px;
+}
+.portfolio{
+    display: flex;
+    text-align: center;
+    flex-wrap: wrap;
+    align-content: center;
+    font-size: 18px;
+}
+
+.portfolio:hover{
+    cursor: pointer;
+    color: #faa1d4;
+    transform: scale(1.1);
+}
+
+.section2 > div{
+    margin: 40px 0;
+}
+
+
+.section2 >div:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: transform 0.1s ease-in-out;
+    .img{
+        transform: scale(1.1);
+    }
+
+}
+
+body.light-mode {
+    background: #fdfdfd;
+    color: #000;
+}
+
+body.light-mode .navbar,
+body.light-mode footer {
+    border-color: #000;
+}
+
+.section2 >div:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: transform 0.1s ease-in-out;;
+
+
+    .img{
+        transform: scale(1.1);
+    }
+
+}
+
+
+
+
+footer {
+    width: 100%;
+    margin-top: 80px;
+}
+
+.footerNavbar {
+    display: flex;
+    justify-content: space-between; /* Logos à gauche, Texte à droite */
+    align-items: center;
+    border-top: 1px solid #fff;
+    padding: 30px 150px; /* Marge de 150px pour s'aligner sur tes titres */
+}
+
+.footerLogosLeft {
+    display: flex;
+    gap: 40px; /* Espace entre les deux blocs (LinkedIn et Mail) */
+    align-items: center;
+}
+
+.footerLink {
+    display: flex;
+    align-items: center;
+    gap: 12px; /* Espace entre l'icône SVG et le mot */
+    text-decoration: none;
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+.footerLinkLabel {
+    font-family: 'Oswald', sans-serif;
+    font-size: 16px;
+    letter-spacing: 1.5px;
+    font-weight: 400;
+}
+
+/* Effet au survol sur l'ensemble du bloc (icône + texte) */
+.footerLink:hover {
+    color: #faa1d4;
+    transform: translateX(5px); /* Petit décalage vers la droite */
+}
+
+/* Adaptation Mode Clair */
+body.light-mode .footerLink {
+    color: #000;
+}
+body.light-mode .footerLink:hover {
+    color: #faa1d4;
+}
+
+/* Pour que ça reste propre sur petit écran */
+@media (max-width: 900px) {
+    .footerNavbar {
+        padding: 30px 40px;
+    }
+}
+
+@media (max-width: 600px) {
+    .footerLogosLeft {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+}
+
+.footerElement {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    font-size: 18px;
+    
+}
+.navRight{
+    display: flex;
+    align-items: center; /* Aligne verticalement le clock et le toggle */
+    gap: 10px; /* Espace horizontal entre les deux */
+    font-family: "holiday", sans-serif;
+
+}
+/* From Uiverse.io by Madflows */
+.toggle-switch {
+    position: relative;
+    width: 100px;
+    height: 50px;
+    --light: #ffffff;
+    --dark: #28292c;
+    --link: rgb(27, 129, 112);
+    --link-hover: rgb(24, 94, 82);
+}
+
+.switch-label {
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    background-color: var(--dark);
+    border-radius: 25px;
+    cursor: pointer;
+    border: 3px solid var(--dark);
+    transform: scale(.5);
+}
+
+.checkbox {
+    position: absolute;
+    display: none;
+
+}
+
+.slider {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+    -webkit-transition: 0.3s;
+    transition: 0.25s;
+
+
+}
+
+.checkbox:checked ~ .slider {
+    background-color: var(--light);
+}
+
+.slider::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    -webkit-box-shadow: inset 12px -4px 0px 0px var(--light);
+    box-shadow: inset 12px -4px 0px 0px var(--light);
+    background-color: var(--dark);
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+}
+
+.checkbox:checked ~ .slider::before {
+    -webkit-transform: translateX(50px);
+    -ms-transform: translateX(50px);
+    transform: translateX(50px);
+    background-color: var(--dark);
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+/* From Uiverse.io by boryanakrasteva */
+.btn {
+    width: 200px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: none;
+    position: relative;
+    background-color: transparent;
+    transition: .2s cubic-bezier(0.19, 1, 0.22, 1);
+    opacity: 0.6;
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 0 0 10px;
+}
+
+.btn::after {
+    content: '';
+    border-bottom: 3px double rgb(255, 255, 255);
+    width: 0;
+    height: 100%;
+    position: absolute;
+    margin-top: -5px;
+    top: 0;
+    left: 5px;
+    visibility: hidden;
+    opacity: 1;
+    transition: .2s linear;
+}
+
+.btn .icon {
+    transform: translateX(0%);
+    transition: .2s linear;
+    animation: attention 1.2s linear infinite;
+
+}
+
+.btn:hover::after {
+    visibility: visible;
+    opacity: 0.7;
+    width: 90%;
+}
+
+.btn:hover {
+    letter-spacing: 2px;
+    opacity: 1;
+    cursor : pointer;
+}
+
+.btn:hover > .icon {
+    transform: translateX(30%);
+    animation: none;
+}
+
+.light-mode .btn {
+    color: #000 !important;
+}
+
+.light-mode .btn::after {
+    border-bottom: 3px double #000 !important;
+}
+
+
+@keyframes attention {
+    0% {
+        transform: translateX(0%);
+    }
+
+    50% {
+        transform: translateX(30%);
+    }
+}
+
+
+.waveContainer svg {
+    display: block;
+    margin: 0;
+    padding: 0;
+    animation: fadeInUp 3s ease-out;
+}
+
+
+#projectPage{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 100px;
+    justify-content: center;
+    padding-top: 34px;
+    max-width: 1535px;
+    margin: 0 auto;
+}
+
+.titleProjectList{
+    font-family: "holiday", sans-serif;
+    font-weight: 100;
+    letter-spacing: 8px;
+}
+
+.presentationContainer{
+    display: flex;
+    justify-content: space-around;
+    animation: fadeInUp 3s ease-out;
+}
+
+.passport{
+    width: 550px;
+    height: auto;
+    margin-right: 20px;
+    transform: rotate(4deg);
+    transition: transform 0.5s ease-in-out;
+}
+
+.passport:hover{
+    transform: rotate(10deg) scale(1.5) translateY(-150px);
+    transition: transform 0.5s ease-in-out;
+}
+
+.PagePres {
+    height: 82vh;
+}
+
+.presentationText {
+    max-width: 600px;
+    font-size: 20px;
+    line-height: 1.6;
+}
+.carousel-container {
+    position: relative;
+    width: 298px;
+    /* ajuste selon ton design */
+    margin: 30px auto;
+    overflow: hidden;
+}
+
+.carousel-track-container {
+    overflow: hidden;
+    width: 297px;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+.carousel-track {
+    display: flex;
+    width: 222px;
+    transition: transform 0.4s ease;
+}
+
+.carousel-slide {
+    min-width: calc(30%); /* 3 logos visibles */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-slide img {
+    width: 50px;
+    height: auto;
+    transition: transform 0.3s;
+}
+
+.carousel-slide img:hover {
+    transform: scale(1.1);
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background 0.3s;
+}
+
+
+
+.carousel-btn.left {
+    left: 16px;
+
+}
+
+.carousel-btn.right {
+    right: -2px;
+
+}
+#nomLogo{
+    display: flex;
+    justify-content: center;
+
+}
+
+.competencetitle{
+    font-family: "holiday", sans-serif;
+    font-weight: 100;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    margin-top: 60px;
+}
+
+.imageProjetImg{
+    width: 358px;
+    height: 445px;
+    object-fit: cover;
+}
+
+/* --- CONTAINER PRINCIPAL CONTACT --- */
+.contactMainContainer {
+    max-width: 1400px;
+    margin: 60px auto 100px;
+    padding: 0 150px;
+    animation: slideInSoft 0.8s ease-out;
+}
+
+.contactHeader {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+/* --- GRILLE DE CONTACT --- */
+.contactGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+.contactCard {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 40px;
+    padding: 60px 30px;
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Effet au survol pour les cartes cliquables */
+.contactCard:not(.no-click):hover {
+    background: rgba(250, 161, 212, 0.08); /* Ton rose */
+    border-color: #faa1d4;
+    transform: translateY(-12px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.cardIcon {
+    width: 90px;
+    height: 90px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    color: #faa1d4;
+    transition: 0.4s;
+}
+
+.contactCard:hover .cardIcon {
+    background: #faa1d4;
+    color: #000;
+    transform: rotate(10deg);
+}
+
+.contactValue {
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px;
+    margin-top: 15px;
+    letter-spacing: 1px;
+    font-weight: 300;
+    opacity: 0.8;
+}
+
+/* --- ADAPTATION MODE CLAIR --- */
+body.light-mode .contactCard {
+    background: #fdfdfd;
+    border-color: #eee;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+}
+
+body.light-mode .cardIcon {
+    background: #f0f0f0;
+}
+
+body.light-mode .contactCard:not(.no-click):hover {
+    background: #fff;
+    border-color: #faa1d4;
+    box-shadow: 0 20px 40px rgba(250, 161, 212, 0.15);
+}
+
+body.light-mode .contactValue {
+    color: #333;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 1100px) {
+    .contactMainContainer { padding: 0 50px; }
+}
+
+@media (max-width: 768px) {
+    .contactMainContainer { padding: 0 20px; }
+    .contactGrid { grid-template-columns: 1fr; }
+    .contactCard { padding: 40px 20px; }
+}

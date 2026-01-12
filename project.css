@@ -1,0 +1,1137 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+@font-face {
+    font-family: 'holiday'; /* le nom que tu choisis pour la police */
+    src: url('./fonts/HolidayFree.otf') format('opentype'); /* chemin vers ton fichier */
+    font-weight: normal;
+    font-style: normal;
+}
+* {
+    border: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: inherit;
+    margin: 0;
+    outline: 0;
+    padding: 0;
+
+}
+img{
+    overflow-clip-margin: content-box;
+    overflow: clip;
+}
+h1 {
+    font-size: 3rem;
+    line-height: 1.2;
+    font-weight: 700;
+}
+.titleimg{
+    align-items: flex-start;
+    display: flex;
+    flex-basis: auto;
+    flex-flow: column;
+    gap: 20px;
+    height: min-content;
+    max-width: 1920px;
+    overflow: hidden;
+    padding: 20px 20px 0px;
+    position: relative;
+    width: 100%;
+}
+
+.projecttitle {
+
+    margin-bottom: 20px;
+}
+
+.imageprincipal{
+    flex-flow: row;
+    flex: none;
+    place-content: center;
+    align-items: center;
+    gap: 0;
+    width: 100%;
+    height: 575px;
+    padding: 0;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    max-width: 1161px;
+    max-height: 697px;
+    margin: 0 auto;
+    border-radius: 40px;
+}
+
+.image1{
+    aspect-ratio: auto 2048 / 1365;
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    object-position: center center;
+    object-fit: cover;
+}
+
+/* On force aussi le h1 à hériter de ces propriétés */
+.titletext h1 {
+    font-size: inherit;
+    line-height: inherit;
+    white-space: nowrap;
+}
+
+.titletext {
+    font-family: 'Oswald', sans-serif;
+    font-size: clamp(24px, 5vw, 50px); /* Taille fluide : min 24px, idéale 5% de la largeur, max 50px */
+    font-weight: 500;
+    white-space: nowrap; /* Empeche le texte d'aller à la ligne */
+    overflow: hidden;    /* Sécurité : cache ce qui dépasse si l'écran est minuscule */
+    text-overflow: ellipsis; /* Ajoute "..." si vraiment l'écran est trop petit pour le mot */
+}
+
+.subtitleProject {
+    color: rgb(166, 166, 166);
+    font-size: 32px;
+}
+
+.imageprincipalGrizlly {
+    border-radius: 40px;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;       /* Ajuste l’image sans déformation */
+    object-position: center -120px;
+}
+
+.informationsProject {
+    display: flex;
+    justify-content: space-between;
+    /* On enlève le gap fixe de 500px qui casse tout */
+    gap: 40px;
+    margin-top: 40px;
+    margin-right: 5%; /* Utilisation de % pour plus de souplesse */
+    margin-left: 150px; /* Aligné avec votre titre */
+    font-family: 'Oswald', sans-serif;
+    padding: 0 20px;
+}
+
+.informationsProjectLeft {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 0 0 200px; /* Largeur fixe de 200px pour la colonne de gauche */
+    margin-left: 0; /* On gère la marge sur le parent */
+}
+
+.informationsProjectRight {
+    flex: 1; /* Prend tout l'espace restant */
+    max-width: 700px; /* Empêche le texte d'être trop long sur très grand écran */
+}
+
+/* LA MAGIE DU RESPONSIVE : Quand l'écran est trop petit */
+@media (max-width: 1100px) {
+    .informationsProject {
+        flex-direction: column; /* On empile les éléments verticalement */
+        margin-left: 50px;
+        margin-right: 50px;
+        gap: 40px;
+    }
+
+    .informationsProjectLeft {
+        flex-direction: row; /* Met Année, Localisation etc sur une ligne sur tablette */
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .informationsProject {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .informationsProjectLeft {
+        flex-direction: column; /* Repasse en colonne sur téléphone */
+    }
+}
+
+
+.projecttitleGrizzlys {
+    margin-bottom: 20px;
+    margin-left: 150px;
+}
+
+.infoMiniTitle {
+    font-size: 25px;
+}
+
+
+
+.colorOrangeGrise{
+    background-color: #d5bd8f;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+}
+
+.colorBlanc{
+    background-color: #f5f5f5;
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+    border: 3px solid #000000;
+}
+
+.colorNoir {
+    background-color: #000000;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    border: 2px solid #ffffff;
+}
+
+.logoGrizzlys{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.logoCienfuegos{
+    width: 170px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.imgLogoGrizzllys{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+.imgLogoCienfuegos{
+    width: 170px;
+    height: 100px;
+    object-fit: scale-down;
+    filter: invert(1);
+}
+body.light-mode .imgLogoCienfuegos{
+
+}
+
+.colorsProjectGrizzlys {
+    display: flex;
+    gap: 30px;
+    margin-top: 10px;
+}
+
+.colorsProjectCienfuegos {
+    display: flex;
+    gap: 30px;
+    margin-top: 10px;
+}
+
+.projectContentGrizzlys{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 280px;
+    margin-top: 55px;
+}
+
+.flecheCatalattitude {
+    margin-right: 78px;
+    margin-top: 67px;
+}
+
+.imgFleche{
+    width: 135px;
+    height: 75px;
+    object-fit: contain;
+    transform: rotateZ(229deg);
+    color : #ffffff;
+    filter: invert(1);
+}
+
+.imgFlecheCatalattitude{
+    width: 135px;
+    height: 75px;
+    object-fit: contain;
+    transform: rotateZ(229deg);
+    color : #ffffff;
+    filter: invert(1);
+}
+
+.TextLogoCatalatitude {
+    font-family: 'holiday', cursive;
+    letter-spacing: 4px;
+    font-size: 34px;
+    margin-top: 10px;
+}
+
+.TextLogo {
+    font-family: 'holiday', cursive;
+    letter-spacing: 4px;
+    font-size: 34px;
+    margin-top: 10px;
+}
+.light-mode .imgFleche {
+    filter: invert(0);
+}
+
+.light-mode .imgFlecheCatalattitude {
+    filter: invert(0);
+}
+
+.light-mode .grandeFleche{
+    filter: invert(0);
+}
+
+.grandeFleche {
+    filter: invert(1);
+    width: 8vw; /* Image responsive */
+    margin-left: 30vw;
+    transform: translateY(8vw) rotate(304deg) scale(1.6);
+}
+
+.projectGalleryGrizzlys{
+    display: flex;
+    gap: 40px;
+    margin-top: 60px;
+    margin-bottom: 100px;
+    justify-content: space-between;
+    margin-left: 100px;
+}
+
+.projectGalleryCatalattitude{
+    display: flex;
+    gap: 40px;
+    justify-content: space-between;
+    margin: 60px 100px 100px;
+}
+
+.NoCharte{
+    font-family: 'Oswald', sans-serif;
+    font-size: 14px;
+    transform: translateX(-28px);
+}
+
+.appareil-wrapper {
+    position: relative; /* Référence pour le carrousel */
+    display: inline-block;
+}
+
+.appareilPhoto {
+    width: 515px;
+    height: 670px;
+    object-fit: cover;
+    display: block;
+    object-position: bottom;
+}
+
+
+.textUnderPhone {
+    font-family: 'Oswald', sans-serif;
+    font-size: 18px;
+    margin-top: 15px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px ;
+    width: 413px;
+}
+
+.tel {
+    position: absolute;
+    z-index: 1;
+    pointer-events: none;
+}
+.video1 {
+    position: relative;
+    width: 256px;
+    height: 549px;
+    left: 77px;
+    object-fit: cover;
+    border-radius: 42px;
+}
+
+.video2 {
+    position: relative;
+    width: 264px;
+    height: 547px;
+    left: 75px;
+    border-radius: 42px;
+    object-fit: cover;
+}
+
+.carousel {
+    position: absolute;
+    top: 296px;
+    left: 240px;
+    transform: translateX(-50%) rotateZ(359deg);
+    max-width: 151px;
+    overflow: hidden;
+    display: flex;
+    padding: 0;
+}
+
+.carousel:hover .group {
+    animation-play-state: paused;
+}
+
+.carousel:hover .groupCatalan {
+    animation-play-state: paused;
+}
+
+.card,
+.imgCard {
+    flex: 0 0 auto;
+    width: 151px;
+    height: 209px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+.group {
+    display: flex;
+    gap: 0; /* On colle les images */
+    animation: scrolling 6s steps(4) infinite; /* 3 images, 2s par image */
+}
+
+.groupCatalan {
+    display: flex;
+    gap: 0; /* On colle les images */
+    animation: scrolling 10s steps(5) infinite; /* 3 images, 2s par image */
+}
+
+@keyframes scrolling {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+
+.iWanna{
+    width: 445px;
+    height: 700px;
+    object-fit: cover;
+    position: relative;
+}
+
+.videoInsta {
+    display: flex;
+    margin-left: 200px;
+    position: relative; /* IMPORTANT : pour que le bouton se positionne par rapport à la vidéo */
+    width: 445px;
+}
+
+.hautInsta {
+    width: 445px;
+    transform: translateY(3px);
+    height: 42px;
+    object-fit: cover;
+}
+
+
+
+
+.imgFlyerGrizzlys1 {
+    width: 400px;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    object-position: top;
+    transform: rotate(-13.5deg) translateX(51px) translateY(54px);
+    position: relative;
+    z-index: 1;
+
+}
+
+.imgFlyerCatalan1 {
+    width: 400px;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    object-position: top;
+    transform: rotate(351deg) translateX(-44px) translateY(27px);
+    position: relative;
+    z-index: 1;
+
+}
+
+.imgFlyerCatalan3 {
+    width: 400px;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    object-position: top;
+    position: relative;
+    z-index: 2;
+    transform: rotate(9deg) translateX(50px) translateY(27px);
+}
+
+.imgFlyerGrizzlys2 {
+    width: 400px;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    object-position: top;
+    position: relative;
+    z-index: 2;
+}
+
+.imgFlyerGrizzlys3 {
+    width: 400px;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    object-position: top;
+    transform: rotate(13.5deg) translateX(-51px) translateY(54px);
+    position: relative;
+    z-index: 3;
+}
+
+.flyers{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 100px;
+    padding-top: 50px;
+}
+body.light-mode .flyers img {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.35);
+}
+
+body.light-mode .imgLogoCienfuegos{
+    filter: invert(0);
+}
+
+.textFlyerGrizzlys {
+    font-family: 'Oswald', sans-serif;
+    font-size: 18px;
+    margin-top: 15px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 500px;
+    padding-bottom: 100px;
+}
+
+.titlePublication{
+    font-family: 'holiday', sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 50px;
+}
+.imgGrid{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 100px;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.creaGrid {
+    width: 300px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+
+.divCreaGrid {
+    position: relative;
+    width: 300px;
+    height: 375px;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.divCreaGrid:hover {
+    transform: scale(1.05); /* léger zoom au hover */
+}
+
+.textHover {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 10px 20px;
+    border-radius: 5px;
+    opacity: 0; /* invisible par défaut */
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    width: 240px;
+    text-align: center;
+}
+
+.divCreaGrid:hover .textHover {
+    opacity: 1; /* visible au hover */
+}
+
+
+
+.creaGrid:hover{
+    opacity: 40%;
+}
+
+
+.divCreaGrid:hover{
+    background: linear-gradient(180deg,rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.84) 75%,rgba(0,0,0,0.75) 90% , rgba(0, 0, 0, 0.34) 100%);
+    border-radius: 8px;
+}
+
+.logoEcritGrizzlys {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    padding-top: 50px;
+}
+
+.hidden {
+    display: none;
+    pointer-events: none;
+}
+
+/* Conteneur du bouton son */
+.boutonSon {
+    background-color: rgba(0, 0, 0, 0.5); /* gris foncé semi-transparent */
+    border-radius: 50%;   /* cercle */
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s;
+    position: absolute;
+    bottom : 10px;
+    right : 10px;
+}
+
+.boutonSon:hover {
+    background-color: rgba(0,0,0,0.7);
+    transform: scale(1.1);
+}
+
+.boutonSon svg {
+    color: white; /* pour que le SVG soit visible sur fond sombre */
+}
+
+.textReel{
+    max-width: 302px;
+    padding-top: 150px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 18px;
+}
+
+.containerReel{
+    display: flex;
+    gap: 12vw
+}
+
+.containerTrophy{
+    display: flex;
+    gap: 20px;
+    margin-left: 100px;
+
+}
+.textTrophy{
+    font-family: 'Oswald', sans-serif;
+    font-size: 18px;
+    width: 262px;
+}
+.trophy{
+    display: flex;
+}
+
+.trophy .imgFleche {
+    transform: rotate(243deg) translateX(43px) translateY(17px) scale(1.5);
+}
+
+.imgTrophy{
+    width: 120px;
+    height: auto;
+    object-fit: cover;
+    transform: rotate(347deg) translateX(26px) translateY(-23px);
+}
+
+.containerTextTrophy{
+    display: flex;
+    flex-direction: column;
+    gap: 250px
+}
+
+.imageprincipalBages {
+    border-radius: 40px;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 0;
+}
+
+.colorVert1{
+    background-color: #81b584;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+}
+
+.colorVert2{
+    background-color: #63926b;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+}
+
+.colorVert3{
+    background-color: #364c32;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+}
+
+.imgLogoBages{
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+
+
+.pannelColor {
+    display: flex;
+    gap: 30px;
+    margin-top: 10px;
+}
+
+.colorsProjectCtalan{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 10px;
+}
+
+.colorJaune1{
+    background-color: #f2f0d3;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+}
+
+.colorRouge1{
+    background-color: #a91f32;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+}
+.colorRouge2{
+    background-color: #3d1114;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+}
+.colorRouge3{
+    background-color: #bc4b26;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+}
+.colorJaune2{
+    background-color: #fecf0e;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+}
+.colorOrange{
+    background-color: #d5bf86;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+}
+
+.colorOrange1{
+    background-color: #8c7660;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+}
+
+/* Conteneur principal */
+.mainVideoWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 40px auto 100px;
+    padding: 0 20px;
+}
+
+/* Conteneur de la vidéo format Portrait */
+.fullVideoContainer {
+    width: 350px; /* Largeur fixe pour garder le format portrait */
+    max-width: 90%; /* S'adapte sur petit écran */
+    aspect-ratio: 9 / 16; /* Force le format vertical */
+    background-color: #000;
+    border-radius: 40px;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+    border: 8px solid #1a1a1a; /* Effet bordure de téléphone optionnel */
+}
+
+.fullVideoContainer video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.videoDetailSection {
+    margin-top: 40px;
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    max-width: 600px;
+}
+
+.detailLine {
+    width: 50px;
+    height: 4px;
+    background-color: #25847d;
+    margin: 0 auto 25px;
+    border-radius: 2px;
+}
+
+.detailLineCienfuegos {
+    width: 50px;
+    height: 4px;
+    background-color: #ff731b;
+    margin: 0 auto 25px;
+    border-radius: 2px;
+}
+
+
+
+.detailTitle {
+    font-size: 28px;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.detailText {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #a1a1a1;
+    font-weight: 300;
+}
+
+/* Ajustement pour les écrans larges : Vidéo à gauche, Texte à droite */
+@media (min-width: 1024px) {
+    .mainVideoWrapper {
+        flex-direction: row;
+        gap: 80px;
+        align-items: center;
+        padding-top: 50px;
+    }
+
+    .videoDetailSection {
+        text-align: left;
+        margin-top: 0;
+    }
+
+    .detailLine {
+        margin: 0 0 25px 0;
+    }
+
+    .detailLineCienfuegos {
+        margin: 0 0 25px 0;
+    }
+
+}
+
+/* Conteneur principal en 358x445 comme demandé */
+.palette-container {
+    width: 358px;
+    height: 225px;
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    background: transparent;
+    font-family: 'holiday', cursive;
+    align-items: center;
+}
+
+.main-logo {
+    width: auto;
+    height: 93px;
+
+}
+
+.circles-group {
+    margin-left: 7vw;
+}
+.logo-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+}
+
+.arrow {
+    transform: rotate(106deg) rotateY(174deg) translateX(53px);
+    filter: invert(1);
+    height: 93px;
+    width: 93px;
+
+}
+
+body.light-mode .arrow {
+    filter: invert(0);
+}
+
+
+
+/* Alignement des ronds */
+.circles-group {
+    display: flex;
+    gap: 15px;
+}
+
+.circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+/* Couleurs des ronds */
+.red    { background-color: #d10a11; }
+.orange { background-color: #ff7b24; }
+.yellow { background-color: #f7e810; }
+.green  { background-color: #84d35b; }
+
+
+
+.logo-wrapper {
+    display: flex;
+}
+
+
+
+
+.grostitre{
+    font-family: 'Oswald', sans-serif;
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 25px;
+    margin-top: 150px;
+    color: #a91f32;
+}
+
+.instagram-media {
+
+}
+
+.titreInsta {
+    font-family: 'holiday', cursive;
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 50px;
+    font-weight: lighter;
+}
+
+.imgCarteCadeauCatalattitude{
+    width: 400px;
+    height: auto;
+    object-fit: cover;
+    object-position: top;
+}
+
+.carteCadeauCatalattitude{
+    display: flex;
+    justify-content: center;
+    padding-top: 250px;
+    gap : 150px;
+}
+
+.texteCadeau{
+    font-family: 'Oswald', sans-serif;
+    font-size: 18px;
+    margin-top: 50px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 550px;
+}
+
+.flecheCadeau {
+    filter: invert(1);
+    transform: rotateZ(260deg) scale(0.5) translateX(71px);
+
+}
+
+BODY.light-mode .flecheCadeau {
+    filter: invert(0);
+}
+
+.rectoverso {
+    display: flex;
+    gap: 100px;
+    justify-content: center;
+    font-family: 'Oswald', sans-serif;
+}
+
+.calandriergrid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 815px;
+    gap: 50px;
+    justify-content: center;
+}
+
+.ordietgridCatalattitude {
+    display: flex;
+    margin-top: 150px;
+}
+
+@media (min-width: 1700px) {
+    .ordietgridCatalattitude {
+        gap: 7vw;
+    }
+}
+
+.imageCalendrier {
+    width: 300px;
+    height: auto;
+    object-fit: cover;
+}
+
+.imageOrdiCatalattitude {
+    margin-top: 50px;
+
+}
+.texteOrdi {
+    width: 500px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 18px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.texteOrdi2 {
+    width: 500px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 18px;
+    text-align: center;
+    margin-top: 150px;
+}
+
+.ordi {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.texteOrdi, .texteOrdi2 {
+    width: 500px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 18px;
+    text-align: center;
+}
+
+.texteOrdi2 { margin-top: 150px; }
+.texteOrdi { margin-top: 277px; }
+
+.imageOrdiCatalattitude {
+    margin-top: 200px;
+    width: 600px;
+    display: block;
+    position: absolute;
+}
+
+/* Nouveau code pour l'intégration dans l'écran */
+/*.ecran-wrapper {*/
+/*    position: relative; !* Permet de positionner l'image du jeu par rapport à l'ordi *!*/
+/*}*/
+
+.imageAprendreoualaisser {
+    position: relative;
+    top: 38px;
+    width: 551px;
+    height: 309px;
+    z-index: 10;
+}
+
+.descriptionCalendrier {
+    font-family: 'Oswald', sans-serif;
+    font-size: 18px;
+    text-align: center;
+    max-width: 300px;
+    width: 300px;
+    margin: auto 0;
+}
+
+.detailLineCatalan {
+    width: 50px;
+    height: 4px;
+    background-color: #a91f32;
+    margin: 0 auto 25px;
+    border-radius: 2px;
+}
+
+.fullVideoContainerCatan{
+    max-width: 90%;
+    aspect-ratio: 9 / 16;
+
+
+    width: 350px;
+    object-fit: cover;
+}
+
+.imageBoxAperoCatalan {
+    width: 350px;
+    object-fit: cover;
+    margin-top: 60px;
+}
+
+@media (min-width: 1024px) {
+    .detailLineCatalan {
+        margin: 0 0 25px 0;
+    }
+}
+
+.titreMerch {
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    margin-bottom: 50px;
+}
+
+.gridMerch{
+    display: flex;
+    margin: 0 auto;
+    width: 1000px;
+    gap: 116px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.imageMerch{
+    height: 250px;
+    width: auto
+}
+
+.divMerch {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.texteMerch {
+    font-family: 'Oswald', sans-serif;
+    margin-top: 5px;
+}
