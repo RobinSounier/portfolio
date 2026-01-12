@@ -542,9 +542,7 @@ body.light-mode .footerLink:hover {
     transition: transform 0.5s ease-in-out;
 }
 
-.PagePres {
-    height: 82vh;
-}
+
 
 .presentationText {
     max-width: 600px;
@@ -647,7 +645,7 @@ body.light-mode .footerLink:hover {
 /* --- GRILLE DE CONTACT --- */
 .contactGrid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     gap: 30px;
 }
 
