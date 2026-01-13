@@ -1,3 +1,4 @@
+let description = "personne";
 Projet = [
     {
         id: 1,
@@ -40,6 +41,20 @@ Projet = [
         description: "Projet scolaire",
         imageUrl: "./img/lycee/imagePrincipal.jpg",
         link: "./projects/lycee.html"
+    },
+    {
+        id: 6,
+        title: "CASA BICICLETA",
+        description: "Projet scolaire",
+        imageUrl: "./img/lycee/imagePrincipal.jpg",
+        link: "./projects/casabicicleta.html"
+    },
+    {
+        id: 7,
+        title: "ESCAPIX",
+        description: "Projet scolaire",
+        imageUrl: "./img/lycee/imagePrincipal.jpg",
+        link: "./projects/escapix.html"
     }
 
 
