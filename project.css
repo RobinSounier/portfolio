@@ -195,6 +195,11 @@ h1 {
     object-fit: cover;
 }
 
+.logoGVincenzo{
+    height: 100px;
+    object-fit: cover;
+}
+
 .logoCienfuegos{
     width: 170px;
     height: 100px;
@@ -212,8 +217,15 @@ h1 {
     object-fit: scale-down;
     filter: invert(1);
 }
-body.light-mode .imgLogoCienfuegos{
+.imgLogoVincenzo{
+    width: 170px;
+    height: 100px;
+    object-fit: scale-down;
+    filter: invert(1);
+}
 
+body.light-mode .imgLogoVincenzo{
+    filter: invert(0);
 }
 
 .colorsProjectGrizzlys {
@@ -532,7 +544,6 @@ body.light-mode .imgLogoCienfuegos{
 
 .creaGrid {
     width: 300px;
-    height: 480px;
     object-fit: cover;
     border-radius: 8px;
 }
@@ -758,6 +769,15 @@ body.light-mode .imgLogoCienfuegos{
 }
 
 /* Conteneur principal */
+.mainVideoWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px;
+    margin:  0 auto 100px;
+    padding: 0 20px;
+}
 .mainVideoWrapper {
     display: flex;
     flex-direction: column;
@@ -1033,6 +1053,11 @@ BODY.light-mode .flecheCadeau {
     display: flex;
     flex-direction: column;
     align-items: center;
+}.ordiVincenzo {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     height: 75vh;
 }
 
 .texteOrdi, .texteOrdi2 {
@@ -1063,6 +1088,14 @@ BODY.light-mode .flecheCadeau {
     width: 551px;
     height: 309px;
     z-index: 10;
+}
+
+.imageOrdiVincenzo {
+     position: relative;
+     top: 225px;
+     width: 551px;
+     height: 309px;
+     z-index: 10;
 }
 
 .descriptionCalendrier {
@@ -1134,5 +1167,126 @@ BODY.light-mode .flecheCadeau {
     margin-top: 5px;
 }
 
+.textOrdiAcceuil {
+
+}
+
+.petiteFlecheGauche {
+    transform: scale(0.5) translate(-162px, -158px) rotate(223deg);
+}
+
+.conatainerVincenzoOrdi {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.FlecheTextGauche {
+    display: flex;
+    align-items: center;
+}
+
+.FlecheTextDroite {
+    display: flex;
+    align-items: center;
+}
+
+.petiteFlecheDroite {
+    transform: scale(0.5) rotate(122deg) rotateY(180deg) translate(206px, -49px);
+}
+.textOrdiClick {
+    width: 140px;
+}
 
 
+.colorBleu1 {
+    background-color: #4696c2;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+}
+
+.colorBleu2{
+    background-color: #007ebd;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+}
+
+.colorBleu3 {
+    background-color: #052a3d;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+}
+
+.colorJaune3 {
+    background-color: #e6da3c;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+}
+.colorRouge3 {
+    background-color: #cc1d30;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+}
+
+.containerCasa {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+}
+.roue {
+    width: 235px;
+}
+
+.descriptionRoue {
+    width: 454px;
+    text-align: center;
+}
+
+.divimgRoueFleche{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10px;
+}
+
+.FlecheRoue {
+    transform: scale(0.5) rotate(229deg) translate(-62px, -36px);
+    filter: invert(1);
+}
+
+.textRoue {
+    font-family: 'holiday', cursive;
+    font-size: 22px;
+}
+
+.textRoueFleche {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.colorTruquoise1 {
+    background-color: #1c7a70;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+}
+
+.colorTruquoise2 {
+    background-color: #20a094;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+}
+.colorTruquoise3 {
+    background-color: #1abcad;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+}

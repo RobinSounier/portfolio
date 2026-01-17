@@ -3,57 +3,57 @@ Projet = [
     {
         id: 1,
         title: "GRIZZLYS CATALANS",
-        description: "Stage",
+        description: "Communication association sportive professionnelle",
         imageUrl: "./img/Capture%20d’écran%202025-10-30%20223154.png",
         link: "./projects/grizzlys.html"
     },
     {
         id: 2,
         title: "UNION BASKET DES ASPRES",
-        description: "Engagement étudiant",
-        imageUrl: "./img/bages/logo.webp",
+        description: "Communication association sportive",
+        imageUrl: "./img/bages/projet.JPG",
         link: "./projects/basket.html"
     },
     {
         id: 4,
         title: "CATAL'ATTITUDE",
-        description: "Stage",
-        imageUrl: "./img/Catal’attitude/logoPage.webp",
+        description: "Communication commerciale",
+        imageUrl: "./img/Catal’attitude/projet.jpeg",
         link: "./projects/catalattitude.html"
     },
     {
         id: 5,
         title: "FESTIVAL CIENFUEGOS",
-        description: "Projet scolaire",
-        imageUrl: "./img/cienfuegos/image358.webp",
+        description: "Communication évènementielle",
+        imageUrl: "./img/cienfuegos/imagePrincipal.webp",
         link: "./projects/cienfuegos.html"
     },
     {
         id: 3,
         title: "RESTAURANT VINCENZO",
-        description: "Projet scolaire",
-        imageUrl: "./img/lycee/imagePrincipal.jpg",
+        description: "Communication commerciale",
+        imageUrl: "./img/vincenzo/projet.jpeg",
         link: "./projects/vincenzo.html"
     },
     {
         id: 3,
         title: "LYCEE ARISTIDE MAILLOL",
-        description: "Projet scolaire",
-        imageUrl: "./img/lycee/imagePrincipal.jpg",
+        description: "Communication publique",
+        imageUrl: "./img/lycee/projet.png",
         link: "./projects/lycee.html"
     },
     {
         id: 6,
         title: "CASA BICICLETA",
-        description: "Projet scolaire",
-        imageUrl: "./img/lycee/imagePrincipal.jpg",
+        description: "Communication associative",
+        imageUrl: "./img/casbicicleta/projet.png",
         link: "./projects/casabicicleta.html"
     },
     {
         id: 7,
         title: "ESCAPIX",
-        description: "Projet scolaire",
-        imageUrl: "./img/lycee/imagePrincipal.jpg",
+        description: "Communication commerciale",
+        imageUrl: "./img/escapix/imagePrincipal.png",
         link: "./projects/escapix.html"
     }
 
