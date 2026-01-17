@@ -620,7 +620,7 @@ body.light-mode .footerLink:hover {
     font-weight: 100;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    margin-top: 60px;
+    margin-top: 140px;
 }
 
 .imageProjetImg{
@@ -729,4 +729,155 @@ body.light-mode .contactValue {
     .contactMainContainer { padding: 0 20px; }
     .contactGrid { grid-template-columns: 1fr; }
     .contactCard { padding: 40px 20px; }
+}
+
+
+.indispensablesCom {
+    width: 550px;
+}
+
+.bacAeroport {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.FlecheTextSurligneur {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    text-align: center;
+    justify-content: center;
+}
+
+.FlecheTextIpad {
+    display: flex;
+    align-items: center;
+}
+
+.FlecheTextBasket {
+    display: flex;
+    align-items: center;
+    transform: translateY(112px);
+}
+.FlecheTextIphone {
+    display: flex;
+    align-items: center;
+}
+.FlecheTextIphone {
+    display: flex;
+    align-items: center;
+}
+.FlecheTextAirpods {
+    display: flex;
+    align-items: center;
+}
+.FlecheTextMackbook {
+    display: flex;
+    align-items: center;
+}
+
+.textSurligneur {
+    width: 275px;
+    text-align: center;
+    transform: translate(10px,31px);
+}
+
+.petiteFlecheSurligneur {
+    transform: translate(141px, 100px) rotateY(180deg) scale(0.5);
+    filter: invert(1);
+}
+
+.petiteFlecheIpad {
+    transform: translate(106px, -50px) scale(0.7) rotate(245deg);
+    filter: invert(1);
+}
+
+body.light-mode .petiteFlecheIpad {
+    filter: invert(0);
+}
+
+.textIpad {
+    transform: translate(-20px, 10px);
+}
+
+.petiteFlecheBasket {
+    transform: translate(97px, -102px) scale(0.7) rotate(244deg);
+    filter: invert(1);
+}
+
+body.light-mode .petiteFlecheBasket {
+    filter: invert(0);
+}
+
+.textBasket {
+    transform: translate(-39px, -48px);
+}
+
+.petiteFlecheIphone {
+    transform: translate(-30px, -40px) scale(0.7) rotate(280deg) rotateX(180deg);
+    filter: invert(1);
+}
+
+body.light-mode .petiteFlecheIphone {
+    filter: invert(0);
+}
+
+.petiteFlecheAirpods {
+    transform: translate(-30px, -40px) scale(0.7) rotate(280deg) rotateX(180deg);
+    filter: invert(1);
+}
+body.light-mode .petiteFlecheAirpods {
+    filter: invert(0);
+}
+
+.petiteFlecheMacbook {
+    transform: translate(-28px, 113px) scale(0.7) rotate(307deg) rotateX(180deg);
+    filter: invert(1);
+}
+body.light-mode .petiteFlecheMacbook {
+    filter: invert(0);
+}
+
+body.light-mode .petiteFlecheSurligneur {
+    filter: invert(0);
+}
+
+.textMacbook {
+    transform: translate(50px, 64px);
+}
+
+.titreIdentitePresentation {
+    font-family: 'holiday', cursive;
+    font-size: 32px;
+    font-weight: lighter;
+    margin-top: 100px;
+    width: 681px;
+    text-wrap-style: balance;
+
+}
+
+.text{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+
+.avionPresentation {
+    width: 90vw;
+    margin: auto 0;
+    filter: invert(1);
+}
+
+
+.avionDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+body.light-mode .avionPresentation {
+    filter: invert(0);
 }
