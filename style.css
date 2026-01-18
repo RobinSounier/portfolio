@@ -66,8 +66,8 @@ body {
 
 
 h1 {
-    text-align: center;
     margin-top: 50px;
+    text-align: center;
 }
 
 @keyframes fadeInUp {
@@ -555,6 +555,7 @@ body.light-mode .footerLink:hover {
     /* ajuste selon ton design */
     margin: 30px auto;
     overflow: hidden;
+    transform: scale(1.5);
 }
 
 .carousel-track-container {
@@ -621,6 +622,7 @@ body.light-mode .footerLink:hover {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     margin-top: 140px;
+    text-align: center;
 }
 
 .imageProjetImg{
@@ -868,6 +870,8 @@ body.light-mode .petiteFlecheSurligneur {
     width: 90vw;
     margin: auto 0;
     filter: invert(1);
+    height: 590px;
+    object-fit: cover;
 }
 
 
@@ -880,4 +884,15 @@ body.light-mode .petiteFlecheSurligneur {
 
 body.light-mode .avionPresentation {
     filter: invert(0);
+}
+
+.h2pres {
+    color: #faa1d4;
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    margin: 10px 0;
+}
+
+.presentation {
+    font-family: 'Oswald', sans-serif;
 }

@@ -76,6 +76,7 @@ h1 {
     font-size: inherit;
     line-height: inherit;
     white-space: nowrap;
+    text-align: left;
 }
 
 .titletext {
@@ -1293,4 +1294,80 @@ body.light-mode .FlecheRoue {
     width: 100px;
     height: 100px;
     border-radius: 100%;
+}
+
+/* Style de la Modal (fond) */
+.modal {
+    display: none; /* Caché par défaut, sera mis en 'flex' par le JS */
+    position: fixed; /* Reste fixé à l'écran */
+    z-index: 99999; /* Par dessus tout, même la nav */
+    left: 0;
+    top: 44vh;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.9);
+
+    /* Centrage magique */
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.modalGrizzly {
+    display: none; /* Caché par défaut, sera mis en 'flex' par le JS */
+    position: fixed; /* Reste fixé à l'écran */
+    z-index: 99999; /* Par dessus tout, même la nav */
+    left: 0;
+    top: 80vh;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.9);
+
+    /* Centrage magique */
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    max-width: 90%;
+    max-height: 85vh; /* Évite que l'image dépasse de l'écran */
+    object-fit: contain;
+    border-radius: 10px;
+    animation: zoom 0.3s ease;
+}
+
+@keyframes zoom {
+    from {transform:scale(0.7); opacity: 0;}
+    to {transform:scale(1); opacity: 1;}
+}
+
+.close {
+    position: absolute;
+    top: 4250px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 60px;
+    font-weight: bold;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.closeGrizzly {
+    position: absolute;
+    top: 2460px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 60px;
+    font-weight: bold;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
 }
