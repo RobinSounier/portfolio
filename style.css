@@ -870,7 +870,7 @@ body.light-mode .petiteFlecheSurligneur {
     width: 90vw;
     margin: auto 0;
     filter: invert(1);
-    height: 590px;
+    height: 700px;
     object-fit: cover;
 }
 
@@ -895,4 +895,90 @@ body.light-mode .avionPresentation {
 
 .presentation {
     font-family: 'Oswald', sans-serif;
+}
+
+.passionTitle {
+    color: #faa1d4;
+    font-size: 120px;
+}
+
+.passionSubTitle {
+    font-family: 'Holiday', cursive;
+    font-size: 45px;
+    transform: translate(195px, -51px);
+}
+
+.passion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.passiontext {
+    width: 700px;
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    transform: translateY(-48px);
+}
+
+.imgFlyerPassion1 {
+    width: 223px;
+    height: 400px;
+    object-fit: cover;
+    display: block;
+    object-position: top;
+    transform: rotate(-13.5deg) translateX(51px) translateY(38px);
+    position: relative;
+    z-index: 1;
+
+}
+
+.imgFlyerPassion2 {
+    width: 223px;
+    height: 400px;
+    object-fit: cover;
+    display: block;
+    object-position: top;
+    position: relative;
+    z-index: 2;
+}
+
+.imgFlyerPassion3 {
+    width: 223px;
+    height: 400px;
+    object-fit: cover;
+    display: block;
+    object-position: top;
+    transform: rotate(13.5deg) translateX(-51px) translateY(38px);
+    position: relative;
+    z-index: 3;
+}
+
+.FlyersCapitaine {
+    display: flex;
+    justify-content: center;
+    gap: 70px;
+}
+
+.divCapitaine {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.capitaine {
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px;
+}
+
+.capitaineText {
+    width: 350px;
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    margin-top: 30px;
+    font-size: 16px;
 }
