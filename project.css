@@ -1236,7 +1236,6 @@ BODY.light-mode .flecheCadeau {
 .containerCasa {
     display: flex;
     justify-content: space-evenly;
-    align-items: center;
     flex-direction: row;
     margin-top: 50px;
 }
@@ -1370,4 +1369,81 @@ body.light-mode .FlecheRoue {
 .close:focus {
     color: #bbb;
     text-decoration: none;
+}
+
+.imageCommuniquer {
+    width: 344px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 5px solid #191a1c;
+}
+
+.textCommuniquer {
+    font-family: "holiday", sans-serif;
+    text-align: center;
+    font-size: 20px;
+}
+
+.motmele {
+    width: 342px;
+    height: auto;
+    object-fit: cover;
+    margin-top: 100px;
+}
+
+.divMotMele {
+    display: flex;
+    align-items: center;
+    /* gap: 20px; */
+    gap: 236px;
+    justify-content: center;
+}
+
+.descriptionMotMele {
+    width: 454px;
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    margin-top: 10px;
+}
+
+.motMeleDiv {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.lienStratégie {
+    background-color: #c51a2e;
+    padding: 30px 60px;
+    border-radius: 35px;
+    font-size: 20px;
+    font-family: 'Oswald', sans-serif;
+    color: #f1f1f1;
+}
+
+.buttonStratégie {
+    display: flex;
+    justify-content: center;
+    margin-top: 125px;
+}
+
+.logo-light {
+    display: none;
+}
+
+.logo-dark {
+    display: block;
+}
+
+/* --- État quand body.light-mode est actif --- */
+/* On inverse : on montre le logo clair et on cache le sombre */
+body.light-mode .logo-light {
+    display: block;
+}
+
+body.light-mode .logo-dark {
+    display: none;
 }
