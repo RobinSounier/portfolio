@@ -64,14 +64,14 @@ Projet = [
 ]
 
 imageListe = [
-    "./img/animationSouris/1.webp",
-    "./img/animationSouris/2.webp",
-    "./img/animationSouris/3.webp",
-    "./img/animationSouris/4.webp",
-    "./img/animationSouris/5.webp",
-    "./img/animationSouris/6.webp",
-    "./img/animationSouris/7.webp",
-    "./img/animationSouris/8.webp",
-    "./img/animationSouris/9.webp",
-    "./img/animationSouris/10.webp"
+    "./img/animationSouris/1.avif",
+    "./img/animationSouris/2.avif",
+    "./img/animationSouris/3.avif",
+    "./img/animationSouris/4.avif",
+    "./img/animationSouris/5.avif",
+    "./img/animationSouris/6.avif",
+    "./img/animationSouris/7.avif",
+    "./img/animationSouris/8.avif",
+    "./img/animationSouris/9.avif",
+    "./img/animationSouris/10.avif"
 ]
