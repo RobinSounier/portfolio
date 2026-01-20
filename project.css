@@ -1295,34 +1295,34 @@ body.light-mode .FlecheRoue {
     border-radius: 100%;
 }
 
-/* Style de la Modal (fond) */
-.modal {
-    display: none; /* Caché par défaut, sera mis en 'flex' par le JS */
-    position: fixed; /* Reste fixé à l'écran */
-    z-index: 99999; /* Par dessus tout, même la nav */
-    left: 0;
-    top: 44vh;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0,0.9);
 
-    /* Centrage magique */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 99999;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.9);
+    /* Garde ces propriétés, elles s'appliqueront quand display devient flex */
     align-items: center;
     justify-content: center;
     flex-direction: column;
 }
 
-.modalGrizzly {
-    display: none; /* Caché par défaut, sera mis en 'flex' par le JS */
-    position: fixed; /* Reste fixé à l'écran */
-    z-index: 99999; /* Par dessus tout, même la nav */
-    left: 0;
-    top: 80vh;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0,0.9);
 
-    /* Centrage magique */
+
+.modalGrizzly {
+    display: none;
+    position: fixed;
+    z-index: 99999;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.9);
+    /* Garde ces propriétés, elles s'appliqueront quand display devient flex */
     align-items: center;
     justify-content: center;
     flex-direction: column;
@@ -1332,7 +1332,7 @@ body.light-mode .FlecheRoue {
     margin: auto;
     display: block;
     max-width: 90%;
-    max-height: 85vh; /* Évite que l'image dépasse de l'écran */
+    max-height: 85vh;
     object-fit: contain;
     border-radius: 10px;
     animation: zoom 0.3s ease;
@@ -1344,25 +1344,35 @@ body.light-mode .FlecheRoue {
 }
 
 .close {
-    position: absolute;
-    top: 4250px;
+    position: fixed; /* ✅ Fixed pour rester visible */
+    top: 20px; /* ✅ 20px depuis le haut de l'écran */
     right: 35px;
     color: #f1f1f1;
     font-size: 60px;
     font-weight: bold;
     cursor: pointer;
     line-height: 1;
+    z-index: 100000;
 }
 
 .closeGrizzly {
-    position: absolute;
-    top: 2460px;
+    position: fixed;
+    top: 20px;
     right: 35px;
     color: #f1f1f1;
     font-size: 60px;
     font-weight: bold;
     cursor: pointer;
     line-height: 1;
+    z-index: 100000;
+}
+
+.close:hover,
+.close:focus,
+.closeGrizzly:hover,
+.closeGrizzly:focus {
+    color: #bbb;
+    text-decoration: none;
 }
 
 .close:hover,

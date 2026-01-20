@@ -3,40 +3,45 @@ const modal = document.getElementById("myModal");
 const modalImg = document.getElementById("img01");
 const captionText = document.getElementById("caption");
 
-// Sélection de toutes les images cliquables possibles sur les deux pages
-const images = document.querySelectorAll('.flyers img, .imgGrid img, .imageprincipal img, .imageprincipalGrizlly, .imageCalendrier, .creaGrid, .imgCard');
+// Sélection de toutes les images cliquables
+const images = document.querySelectorAll('.flyers img, .imgGrid img, .imageCalendrier, .creaGrid, .imgCard, .imageCommuniquer, .motmele');
 
-// 1. Gestion de l'ouverture
+// Ouverture de la modal
 images.forEach(img => {
     img.style.cursor = "zoom-in";
     img.onclick = function(){
-        // On vérifie que la modal existe sur la page avant d'agir
         if (modal && modalImg) {
-            modal.style.display = "flex";
+            // Force tous les styles directement
+            modal.style.cssText = `
+            display: flex;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(0,0,0,0.9);
+            z-index: 99999;
+        `;
             modalImg.src = this.src;
-            if (captionText) captionText.innerHTML = this.alt;
-            //document.body.style.overflow = "hidden"; // Bloque le scroll
+            document.body.style.overflow = "hidden";
         }
     }
 });
 
-// 2. Gestion de la fermeture (Sécurisée)
+// Fermeture de la modal
 const closeModal = () => {
     if (modal) {
         modal.style.display = "none";
-        document.body.style.overflow = "auto"; // Rétablit le scroll
+        document.body.style.overflow = "auto";
     }
 };
 
-// On cherche les boutons de fermeture (standard et Grizzly)
 const closeBtn = document.querySelector(".close");
-const closeGrizzlyBtn = document.querySelector(".closeGrizzly");
-
-// On n'attribue l'événement que si le bouton est trouvé sur la page actuelle
 if (closeBtn) closeBtn.onclick = closeModal;
-if (closeGrizzlyBtn) closeGrizzlyBtn.onclick = closeModal;
 
-// Fermeture au clic sur le fond de la modal
+// Fermeture au clic sur le fond noir
 if (modal) {
     modal.onclick = function(event) {
         if (event.target === modal) {
@@ -44,3 +49,10 @@ if (modal) {
         }
     }
 }
+
+// Fermeture avec la touche Echap
+document.addEventListener('keydown', function(event) {
+    if (event.key === "Escape") {
+        closeModal();
+    }
+});

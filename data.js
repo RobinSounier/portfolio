@@ -3,14 +3,14 @@ Projet = [
     {
         id: 1,
         title: "GRIZZLYS CATALANS",
-        description: "Communication associative sportive professionnelle",
+        description: "Communication association sportive professionnelle",
         imageUrl: "./img/Capture%20d’écran%202025-10-30%20223154.png",
         link: "./projects/grizzlys.html"
     },
     {
         id: 2,
         title: "UNION BASKET DES ASPRES",
-        description: "Communication associative sportive",
+        description: "Communication association sportive",
         imageUrl: "./img/bages/projet.JPG",
         link: "./projects/basket.html"
     },
@@ -45,7 +45,7 @@ Projet = [
     {
         id: 6,
         title: "CASA BICICLETA",
-        description: "Communication associative",
+        description: "Communication association",
         imageUrl: "./img/casbicicleta/projet.png",
         link: "./projects/casabicicleta.html"
     },
