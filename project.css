@@ -1,30 +1,69 @@
+/* ===========================================
+   PROJECT.CSS - STYLES DES PAGES PROJETS
+   =========================================== */
+
+/* -------------------------------------------
+   1. IMPORTS & FONTS
+   ------------------------------------------- */
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
 
 @font-face {
-    font-family: 'holiday'; /* le nom que tu choisis pour la police */
-    src: url('./fonts/HolidayFree.otf') format('opentype'); /* chemin vers ton fichier */
-    font-weight: normal;
+    font-family: 'holiday';
     font-style: normal;
+    font-weight: normal;
+    src: url('./fonts/HolidayFree.otf') format('opentype');
 }
+
+/* -------------------------------------------
+   2. RESET & BASE
+   ------------------------------------------- */
 * {
+    -webkit-font-smoothing: inherit;
     border: 0;
     box-sizing: border-box;
-    -webkit-font-smoothing: inherit;
     margin: 0;
     outline: 0;
     padding: 0;
+}
 
-}
-img{
-    overflow-clip-margin: content-box;
+img {
     overflow: clip;
+    overflow-clip-margin: content-box;
 }
+
 h1 {
     font-size: 3rem;
-    line-height: 1.2;
     font-weight: 700;
+    line-height: 1.2;
 }
-.titleimg{
+
+/* -------------------------------------------
+   3. ANIMATIONS KEYFRAMES
+   ------------------------------------------- */
+@keyframes scrolling {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes zoom {
+    from {
+        opacity: 0;
+        transform: scale(0.7);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* -------------------------------------------
+   4. EN-TÊTE DE PROJET
+   ------------------------------------------- */
+.titleimg {
     align-items: flex-start;
     display: flex;
     flex-basis: auto;
@@ -39,53 +78,28 @@ h1 {
 }
 
 .projecttitle {
-
     margin-bottom: 20px;
 }
 
-.imageprincipal{
-    flex-flow: row;
-    flex: none;
-    place-content: center;
-    align-items: center;
-    gap: 0;
-    width: 100%;
-    height: 575px;
-    padding: 0;
-    display: flex;
-    position: relative;
-    overflow: hidden;
-    max-width: 1161px;
-    max-height: 697px;
-    margin: 0 auto;
-    border-radius: 40px;
-}
-
-.image1{
-    aspect-ratio: auto 2048 / 1365;
-    display: block;
-    width: 100%;
-    height: 100%;
-    border-radius: inherit;
-    object-position: center center;
-    object-fit: cover;
-}
-
-/* On force aussi le h1 à hériter de ces propriétés */
-.titletext h1 {
-    font-size: inherit;
-    line-height: inherit;
-    white-space: nowrap;
-    text-align: left;
+.projecttitleGrizzlys {
+    margin-bottom: 20px;
+    margin-left: 150px;
 }
 
 .titletext {
     font-family: 'Oswald', sans-serif;
-    font-size: clamp(24px, 5vw, 50px); /* Taille fluide : min 24px, idéale 5% de la largeur, max 50px */
+    font-size: clamp(24px, 5vw, 50px);
     font-weight: 500;
-    white-space: nowrap; /* Empeche le texte d'aller à la ligne */
-    overflow: hidden;    /* Sécurité : cache ce qui dépasse si l'écran est minuscule */
-    text-overflow: ellipsis; /* Ajoute "..." si vraiment l'écran est trop petit pour le mot */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.titletext h1 {
+    font-size: inherit;
+    line-height: inherit;
+    text-align: left;
+    white-space: nowrap;
 }
 
 .subtitleProject {
@@ -93,140 +107,129 @@ h1 {
     font-size: 32px;
 }
 
+/* -------------------------------------------
+   5. IMAGE PRINCIPALE
+   ------------------------------------------- */
+.imageprincipal {
+    align-items: center;
+    border-radius: 40px;
+    display: flex;
+    flex: none;
+    flex-flow: row;
+    gap: 0;
+    height: 575px;
+    margin: 0 auto;
+    max-height: 697px;
+    max-width: 1161px;
+    overflow: hidden;
+    padding: 0;
+    place-content: center;
+    position: relative;
+    width: 100%;
+}
+
+.image1 {
+    aspect-ratio: auto 2048 / 1365;
+    border-radius: inherit;
+    display: block;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    width: 100%;
+}
+
 .imageprincipalGrizlly {
     border-radius: 40px;
     display: block;
-    width: 100%;
     height: 100%;
-    object-fit: cover;       /* Ajuste l’image sans déformation */
+    object-fit: cover;
     object-position: center -120px;
+    width: 100%;
 }
 
+.imageprincipalBages {
+    border-radius: 40px;
+    display: block;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 0;
+    width: 100%;
+}
+
+/* -------------------------------------------
+   6. INFORMATIONS PROJET
+   ------------------------------------------- */
 .informationsProject {
     display: flex;
-    justify-content: space-between;
-    /* On enlève le gap fixe de 500px qui casse tout */
-    gap: 40px;
-    margin-top: 40px;
-    margin-right: 5%; /* Utilisation de % pour plus de souplesse */
-    margin-left: 150px; /* Aligné avec votre titre */
     font-family: 'Oswald', sans-serif;
+    gap: 40px;
+    justify-content: space-between;
+    margin-left: 150px;
+    margin-right: 5%;
+    margin-top: 40px;
     padding: 0 20px;
 }
 
 .informationsProjectLeft {
     display: flex;
+    flex: 0 0 200px;
     flex-direction: column;
     gap: 20px;
-    flex: 0 0 200px; /* Largeur fixe de 200px pour la colonne de gauche */
-    margin-left: 0; /* On gère la marge sur le parent */
+    margin-left: 0;
 }
 
 .informationsProjectRight {
-    flex: 1; /* Prend tout l'espace restant */
-    max-width: 700px; /* Empêche le texte d'être trop long sur très grand écran */
-}
-
-/* LA MAGIE DU RESPONSIVE : Quand l'écran est trop petit */
-@media (max-width: 1100px) {
-    .informationsProject {
-        flex-direction: column; /* On empile les éléments verticalement */
-        margin-left: 50px;
-        margin-right: 50px;
-        gap: 40px;
-    }
-
-    .informationsProjectLeft {
-        flex-direction: row; /* Met Année, Localisation etc sur une ligne sur tablette */
-        flex-wrap: wrap;
-        justify-content: space-between;
-        width: 100%;
-    }
-}
-
-@media (max-width: 600px) {
-    .informationsProject {
-        margin-left: 20px;
-        margin-right: 20px;
-    }
-
-    .informationsProjectLeft {
-        flex-direction: column; /* Repasse en colonne sur téléphone */
-    }
-}
-
-
-.projecttitleGrizzlys {
-    margin-bottom: 20px;
-    margin-left: 150px;
+    flex: 1;
+    max-width: 700px;
 }
 
 .infoMiniTitle {
     font-size: 25px;
 }
 
-
-
-.colorOrangeGrise{
-    background-color: #d5bd8f;
-    width: 100px;
-    height: 100px;
-    border-radius: 100%;
+/* -------------------------------------------
+   7. IDENTITÉ VISUELLE - TITRES
+   ------------------------------------------- */
+.titreIdentite {
+    font-family: 'holiday', cursive;
+    font-size: 32px;
+    font-weight: lighter;
+    margin-top: 100px;
 }
 
-.colorBlanc{
-    background-color: #f5f5f5;
-    height: 100px;
-    width: 100px;
-    border-radius: 100%;
-    border: 3px solid #000000;
+.titreInsta {
+    font-family: 'holiday', cursive;
+    font-size: 32px;
+    font-weight: lighter;
+    margin-bottom: 50px;
+    text-align: center;
 }
 
-.colorNoir {
-    background-color: #000000;
-    width: 100px;
-    height: 100px;
-    border-radius: 100%;
-    border: 2px solid #ffffff;
+.grostitre {
+    color: #a91f32;
+    font-family: 'Oswald', sans-serif;
+    font-size: 50px;
+    margin-top: 150px;
+    text-align: center;
 }
 
-.logoGrizzlys{
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
+.titlePublication {
+    font-family: 'holiday', sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    text-align: center;
 }
 
-.logoGVincenzo{
-    height: 100px;
-    object-fit: cover;
-}
-
-.logoCienfuegos{
-    width: 170px;
-    height: 100px;
-    object-fit: cover;
-}
-
-.imgLogoGrizzllys{
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-}
-.imgLogoCienfuegos{
-    width: 170px;
-    height: 100px;
-    object-fit: scale-down;
-    filter: invert(1);
-}
-.imgLogoVincenzo{
-    width: 170px;
-    height: 100px;
-    object-fit: scale-down;
-    filter: invert(1);
-}
-
-body.light-mode .imgLogoVincenzo{
-    filter: invert(0);
+/* -------------------------------------------
+   8. LOGOS ET COULEURS
+   ------------------------------------------- */
+.projectContentGrizzlys {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 280px;
+    margin-top: 45px;
 }
 
 .colorsProjectGrizzlys {
@@ -241,11 +244,211 @@ body.light-mode .imgLogoVincenzo{
     margin-top: 10px;
 }
 
-.projectContentGrizzlys{
+.colorsProjectCtalan {
     display: flex;
-    justify-content: flex-end;
-    margin-right: 280px;
-    margin-top: 45px;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 10px;
+}
+
+.pannelColor {
+    display: flex;
+    gap: 30px;
+    margin-top: 10px;
+}
+
+.logoGrizzlys {
+    height: 100px;
+    object-fit: cover;
+    width: 100px;
+}
+
+.logoGVincenzo {
+    height: 100px;
+    object-fit: cover;
+}
+
+.logoCienfuegos {
+    height: 100px;
+    object-fit: cover;
+    width: 170px;
+}
+
+.imgLogoGrizzllys {
+    height: 100px;
+    object-fit: cover;
+    width: 100px;
+}
+
+.imgLogoBages {
+    height: 100px;
+    object-fit: contain;
+    width: 100px;
+}
+
+.imgLogoCienfuegos {
+    filter: invert(1);
+    height: 100px;
+    object-fit: scale-down;
+    width: 170px;
+}
+
+.imgLogoVincenzo {
+    filter: invert(1);
+    height: 100px;
+    object-fit: scale-down;
+    width: 170px;
+}
+
+/* -------------------------------------------
+   9. COULEURS (CERCLES)
+   ------------------------------------------- */
+.colorOrangeGrise {
+    background-color: #d5bd8f;
+    border-radius: 100%;
+    height: 100px;
+    width: 100px;
+}
+
+.colorBlanc {
+    background-color: #f5f5f5;
+    border: 3px solid #000000;
+    border-radius: 100%;
+    height: 100px;
+    width: 100px;
+}
+
+.colorNoir {
+    background-color: #000000;
+    border: 2px solid #ffffff;
+    border-radius: 100%;
+    height: 100px;
+    width: 100px;
+}
+
+.colorVert1 {
+    background-color: #81b584;
+    border-radius: 100%;
+    height: 100px;
+    width: 100px;
+}
+
+.colorVert2 {
+    background-color: #63926b;
+    border-radius: 100%;
+    height: 100px;
+    width: 100px;
+}
+
+.colorVert3 {
+    background-color: #364c32;
+    border-radius: 100%;
+    height: 100px;
+    width: 100px;
+}
+
+.colorJaune1 {
+    background-color: #f2f0d3;
+    border-radius: 100%;
+    height: 100px;
+    width: 100px;
+}
+
+.colorJaune2 {
+    background-color: #fecf0e;
+    border-radius: 100%;
+    height: 100px;
+    width: 100px;
+}
+
+.colorJaune3 {
+    background-color: #e6da3c;
+    border-radius: 100%;
+    height: 100px;
+    width: 100px;
+}
+
+.colorRouge1 {
+    background-color: #a91f32;
+    border-radius: 100%;
+    height: 100px;
+    width: 100px;
+}
+
+.colorRouge2 {
+    background-color: #3d1114;
+    border-radius: 100%;
+    height: 100px;
+    width: 100px;
+}
+
+.colorRouge3 {
+    background-color: #bc4b26;
+    border-radius: 100%;
+    height: 100px;
+    width: 100px;
+}
+
+.colorOrange {
+    background-color: #d5bf86;
+    border-radius: 100%;
+    height: 100px;
+    width: 100px;
+}
+
+.colorOrange1 {
+    background-color: #8c7660;
+    border-radius: 100%;
+    height: 100px;
+    width: 100px;
+}
+
+.colorBleu1 {
+    background-color: #4696c2;
+    border-radius: 100%;
+    height: 100px;
+    width: 100px;
+}
+
+.colorBleu2 {
+    background-color: #007ebd;
+    border-radius: 100%;
+    height: 100px;
+    width: 100px;
+}
+
+.colorBleu3 {
+    background-color: #052a3d;
+    border-radius: 100%;
+    height: 100px;
+    width: 100px;
+}
+
+.colorTruquoise1 {
+    background-color: #1c7a70;
+    border-radius: 100%;
+    height: 100px;
+    width: 100px;
+}
+
+.colorTruquoise2 {
+    background-color: #20a094;
+    border-radius: 100%;
+    height: 100px;
+    width: 100px;
+}
+
+.colorTruquoise3 {
+    background-color: #1abcad;
+    border-radius: 100%;
+    height: 100px;
+    width: 100px;
+}
+
+/* -------------------------------------------
+   10. FLÈCHES DÉCORATIVES
+   ------------------------------------------- */
+.fleche {
 }
 
 .flecheCatalattitude {
@@ -253,135 +456,162 @@ body.light-mode .imgLogoVincenzo{
     margin-top: 67px;
 }
 
-.imgFleche{
-    width: 135px;
+.imgFleche {
+    color: #ffffff;
+    filter: invert(1);
     height: 75px;
     object-fit: contain;
     transform: rotateZ(229deg);
-    color : #ffffff;
-    filter: invert(1);
+    width: 135px;
 }
 
-.imgFlecheCatalattitude{
-    width: 135px;
+.imgFlecheCatalattitude {
+    color: #ffffff;
+    filter: invert(1);
     height: 75px;
     object-fit: contain;
     transform: rotateZ(229deg);
-    color : #ffffff;
-    filter: invert(1);
-}
-
-.TextLogoCatalatitude {
-    font-family: 'holiday', cursive;
-    letter-spacing: 4px;
-    font-size: 34px;
-    margin-top: 10px;
-}
-
-.TextLogo {
-    font-family: 'holiday', cursive;
-    letter-spacing: 4px;
-    font-size: 34px;
-    margin-top: 10px;
-}
-.light-mode .imgFleche {
-    filter: invert(0);
-}
-
-.light-mode .imgFlecheCatalattitude {
-    filter: invert(0);
-}
-
-.light-mode .grandeFleche{
-    filter: invert(0);
+    width: 135px;
 }
 
 .grandeFleche {
     filter: invert(1);
-    width: 8vw; /* Image responsive */
     margin-left: 30vw;
     transform: translateY(8vw) rotate(304deg) scale(1.6);
+    width: 8vw;
 }
 
-.projectGalleryGrizzlys{
+.flecheCadeau {
+    filter: invert(1);
+    transform: rotateZ(260deg) scale(0.5) translateX(71px);
+}
+
+.TextLogo {
+    font-family: 'holiday', cursive;
+    font-size: 34px;
+    letter-spacing: 4px;
+    margin-top: 10px;
+}
+
+.TextLogoCatalatitude {
+    font-family: 'holiday', cursive;
+    font-size: 34px;
+    letter-spacing: 4px;
+    margin-top: 10px;
+}
+
+.NoCharte {
+    font-family: 'Oswald', sans-serif;
+    font-size: 14px;
+    transform: translateX(-28px);
+}
+
+/* -------------------------------------------
+   11. GALERIE PROJETS
+   ------------------------------------------- */
+.projectGalleryGrizzlys {
     display: flex;
     gap: 40px;
-    margin-top: 60px;
-    margin-bottom: 100px;
     justify-content: space-between;
+    margin-bottom: 100px;
     margin-left: 100px;
+    margin-top: 60px;
 }
 
-.projectGalleryCatalattitude{
+.projectGalleryCatalattitude {
     display: flex;
     gap: 40px;
     justify-content: space-between;
     margin: 60px 100px 100px;
 }
 
-.NoCharte{
-    font-family: 'Oswald', sans-serif;
-    font-size: 14px;
-    transform: translateX(-28px);
+/* -------------------------------------------
+   12. TÉLÉPHONE / VIDÉOS
+   ------------------------------------------- */
+.iphone {
 }
-
-.appareil-wrapper {
-    position: relative; /* Référence pour le carrousel */
-    display: inline-block;
-}
-
-.appareilPhoto {
-    width: 515px;
-    height: 670px;
-    object-fit: cover;
-    display: block;
-    object-position: bottom;
-}
-
 
 .textUnderPhone {
-    font-family: 'Oswald', sans-serif;
-    font-size: 18px;
-    margin-top: 15px;
-    text-align: center;
     display: flex;
     flex-direction: column;
-    gap: 20px ;
+    font-family: 'Oswald', sans-serif;
+    font-size: 18px;
+    gap: 20px;
+    margin-top: 15px;
+    text-align: center;
     width: 413px;
 }
 
 .tel {
+    pointer-events: none;
     position: absolute;
     z-index: 1;
-    pointer-events: none;
 }
+
 .video1 {
-    position: relative;
-    width: 256px;
+    border-radius: 42px;
     height: 549px;
     left: 77px;
     object-fit: cover;
-    border-radius: 42px;
+    position: relative;
+    width: 256px;
 }
 
 .video2 {
-    position: relative;
-    width: 264px;
+    border-radius: 42px;
     height: 547px;
     left: 75px;
-    border-radius: 42px;
     object-fit: cover;
+    position: relative;
+    width: 264px;
+}
+
+.videoInsta {
+    display: flex;
+    margin-left: 200px;
+    position: relative;
+    width: 445px;
+}
+
+.iWanna {
+    height: 700px;
+    object-fit: cover;
+    position: relative;
+    width: 445px;
+}
+
+.hautInsta {
+    height: 42px;
+    object-fit: cover;
+    transform: translateY(3px);
+    width: 445px;
+}
+
+/* -------------------------------------------
+   13. APPAREIL PHOTO / CAROUSEL
+   ------------------------------------------- */
+.appareil-wrapper {
+    display: inline-block;
+    position: relative;
+}
+
+.appareilPhoto {
+    display: block;
+    height: 670px;
+    object-fit: cover;
+    object-position: bottom;
+    width: 515px;
 }
 
 .carousel {
-    position: absolute;
-    top: 296px;
+    display: flex;
     left: 240px;
-    transform: translateX(-50%) rotateZ(359deg);
     max-width: 151px;
     overflow: hidden;
-    display: flex;
     padding: 0;
+    position: absolute;
+    top: 296px;
+    transform: translateX(-50%) rotateZ(359deg);
 }
 
 .carousel:hover .group {
@@ -394,232 +624,41 @@ body.light-mode .imgLogoVincenzo{
 
 .card,
 .imgCard {
-    flex: 0 0 auto;
-    width: 151px;
-    height: 209px;
     border-radius: 8px;
+    flex: 0 0 auto;
+    height: 209px;
     object-fit: cover;
+    width: 151px;
 }
+
 .group {
+    animation: scrolling 6s steps(4) infinite;
     display: flex;
-    gap: 0; /* On colle les images */
-    animation: scrolling 6s steps(4) infinite; /* 3 images, 2s par image */
+    gap: 0;
 }
 
 .groupCatalan {
+    animation: scrolling 10s steps(5) infinite;
     display: flex;
-    gap: 0; /* On colle les images */
-    animation: scrolling 10s steps(5) infinite; /* 3 images, 2s par image */
+    gap: 0;
 }
 
-@keyframes scrolling {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-100%);
-    }
-}
-
-
-.iWanna{
-    width: 445px;
-    height: 700px;
-    object-fit: cover;
-    position: relative;
-}
-
-.videoInsta {
-    display: flex;
-    margin-left: 200px;
-    position: relative; /* IMPORTANT : pour que le bouton se positionne par rapport à la vidéo */
-    width: 445px;
-}
-
-.hautInsta {
-    width: 445px;
-    transform: translateY(3px);
-    height: 42px;
-    object-fit: cover;
-}
-
-
-
-
-.imgFlyerGrizzlys1 {
-    width: 400px;
-    height: auto;
-    object-fit: cover;
-    display: block;
-    object-position: top;
-    transform: rotate(-13.5deg) translateX(51px) translateY(54px);
-    position: relative;
-    z-index: 1;
-
-}
-
-.imgFlyerCatalan1 {
-    width: 400px;
-    height: auto;
-    object-fit: cover;
-    display: block;
-    object-position: top;
-    transform: rotate(351deg) translateX(-44px) translateY(27px);
-    position: relative;
-    z-index: 1;
-
-}
-
-.imgFlyerCatalan3 {
-    width: 400px;
-    height: auto;
-    object-fit: cover;
-    display: block;
-    object-position: top;
-    position: relative;
-    z-index: 2;
-    transform: rotate(9deg) translateX(50px) translateY(27px);
-}
-
-.imgFlyerGrizzlys2 {
-    width: 400px;
-    height: auto;
-    object-fit: cover;
-    display: block;
-    object-position: top;
-    position: relative;
-    z-index: 2;
-}
-
-.imgFlyerGrizzlys3 {
-    width: 400px;
-    height: auto;
-    object-fit: cover;
-    display: block;
-    object-position: top;
-    transform: rotate(13.5deg) translateX(-51px) translateY(54px);
-    position: relative;
-    z-index: 3;
-}
-
-.flyers{
-    display: flex;
-    justify-content: center;
-    padding-bottom: 100px;
-    padding-top: 50px;
-}
-body.light-mode .flyers img {
-    box-shadow: 0 5px 15px rgba(0,0,0,0.35);
-}
-
-body.light-mode .imgLogoCienfuegos{
-    filter: invert(0);
-}
-
-.textFlyerGrizzlys {
-    font-family: 'Oswald', sans-serif;
-    font-size: 18px;
-    margin-top: 15px;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    width: 500px;
-
-}
-
-.titlePublication{
-    font-family: 'holiday', sans-serif;
-    font-size: 32px;
-    font-weight: 500;
-    text-align: center;
-    margin-bottom: 50px;
-    margin-top: 50px;
-}
-.imgGrid{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 100px;
-    justify-content: center;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.creaGrid {
-    width: 300px;
-    object-fit: cover;
-    border-radius: 8px;
-}
-
-
-.divCreaGrid {
-    position: relative;
-    width: 300px;
-    height: 375px;
-    border-radius: 8px;
-    overflow: hidden;
-    cursor: pointer;
-    transition: transform 0.3s;
-}
-
-.divCreaGrid:hover {
-    transform: scale(1.05); /* léger zoom au hover */
-}
-
-.textHover {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 3;
-    color: white;
-    background-color: rgba(0, 0, 0, 0.6);
-    padding: 10px 20px;
-    border-radius: 5px;
-    opacity: 0; /* invisible par défaut */
-    transition: opacity 0.3s ease;
-    pointer-events: none;
-    width: 240px;
-    text-align: center;
-}
-
-.divCreaGrid:hover .textHover {
-    opacity: 1; /* visible au hover */
-}
-
-
-
-.creaGrid:hover{
-    opacity: 40%;
-}
-
-
-.divCreaGrid:hover{
-    background: linear-gradient(180deg,rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.84) 75%,rgba(0,0,0,0.75) 90% , rgba(0, 0, 0, 0.34) 100%);
-    border-radius: 8px;
-}
-
-.logoEcritGrizzlys {
-    margin-left: auto;
-    margin-right: auto;
-    display: flex;
-    padding-top: 50px;
-}
-
-
-/* Conteneur du bouton son */
+/* -------------------------------------------
+   14. BOUTON SON
+   ------------------------------------------- */
 .boutonSon {
-    background-color: rgba(0, 0, 0, 0.5); /* gris foncé semi-transparent */
-    border-radius: 50%;   /* cercle */
-    width: 35px;
-    height: 35px;
-    display: flex;
     align-items: center;
-    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    bottom: 10px;
     cursor: pointer;
-    transition: transform 0.2s, background-color 0.2s;
+    display: flex;
+    height: 35px;
+    justify-content: center;
     position: absolute;
-    bottom : 10px;
-    right : 10px;
+    right: 10px;
+    transition: transform 0.2s, background-color 0.2s;
+    width: 35px;
 }
 
 .boutonSon:hover {
@@ -628,33 +667,37 @@ body.light-mode .imgLogoCienfuegos{
 }
 
 .boutonSon svg {
-    color: white; /* pour que le SVG soit visible sur fond sombre */
+    color: white;
 }
 
-.textReel{
-    max-width: 302px;
-    padding-top: 150px;
+/* -------------------------------------------
+   15. CONTAINER REEL / TROPHY
+   ------------------------------------------- */
+.containerReel {
+    display: flex;
+    gap: 12vw;
+}
+
+.textReel {
     font-family: 'Oswald', sans-serif;
     font-size: 18px;
+    max-width: 302px;
+    padding-top: 150px;
 }
 
-.containerReel{
+.containerTextTrophy {
     display: flex;
-    gap: 12vw
+    flex-direction: column;
+    gap: 250px;
 }
 
-.containerTrophy{
+.containerTrophy {
     display: flex;
     gap: 20px;
     margin-left: 100px;
+}
 
-}
-.textTrophy{
-    font-family: 'Oswald', sans-serif;
-    font-size: 18px;
-    width: 262px;
-}
-.trophy{
+.trophy {
     display: flex;
 }
 
@@ -662,169 +705,226 @@ body.light-mode .imgLogoCienfuegos{
     transform: rotate(243deg) translateX(43px) translateY(17px) scale(1.5);
 }
 
-.imgTrophy{
-    width: 120px;
+.imgTrophy {
     height: auto;
     object-fit: cover;
     transform: rotate(347deg) translateX(26px) translateY(-23px);
+    width: 120px;
 }
 
-.containerTextTrophy{
+.textTrophy {
+    font-family: 'Oswald', sans-serif;
+    font-size: 18px;
+    width: 262px;
+}
+
+/* -------------------------------------------
+   16. FLYERS
+   ------------------------------------------- */
+.flyers {
     display: flex;
-    flex-direction: column;
-    gap: 250px
-}
-
-.imageprincipalBages {
-    border-radius: 40px;
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center 0;
-}
-
-.colorVert1{
-    background-color: #81b584;
-    width: 100px;
-    height: 100px;
-    border-radius: 100%;
-}
-
-.colorVert2{
-    background-color: #63926b;
-    width: 100px;
-    height: 100px;
-    border-radius: 100%;
-}
-
-.colorVert3{
-    background-color: #364c32;
-    width: 100px;
-    height: 100px;
-    border-radius: 100%;
-}
-
-.imgLogoBages{
-    width: 100px;
-    height: 100px;
-    object-fit: contain;
-}
-
-
-.pannelColor {
-    display: flex;
-    gap: 30px;
-    margin-top: 10px;
-}
-
-.colorsProjectCtalan{
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    margin-top: 10px;
-}
-
-.colorJaune1{
-    background-color: #f2f0d3;
-    width: 100px;
-    height: 100px;
-    border-radius: 100%;
-}
-
-.colorRouge1{
-    background-color: #a91f32;
-    width: 100px;
-    height: 100px;
-    border-radius: 100%;
-}
-.colorRouge2{
-    background-color: #3d1114;
-    width: 100px;
-    height: 100px;
-    border-radius: 100%;
-}
-.colorRouge3{
-    background-color: #bc4b26;
-    width: 100px;
-    height: 100px;
-    border-radius: 100%;
-}
-.colorJaune2{
-    background-color: #fecf0e;
-    width: 100px;
-    height: 100px;
-    border-radius: 100%;
-}
-.colorOrange{
-    background-color: #d5bf86;
-    width: 100px;
-    height: 100px;
-    border-radius: 100%;
-}
-
-.colorOrange1{
-    background-color: #8c7660;
-    width: 100px;
-    height: 100px;
-    border-radius: 100%;
-}
-
-/* Conteneur principal */
-.mainVideoWrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
+    padding-bottom: 100px;
+    padding-top: 50px;
+}
+
+.imgFlyerGrizzlys1 {
+    display: block;
+    height: auto;
+    object-fit: cover;
+    object-position: top;
+    position: relative;
+    transform: rotate(-13.5deg) translateX(51px) translateY(54px);
+    width: 400px;
+    z-index: 1;
+}
+
+.imgFlyerGrizzlys2 {
+    display: block;
+    height: auto;
+    object-fit: cover;
+    object-position: top;
+    position: relative;
+    width: 400px;
+    z-index: 2;
+}
+
+.imgFlyerGrizzlys3 {
+    display: block;
+    height: auto;
+    object-fit: cover;
+    object-position: top;
+    position: relative;
+    transform: rotate(13.5deg) translateX(-51px) translateY(54px);
+    width: 400px;
+    z-index: 3;
+}
+
+.imgFlyerCatalan1 {
+    display: block;
+    height: auto;
+    object-fit: cover;
+    object-position: top;
+    position: relative;
+    transform: rotate(351deg) translateX(-44px) translateY(27px);
+    width: 400px;
+    z-index: 1;
+}
+
+.imgFlyerCatalan3 {
+    display: block;
+    height: auto;
+    object-fit: cover;
+    object-position: top;
+    position: relative;
+    transform: rotate(9deg) translateX(50px) translateY(27px);
+    width: 400px;
+    z-index: 2;
+}
+
+.textFlyerGrizzlys {
+    font-family: 'Oswald', sans-serif;
+    font-size: 18px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    text-align: center;
+    width: 500px;
+}
+
+/* -------------------------------------------
+   17. GRILLE D'IMAGES
+   ------------------------------------------- */
+.imgGrid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 100px;
+    justify-content: center;
+    margin: 0 auto;
     max-width: 1200px;
+}
+
+.divCreaGrid {
+    border-radius: 8px;
+    cursor: pointer;
+    height: 375px;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s;
+    width: 300px;
+}
+
+.divCreaGrid:hover {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.84) 75%, rgba(0,0,0,0.75) 90%, rgba(0, 0, 0, 0.34) 100%);
+    border-radius: 8px;
+    transform: scale(1.05);
+}
+
+.creaGrid {
+    border-radius: 8px;
+    object-fit: cover;
+    width: 300px;
+}
+
+.creaGrid:hover {
+    opacity: 40%;
+}
+
+.textHover {
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 5px;
+    color: white;
+    left: 50%;
+    opacity: 0;
+    padding: 10px 20px;
+    pointer-events: none;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.3s ease;
+    width: 240px;
+    z-index: 3;
+}
+
+.divCreaGrid:hover .textHover {
+    opacity: 1;
+}
+
+.logoEcritGrizzlys {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 50px;
+}
+
+/* -------------------------------------------
+   18. VIDEO WRAPPER
+   ------------------------------------------- */
+.mainVideoWrapper {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     margin: 80px auto 100px;
+    max-width: 1200px;
     padding: 0 20px;
 }
 
-
-/* Conteneur de la vidéo format Portrait */
 .fullVideoContainer {
-    width: 350px; /* Largeur fixe pour garder le format portrait */
-    max-width: 90%; /* S'adapte sur petit écran */
-    aspect-ratio: 9 / 16; /* Force le format vertical */
+    aspect-ratio: 9 / 16;
     background-color: #000;
+    border: 8px solid #1a1a1a;
     border-radius: 40px;
-    overflow: hidden;
     box-shadow: 0 20px 50px rgba(0,0,0,0.2);
-    border: 8px solid #1a1a1a; /* Effet bordure de téléphone optionnel */
+    max-width: 90%;
+    overflow: hidden;
+    width: 350px;
 }
 
 .fullVideoContainer video {
-    width: 100%;
     height: 100%;
     object-fit: cover;
+    width: 100%;
 }
 
+.fullVideoContainerCatan {
+    aspect-ratio: 9 / 16;
+    max-width: 90%;
+    object-fit: cover;
+    width: 350px;
+}
 
 .videoDetailSection {
-    margin-top: 40px;
-    text-align: center;
     font-family: 'Oswald', sans-serif;
+    margin-top: 40px;
     max-width: 600px;
+    text-align: center;
 }
 
 .detailLine {
-    width: 50px;
-    height: 4px;
     background-color: #25847d;
-    margin: 0 auto 25px;
     border-radius: 2px;
+    height: 4px;
+    margin: 0 auto 25px;
+    width: 50px;
 }
 
 .detailLineCienfuegos {
-    width: 50px;
-    height: 4px;
     background-color: #ff731b;
-    margin: 0 auto 25px;
     border-radius: 2px;
+    height: 4px;
+    margin: 0 auto 25px;
+    width: 50px;
 }
 
-
+.detailLineCatalan {
+    background-color: #a91f32;
+    border-radius: 2px;
+    height: 4px;
+    margin: 0 auto 25px;
+    width: 50px;
+}
 
 .detailTitle {
     font-size: 28px;
@@ -834,327 +934,260 @@ body.light-mode .imgLogoCienfuegos{
 }
 
 .detailText {
-    font-size: 18px;
-    line-height: 1.6;
     color: #a1a1a1;
+    font-size: 18px;
     font-weight: 300;
+    line-height: 1.6;
 }
 
-/* Ajustement pour les écrans larges : Vidéo à gauche, Texte à droite */
-@media (min-width: 1024px) {
-    .mainVideoWrapper {
-        flex-direction: row;
-        gap: 80px;
-        align-items: center;
-    }
-
-    .videoDetailSection {
-        text-align: left;
-        margin-top: 0;
-    }
-
-    .detailLine {
-        margin: 0 0 25px 0;
-    }
-
-    .detailLineCienfuegos {
-        margin: 0 0 25px 0;
-    }
-
+.imageBoxAperoCatalan {
+    margin-top: 60px;
+    object-fit: cover;
+    width: 350px;
 }
 
-/* Conteneur principal en 358x445 comme demandé */
+/* -------------------------------------------
+   19. CIENFUEGOS - PALETTE
+   ------------------------------------------- */
 .palette-container {
-    width: 358px;
-    height: 225px;
-    display: flex;
-    flex-direction: row;
-    gap: 40px;
+    align-items: center;
     background: transparent;
-    font-family: 'holiday', cursive;
-    align-items: center;
-}
-
-.main-logo {
-    width: auto;
-    height: 93px;
-
-}
-
-.circles-group {
-    margin-left: 7vw;
-}
-.logo-wrapper {
     display: flex;
     flex-direction: row;
-    align-content: center;
-    align-items: center;
+    font-family: 'holiday', cursive;
+    gap: 40px;
+    height: 225px;
+    width: 358px;
 }
 
-.arrow {
-    transform: rotate(106deg) rotateY(174deg) translateX(53px);
-    filter: invert(1);
-    height: 93px;
-    width: 93px;
-
-}
-
-body.light-mode .arrow {
-    filter: invert(0);
-}
-
-
-
-/* Alignement des ronds */
 .circles-group {
     display: flex;
     gap: 15px;
+    margin-left: 7vw;
 }
 
 .circle {
-    width: 100px;
-    height: 100px;
     border-radius: 50%;
+    height: 100px;
+    width: 100px;
 }
 
-/* Couleurs des ronds */
-.red    { background-color: #d10a11; }
-.orange { background-color: #ff7b24; }
-.yellow { background-color: #f7e810; }
-.green  { background-color: #84d35b; }
+.red {
+    background-color: #d10a11;
+}
 
+.orange {
+    background-color: #ff7b24;
+}
 
+.yellow {
+    background-color: #f7e810;
+}
+
+.green {
+    background-color: #84d35b;
+}
 
 .logo-wrapper {
+    align-content: center;
+    align-items: center;
     display: flex;
+    flex-direction: row;
 }
 
-
-
-
-.grostitre{
-    font-family: 'Oswald', sans-serif;
-    font-size: 50px;
-    text-align: center;
-    margin-top: 150px;
-    color: #a91f32;
+.main-logo {
+    height: 93px;
+    width: auto;
 }
 
-.titreInsta {
-    font-family: 'holiday', cursive;
-    font-size: 32px;
-    text-align: center;
-    margin-bottom: 50px;
-    font-weight: lighter;
-
+.arrow {
+    filter: invert(1);
+    height: 93px;
+    transform: rotate(106deg) rotateY(174deg) translateX(53px);
+    width: 93px;
 }
 
-.titreIdentite {
-    font-family: 'holiday', cursive;
-    font-size: 32px;
-    font-weight: lighter;
-    margin-top: 100px;
+/* -------------------------------------------
+   20. CARTE CADEAU
+   ------------------------------------------- */
+.carteCadeauCatalattitude {
+    display: flex;
+    gap: 150px;
+    justify-content: center;
+    padding-top: 50px;
 }
 
-.imgCarteCadeauCatalattitude{
-    width: 400px;
+.imgCarteCadeauCatalattitude {
     height: auto;
     object-fit: cover;
     object-position: top;
+    width: 400px;
 }
 
-.carteCadeauCatalattitude{
-    display: flex;
-    justify-content: center;
-    padding-top: 50px;
-    gap : 150px;
-}
-
-.texteCadeau{
+.texteCadeau {
     font-family: 'Oswald', sans-serif;
     font-size: 18px;
-    margin-top: 50px;
-    text-align: center;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 50px;
+    text-align: center;
     width: 550px;
-}
-
-.flecheCadeau {
-    filter: invert(1);
-    transform: rotateZ(260deg) scale(0.5) translateX(71px);
-
-}
-
-BODY.light-mode .flecheCadeau {
-    filter: invert(0);
 }
 
 .rectoverso {
     display: flex;
+    font-family: 'Oswald', sans-serif;
     gap: 100px;
     justify-content: center;
-    font-family: 'Oswald', sans-serif;
+}
+
+/* -------------------------------------------
+   21. CALENDRIER DE L'AVENT
+   ------------------------------------------- */
+.ordietgridCatalattitude {
+    display: flex;
+    margin-top: 100px;
 }
 
 .calandriergrid {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    width: 815px;
     gap: 50px;
     justify-content: center;
-}
-
-.ordietgridCatalattitude {
-    display: flex;
-    margin-top: 100px;
-}
-
-@media (min-width: 1700px) {
-    .ordietgridCatalattitude {
-        gap: 7vw;
-    }
+    width: 815px;
 }
 
 .imageCalendrier {
-    width: 300px;
     height: auto;
     object-fit: cover;
-}
-
-.imageOrdiCatalattitude {
-    margin-top: 50px;
-
-}
-.texteOrdi {
-    width: 500px;
-    font-family: 'Oswald', sans-serif;
-    font-size: 18px;
-    text-align: center;
-    margin-top: 50px;
-}
-
-.texteOrdi2 {
-    width: 500px;
-    font-family: 'Oswald', sans-serif;
-    font-size: 18px;
-    text-align: center;
-    margin-top: 150px;
-}
-
-.ordi {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}.ordiVincenzo {
-     display: flex;
-     flex-direction: column;
-     align-items: center;
-     height: 75vh;
-}
-
-.texteOrdi, .texteOrdi2 {
-    width: 500px;
-    font-family: 'Oswald', sans-serif;
-    font-size: 18px;
-    text-align: center;
-}
-
-.texteOrdi2 { margin-top: 150px; }
-.texteOrdi { margin-top: 277px; }
-
-.imageOrdiCatalattitude {
-    margin-top: 200px;
-    width: 600px;
-    display: block;
-    position: absolute;
-}
-
-/* Nouveau code pour l'intégration dans l'écran */
-/*.ecran-wrapper {*/
-/*    position: relative; !* Permet de positionner l'image du jeu par rapport à l'ordi *!*/
-/*}*/
-
-.imageAprendreoualaisser {
-    position: relative;
-    top: 38px;
-    width: 551px;
-    height: 309px;
-    z-index: 10;
-}
-
-.imageOrdiVincenzo {
-     position: relative;
-     top: 225px;
-     width: 551px;
-     height: 309px;
-     z-index: 10;
+    width: 300px;
 }
 
 .descriptionCalendrier {
     font-family: 'Oswald', sans-serif;
     font-size: 18px;
-    text-align: center;
-    max-width: 300px;
-    width: 300px;
     margin: auto 0;
-}
-
-.detailLineCatalan {
-    width: 50px;
-    height: 4px;
-    background-color: #a91f32;
-    margin: 0 auto 25px;
-    border-radius: 2px;
-}
-
-.fullVideoContainerCatan{
-    max-width: 90%;
-    aspect-ratio: 9 / 16;
-
-
-    width: 350px;
-    object-fit: cover;
-}
-
-.imageBoxAperoCatalan {
-    width: 350px;
-    object-fit: cover;
-    margin-top: 60px;
-}
-
-@media (min-width: 1024px) {
-    .detailLineCatalan {
-        margin: 0 0 25px 0;
-    }
-}
-
-.titreMerch {
+    max-width: 300px;
     text-align: center;
+    width: 300px;
+}
+
+/* -------------------------------------------
+   22. ORDINATEUR
+   ------------------------------------------- */
+.ordi {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.ordiVincenzo {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 75vh;
+}
+
+.imageOrdiCatalattitude {
+    display: block;
+    margin-top: 200px;
+    position: absolute;
+    width: 600px;
+}
+
+.imageAprendreoualaisser {
+    height: 309px;
+    position: relative;
+    top: 38px;
+    width: 551px;
+    z-index: 10;
+}
+
+.imageOrdiVincenzo {
+    height: 309px;
+    position: relative;
+    top: 225px;
+    width: 551px;
+    z-index: 10;
+}
+
+.texteOrdi {
+    font-family: 'Oswald', sans-serif;
+    font-size: 18px;
+    margin-top: 277px;
+    text-align: center;
+    width: 500px;
+}
+
+.texteOrdi2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 18px;
+    margin-top: 150px;
+    text-align: center;
+    width: 500px;
+}
+
+.conatainerVincenzoOrdi {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.FlecheTextGauche {
+    align-items: center;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 245px;
+    width: 269px;
+}
+
+.FlecheTextDroite {
+    align-items: center;
+    display: flex;
+    margin-top: 440px;
+}
+
+.petiteFlecheGauche {
+    transform: scale(0.5) translate(-162px, -158px) rotate(223deg);
+}
+
+.petiteFlecheDroite {
+    transform: scale(0.5) rotate(122deg) rotateY(180deg) translate(206px, -49px);
+}
+
+.textOrdiClick {
+    text-align: center;
+    width: 275px;
+}
+
+/* -------------------------------------------
+   23. MERCH (GOODIES)
+   ------------------------------------------- */
+.titreMerch {
     font-family: 'Oswald', sans-serif;
     margin-bottom: 50px;
-
+    text-align: center;
 }
 
-.gridMerch{
+.gridMerch {
     display: flex;
+    flex-wrap: wrap;
+    gap: 116px;
+    justify-content: space-around;
     margin: 0 auto;
     width: 1000px;
-    gap: 116px;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-
-.imageMerch{
-    height: 250px;
-    width: auto
 }
 
 .divMerch {
+    align-items: center;
     display: flex;
     flex-direction: column;
-    align-items: center;
+}
+
+.imageMerch {
+    height: 250px;
+    width: auto;
 }
 
 .texteMerch {
@@ -1162,107 +1195,57 @@ BODY.light-mode .flecheCadeau {
     margin-top: 5px;
 }
 
-.textOrdiAcceuil {
-
-}
-
-.petiteFlecheGauche {
-    transform: scale(0.5) translate(-162px, -158px) rotate(223deg);
-}
-
-.conatainerVincenzoOrdi {
+/* -------------------------------------------
+   24. CASA BICICLETA
+   ------------------------------------------- */
+.containerCasa {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 50px;
 }
 
-.FlecheTextGauche {
-    display: flex;
-    align-items: center;
-    margin-top: 245px;
-    width: 269px;
-    justify-content: flex-end;
+.imageCommuniquer {
+    border: 5px solid #191a1c;
+    border-radius: 10px;
+    height: auto;
+    object-fit: cover;
+    width: 344px;
 }
 
-.FlecheTextDroite {
-    display: flex;
-    align-items: center;
-    margin-top: 440px;
-}
-
-.petiteFlecheDroite {
-    transform: scale(0.5) rotate(122deg) rotateY(180deg) translate(206px, -49px);
-}
-.textOrdiClick {
-    width: 275px;
+.textCommuniquer {
+    font-family: "holiday", sans-serif;
+    font-size: 20px;
     text-align: center;
 }
 
-
-.colorBleu1 {
-    background-color: #4696c2;
-    width: 100px;
-    height: 100px;
-    border-radius: 100%;
+.textCommuniquerEscapix {
+    font-family: "holiday", sans-serif;
+    font-size: 20px;
+    margin-top: 100px;
+    text-align: center;
 }
 
-.colorBleu2{
-    background-color: #007ebd;
-    width: 100px;
-    height: 100px;
-    border-radius: 100%;
-}
-
-.colorBleu3 {
-    background-color: #052a3d;
-    width: 100px;
-    height: 100px;
-    border-radius: 100%;
-}
-
-.colorJaune3 {
-    background-color: #e6da3c;
-    width: 100px;
-    height: 100px;
-    border-radius: 100%;
-}
-.colorRouge3 {
-    background-color: #cc1d30;
-    width: 100px;
-    height: 100px;
-    border-radius: 100%;
-}
-
-.containerCasa {
-    display: flex;
-    justify-content: space-evenly;
-    flex-direction: row;
-    margin-top: 50px;
-}
 .roue {
     width: 235px;
 }
 
 .descriptionRoue {
-    width: 454px;
     text-align: center;
+    width: 454px;
 }
 
-.divimgRoueFleche{
+.divimgRoueFleche {
     display: flex;
     justify-content: space-around;
     margin-bottom: 10px;
 }
 
 .FlecheRoue {
-    transform: scale(0.5) rotate(229deg) translate(-62px, -36px);
     filter: invert(1);
+    transform: scale(0.5) rotate(229deg) translate(-62px, -36px);
 }
 
-
-body.light-mode .FlecheRoue {
-    filter: invert(0);
-}
 .textRoue {
     font-family: 'holiday', cursive;
     font-size: 22px;
@@ -1270,186 +1253,42 @@ body.light-mode .FlecheRoue {
 
 .textRoueFleche {
     display: flex;
-    text-align: center;
-    justify-content: center;
     flex-direction: column;
-}
-
-.colorTruquoise1 {
-    background-color: #1c7a70;
-    width: 100px;
-    height: 100px;
-    border-radius: 100%;
-}
-
-.colorTruquoise2 {
-    background-color: #20a094;
-    width: 100px;
-    height: 100px;
-    border-radius: 100%;
-}
-.colorTruquoise3 {
-    background-color: #1abcad;
-    width: 100px;
-    height: 100px;
-    border-radius: 100%;
-}
-
-
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 99999;
-    left: 0;
-    top: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(0,0,0,0.9);
-    /* Garde ces propriétés, elles s'appliqueront quand display devient flex */
-    align-items: center;
     justify-content: center;
-    flex-direction: column;
-}
-
-
-
-.modalGrizzly {
-    display: none;
-    position: fixed;
-    z-index: 99999;
-    left: 0;
-    top: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(0,0,0,0.9);
-    /* Garde ces propriétés, elles s'appliqueront quand display devient flex */
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
-
-.modal-content {
-    margin: auto;
-    display: block;
-    max-width: 90%;
-    max-height: 85vh;
-    object-fit: contain;
-    border-radius: 10px;
-    animation: zoom 0.3s ease;
-}
-
-@keyframes zoom {
-    from {transform:scale(0.7); opacity: 0;}
-    to {transform:scale(1); opacity: 1;}
-}
-
-.close {
-    position: fixed; /* ✅ Fixed pour rester visible */
-    top: 20px; /* ✅ 20px depuis le haut de l'écran */
-    right: 35px;
-    color: #f1f1f1;
-    font-size: 60px;
-    font-weight: bold;
-    cursor: pointer;
-    line-height: 1;
-    z-index: 100000;
-}
-
-.closeGrizzly {
-    position: fixed;
-    top: 20px;
-    right: 35px;
-    color: #f1f1f1;
-    font-size: 60px;
-    font-weight: bold;
-    cursor: pointer;
-    line-height: 1;
-    z-index: 100000;
-}
-
-.close:hover,
-.close:focus,
-.closeGrizzly:hover,
-.closeGrizzly:focus {
-    color: #bbb;
-    text-decoration: none;
-}
-
-.close:hover,
-.close:focus {
-    color: #bbb;
-    text-decoration: none;
-}
-
-.imageCommuniquer {
-    width: 344px;
-    height: auto;
-    object-fit: cover;
-    border-radius: 10px;
-    border: 5px solid #191a1c;
-}
-
-.textCommuniquer {
-    font-family: "holiday", sans-serif;
     text-align: center;
-    font-size: 20px;
-}
-.textCommuniquerEscapix {
-    font-family: "holiday", sans-serif;
-    text-align: center;
-    font-size: 20px;
-    margin-top: 100px;
-}
-
-.motmele {
-    width: 342px;
-    height: auto;
-    object-fit: cover;
-    margin-top: 100px;
 }
 
 .divMotMele {
     display: flex;
     align-items: center;
-    /* gap: 20px; */
     gap: 236px;
     justify-content: center;
 }
 
+.motMeleDiv {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.motmele {
+    height: auto;
+    margin-top: 100px;
+    object-fit: cover;
+    width: 342px;
+}
+
 .descriptionMotMele {
-    width: 454px;
-    text-align: center;
     font-family: 'Oswald', sans-serif;
     margin-top: 10px;
+    text-align: center;
+    width: 454px;
 }
 
-.motMeleDiv {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-
-}
-
-.lienStratégieEscapix {
-    background-color: #5795c4;
-    padding: 30px 60px;
-    border-radius: 35px;
-    font-size: 20px;
-    font-family: 'Oswald', sans-serif;
-    color: #f1f1f1;
-    margin-bottom: 50px;
-}
-
-.lienStratégie {
-    background-color: #c51a2e;
-    padding: 30px 60px;
-    border-radius: 35px;
-    font-size: 20px;
-    font-family: 'Oswald', sans-serif;
-    color: #f1f1f1;
-}
-
+/* -------------------------------------------
+   25. BOUTONS STRATÉGIE
+   ------------------------------------------- */
 .buttonStratégie {
     display: flex;
     justify-content: center;
@@ -1462,39 +1301,38 @@ body.light-mode .FlecheRoue {
     margin-top: 125px;
 }
 
-.logo-light {
-    display: none;
+.lienStratégie {
+    background-color: #c51a2e;
+    border-radius: 35px;
+    color: #f1f1f1;
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px;
+    padding: 30px 60px;
 }
 
-.logo-dark {
-    display: block;
+.lienStratégieEscapix {
+    background-color: #5795c4;
+    border-radius: 35px;
+    color: #f1f1f1;
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px;
+    margin-bottom: 50px;
+    padding: 30px 60px;
 }
 
-/* --- État quand body.light-mode est actif --- */
-/* On inverse : on montre le logo clair et on cache le sombre */
-body.light-mode .logo-light {
-    display: block;
-}
-
-body.light-mode .logo-dark {
-    display: none;
-}
-
+/* -------------------------------------------
+   26. ESCAPIX
+   ------------------------------------------- */
 .escapixCarousel {
     display: flex;
     justify-content: center;
 }
 
 .escapixDescription {
-    width: 393px;
     font-family: 'Oswald', sans-serif;
     margin-top: 20px;
     text-align: center;
-}
-
-.imgCarousel {
-    width: 321px;
-    height: auto;
+    width: 393px;
 }
 
 .divEscapixCarousel {
@@ -1503,15 +1341,20 @@ body.light-mode .logo-dark {
     margin-top: 30px;
 }
 
-.DivAvionJaune{
+.imgCarousel {
+    height: auto;
+    width: 321px;
+}
+
+.DivAvionJaune {
     display: flex;
-    justify-content: center;
     gap: 261px;
+    justify-content: center;
 }
 
 .avionJaune {
-    width: 321px;
     object-fit: cover;
+    width: 321px;
 }
 
 .divEscapixLogoLarge {
@@ -1520,6 +1363,202 @@ body.light-mode .logo-dark {
 }
 
 .logoLarge {
-    width: 450px;
     object-fit: cover;
+    width: 450px;
+}
+
+/* -------------------------------------------
+   27. MODAL
+   ------------------------------------------- */
+.modal {
+    align-items: center;
+    background-color: rgba(0,0,0,0.9);
+    display: none;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    z-index: 99999;
+}
+
+.modalGrizzly {
+    align-items: center;
+    background-color: rgba(0,0,0,0.9);
+    display: none;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    z-index: 99999;
+}
+
+.modal-content {
+    animation: zoom 0.3s ease;
+    border-radius: 10px;
+    display: block;
+    margin: auto;
+    max-height: 85vh;
+    max-width: 90%;
+    object-fit: contain;
+}
+
+.close {
+    color: #f1f1f1;
+    cursor: pointer;
+    font-size: 60px;
+    font-weight: bold;
+    line-height: 1;
+    position: fixed;
+    right: 35px;
+    top: 20px;
+    z-index: 100000;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+}
+
+.closeGrizzly {
+    color: #f1f1f1;
+    cursor: pointer;
+    font-size: 60px;
+    font-weight: bold;
+    line-height: 1;
+    position: fixed;
+    right: 35px;
+    top: 20px;
+    z-index: 100000;
+}
+
+.closeGrizzly:hover,
+.closeGrizzly:focus {
+    color: #bbb;
+    text-decoration: none;
+}
+
+/* -------------------------------------------
+   28. LOGOS LIGHT/DARK MODE
+   ------------------------------------------- */
+.logo-light {
+    display: none;
+}
+
+.logo-dark {
+    display: block;
+}
+
+/* -------------------------------------------
+   29. MODE CLAIR (Light Mode)
+   ------------------------------------------- */
+body.light-mode .imgLogoVincenzo {
+    filter: invert(0);
+}
+
+body.light-mode .imgLogoCienfuegos {
+    filter: invert(0);
+}
+
+body.light-mode .imgFleche {
+    filter: invert(0);
+}
+
+body.light-mode .imgFlecheCatalattitude {
+    filter: invert(0);
+}
+
+body.light-mode .grandeFleche {
+    filter: invert(0);
+}
+
+body.light-mode .flecheCadeau {
+    filter: invert(0);
+}
+
+body.light-mode .arrow {
+    filter: invert(0);
+}
+
+body.light-mode .FlecheRoue {
+    filter: invert(0);
+}
+
+body.light-mode .flyers img {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.35);
+}
+
+body.light-mode .logo-light {
+    display: block;
+}
+
+body.light-mode .logo-dark {
+    display: none;
+}
+
+/* -------------------------------------------
+   30. RESPONSIVE
+   ------------------------------------------- */
+@media (max-width: 1100px) {
+    .informationsProject {
+        flex-direction: column;
+        gap: 40px;
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+
+    .informationsProjectLeft {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .informationsProject {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .informationsProjectLeft {
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 1024px) {
+    .mainVideoWrapper {
+        align-items: center;
+        flex-direction: row;
+        gap: 80px;
+    }
+
+    .videoDetailSection {
+        margin-top: 0;
+        text-align: left;
+    }
+
+    .detailLine {
+        margin: 0 0 25px 0;
+    }
+
+    .detailLineCienfuegos {
+        margin: 0 0 25px 0;
+    }
+
+    .detailLineCatalan {
+        margin: 0 0 25px 0;
+    }
+}
+
+@media (min-width: 1700px) {
+    .ordietgridCatalattitude {
+        gap: 7vw;
+    }
 }

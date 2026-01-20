@@ -1,0 +1,829 @@
+/* ===========================================
+   RESPONSIVE.CSS - ADAPTATIONS MOBILE/TABLETTE
+   À ajouter APRÈS style.css et project.css
+   =========================================== */
+
+/* -------------------------------------------
+   TABLETTE (max 1100px)
+   ------------------------------------------- */
+@media (max-width: 1100px) {
+
+    /* Navigation */
+    .navbar {
+        flex-wrap: wrap;
+        gap: 15px;
+        padding: 15px 10px;
+    }
+
+    .Logo {
+        margin-left: 10px;
+        width: auto;
+    }
+
+    .navbarElement {
+        font-size: 16px;
+        gap: 15px;
+    }
+
+    /* Page d'accueil */
+    .title {
+        font-size: 50px;
+    }
+
+    .containerTitle {
+        height: 60vh;
+    }
+
+    /* Présentation */
+    .presentationContainer {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+        padding: 0 20px;
+    }
+
+    .presentationText {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .passport {
+        width: 400px;
+        margin-right: 0;
+    }
+
+    .passport:hover {
+        transform: rotate(5deg) scale(1.1);
+    }
+
+    .carousel-container {
+        transform: scale(1.2);
+    }
+
+    /* Passion / Basket */
+    .passionTitle {
+        font-size: 80px;
+    }
+
+    .passionSubTitle {
+        font-size: 35px;
+        transform: translate(130px, -40px);
+    }
+
+    .passiontext {
+        width: 90%;
+        padding: 0 20px;
+    }
+
+    .FlyersCapitaine {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .flyers {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .imgFlyerPassion1,
+    .imgFlyerPassion2,
+    .imgFlyerPassion3 {
+        transform: none;
+        width: 180px;
+        height: 320px;
+    }
+
+    /* Indispensables */
+    .indispensablesCom {
+        width: 400px;
+    }
+
+    .bacAeroport {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .FlecheTextSurligneur,
+    .FlecheTextIpad,
+    .FlecheTextBasket,
+    .FlecheTextIphone,
+    .FlecheTextAirpods,
+    .FlecheTextMackbook {
+        display: none;
+    }
+
+    /* Projets - En-tête */
+    .projecttitleGrizzlys {
+        margin-left: 50px;
+    }
+
+    .titletext {
+        font-size: clamp(20px, 4vw, 40px);
+    }
+
+    .subtitleProject {
+        font-size: 24px;
+    }
+
+    /* Projets - Contenu */
+    .projectContentGrizzlys {
+        justify-content: center;
+        margin-right: 0;
+        padding: 0 20px;
+    }
+
+    .colorsProjectGrizzlys,
+    .colorsProjectCienfuegos {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .grandeFleche {
+        display: none;
+    }
+
+    /* Galerie projets */
+    .projectGalleryGrizzlys,
+    .projectGalleryCatalattitude {
+        flex-direction: column;
+        align-items: center;
+        margin-left: 0;
+        margin-right: 0;
+        padding: 0 20px;
+    }
+
+    .appareil-wrapper {
+        display: none;
+    }
+
+    /* Container Reel */
+    .containerReel {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .videoInsta {
+        margin-left: 0;
+    }
+
+    .containerTextTrophy {
+        flex-direction: row;
+        gap: 40px;
+        align-items: center;
+    }
+
+    .containerTrophy {
+        margin-left: 0;
+    }
+
+    .textReel {
+        padding-top: 0;
+        text-align: center;
+    }
+
+    /* Flyers projets */
+    .imgFlyerGrizzlys1,
+    .imgFlyerGrizzlys2,
+    .imgFlyerGrizzlys3,
+    .imgFlyerCatalan1,
+    .imgFlyerCatalan3 {
+        width: 280px;
+        transform: none;
+    }
+
+    .textFlyerGrizzlys {
+        width: 90%;
+        padding: 0 20px;
+    }
+
+    /* Grille images */
+    .imgGrid {
+        gap: 40px;
+        padding: 0 20px;
+    }
+
+    /* Calendrier */
+    .ordietgridCatalattitude {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .calandriergrid {
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .ordi,
+    .ordiVincenzo {
+        display: none;
+    }
+
+    /* Carte cadeau */
+    .carteCadeauCatalattitude {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .flecheCadeau {
+        display: none;
+    }
+
+    .imgCarteCadeauCatalattitude {
+        width: 350px;
+    }
+
+    /* Casa Bicicleta */
+    .containerCasa {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .divMotMele {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    /* Cienfuegos */
+    .palette-container {
+        flex-direction: column;
+        height: auto;
+        width: 100%;
+        padding: 20px;
+    }
+
+    .circles-group {
+        margin-left: 0;
+    }
+
+    /* Merch */
+    .gridMerch {
+        width: 100%;
+        gap: 40px;
+        padding: 0 20px;
+    }
+
+    /* Vincenzo */
+    .conatainerVincenzoOrdi {
+        flex-direction: column;
+    }
+
+    .FlecheTextGauche,
+    .FlecheTextDroite {
+        display: none;
+    }
+
+    /* Escapix */
+    .divEscapixCarousel {
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+    }
+
+    .DivAvionJaune {
+        gap: 40px;
+    }
+}
+
+/* -------------------------------------------
+   MOBILE (max 768px)
+   ------------------------------------------- */
+@media (max-width: 768px) {
+
+    /* Navigation */
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .Logo {
+        margin-left: 0;
+    }
+
+    .navbarElement {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        font-size: 14px;
+    }
+
+    .navRight {
+        gap: 5px;
+    }
+
+    #clock {
+        font-size: 14px;
+        width: 100px;
+    }
+
+    /* Page d'accueil */
+    .title {
+        font-size: 35px;
+    }
+
+    .subtitle {
+        font-size: 16px;
+    }
+
+    .containerTitle {
+        height: 50vh;
+    }
+
+    .titleProjet {
+        font-size: 24px;
+    }
+
+    /* Section projets */
+    .section2 {
+        gap: 40px;
+    }
+
+    .imageProjetImg {
+        width: 300px;
+        height: 370px;
+    }
+
+    #projectPage {
+        gap: 50px;
+        padding: 20px;
+    }
+
+    /* Présentation */
+    .passport {
+        width: 300px;
+    }
+
+    .competencetitle {
+        margin-top: 80px;
+        font-size: 28px;
+    }
+
+    .carousel-container {
+        transform: scale(1);
+    }
+
+    /* Passion */
+    .passionTitle {
+        font-size: 50px;
+    }
+
+    .passionSubTitle {
+        font-size: 25px;
+        transform: translate(80px, -30px);
+    }
+
+    .imgFlyerPassion1,
+    .imgFlyerPassion2,
+    .imgFlyerPassion3 {
+        width: 140px;
+        height: 250px;
+    }
+
+    .capitaineText {
+        width: 280px;
+    }
+
+    /* Indispensables */
+    .titreIdentitePresentation {
+        width: 90%;
+        font-size: 26px;
+        text-align: center;
+    }
+
+    .indispensablesCom {
+        width: 90%;
+        max-width: 350px;
+    }
+
+    .avionPresentation {
+        height: 400px;
+    }
+
+    /* Projets - En-tête */
+    .imageprincipal {
+        height: 300px;
+        border-radius: 20px;
+    }
+
+    .imageprincipalGrizlly,
+    .imageprincipalBages {
+        border-radius: 20px;
+    }
+
+    .projecttitleGrizzlys {
+        margin-left: 20px;
+    }
+
+    .subtitleProject {
+        font-size: 18px;
+    }
+
+    /* Titres projets */
+    .titreIdentite,
+    .titreInsta,
+    .titlePublication {
+        font-size: 26px;
+        padding: 0 20px;
+    }
+
+    .grostitre {
+        font-size: 35px;
+    }
+
+    /* Logos et couleurs */
+    .colorsProjectGrizzlys,
+    .colorsProjectCienfuegos,
+    .colorsProjectCtalan,
+    .pannelColor {
+        gap: 15px;
+    }
+
+    .logoGrizzlys,
+    .imgLogoGrizzllys,
+    .imgLogoBages {
+        width: 70px;
+        height: 70px;
+    }
+
+    .colorOrangeGrise,
+    .colorBlanc,
+    .colorNoir,
+    .colorVert1,
+    .colorVert2,
+    .colorVert3,
+    .colorJaune1,
+    .colorJaune2,
+    .colorJaune3,
+    .colorRouge1,
+    .colorRouge2,
+    .colorRouge3,
+    .colorOrange,
+    .colorOrange1,
+    .colorBleu1,
+    .colorBleu2,
+    .colorBleu3,
+    .colorTruquoise1,
+    .colorTruquoise2,
+    .colorTruquoise3,
+    .circle {
+        width: 60px;
+        height: 60px;
+    }
+
+    .fleche,
+    .flecheCatalattitude {
+        display: none;
+    }
+
+    /* Téléphones */
+    .textUnderPhone {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .tel {
+        width: 350px;
+    }
+
+    .video1 {
+        width: 220px;
+        height: 470px;
+        left: 65px;
+        border-radius: 35px;
+    }
+
+    .videoInsta {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .iWanna {
+        width: 100%;
+        max-width: 350px;
+        height: auto;
+        aspect-ratio: 9/16;
+    }
+
+    .hautInsta {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    /* Flyers */
+    .flyers {
+        padding: 30px 10px;
+    }
+
+    .imgFlyerGrizzlys1,
+    .imgFlyerGrizzlys2,
+    .imgFlyerGrizzlys3,
+    .imgFlyerCatalan1,
+    .imgFlyerCatalan3 {
+        width: 200px;
+    }
+
+    /* Grille images */
+    .divCreaGrid {
+        width: 280px;
+        height: 350px;
+    }
+
+    .creaGrid {
+        width: 280px;
+    }
+
+    /* Video wrapper */
+    .mainVideoWrapper {
+        margin: 40px auto;
+    }
+
+    .fullVideoContainer {
+        width: 280px;
+    }
+
+    .detailTitle {
+        font-size: 22px;
+    }
+
+    .detailText {
+        font-size: 16px;
+    }
+
+    /* Calendrier */
+    .imageCalendrier {
+        width: 250px;
+    }
+
+    .descriptionCalendrier {
+        width: 250px;
+    }
+
+    /* Carte cadeau */
+    .imgCarteCadeauCatalattitude {
+        width: 280px;
+    }
+
+    .texteCadeau {
+        width: 90%;
+    }
+
+    /* Trophy */
+    .containerTextTrophy {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .trophy {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .trophy .imgFleche {
+        display: none;
+    }
+
+    .textTrophy {
+        text-align: center;
+    }
+
+    /* Casa Bicicleta */
+    .imageCommuniquer {
+        width: 280px;
+    }
+
+    .roue {
+        width: 180px;
+    }
+
+    .descriptionRoue,
+    .descriptionMotMele {
+        width: 90%;
+    }
+
+    .motmele {
+        width: 280px;
+    }
+
+    /* Boutons */
+    .lienStratégie,
+    .lienStratégieEscapix {
+        padding: 20px 40px;
+        font-size: 18px;
+    }
+
+    /* Merch */
+    .imageMerch {
+        height: 180px;
+    }
+
+    /* Escapix */
+    .imgCarousel {
+        width: 280px;
+    }
+
+    .avionJaune {
+        width: 150px;
+    }
+
+    .logoLarge {
+        width: 300px;
+    }
+
+    /* Footer */
+    .footerNavbar {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .footerLogosLeft {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+/* -------------------------------------------
+   PETIT MOBILE (max 480px)
+   ------------------------------------------- */
+@media (max-width: 480px) {
+
+    /* Navigation */
+    .navbarElement {
+        font-size: 12px;
+        gap: 8px;
+    }
+
+    #clock {
+        font-size: 12px;
+        width: 80px;
+    }
+
+    .toggle-switch {
+        width: 80px;
+    }
+
+    /* Page d'accueil */
+    .title {
+        font-size: 28px;
+    }
+
+    .subtitle {
+        font-size: 14px;
+    }
+
+    /* Présentation */
+    .passport {
+        width: 250px;
+    }
+
+    .h2pres {
+        font-size: 16px;
+    }
+
+    .presentation {
+        font-size: 14px;
+    }
+
+    /* Passion */
+    .passionTitle {
+        font-size: 40px;
+    }
+
+    .passionSubTitle {
+        font-size: 20px;
+        transform: translate(60px, -25px);
+    }
+
+    .passiontext {
+        font-size: 14px;
+    }
+
+    .imgFlyerPassion1,
+    .imgFlyerPassion2,
+    .imgFlyerPassion3 {
+        width: 100px;
+        height: 180px;
+    }
+
+    /* Projets */
+    .imageprincipal {
+        height: 200px;
+    }
+
+    .titletext {
+        font-size: 20px;
+    }
+
+    .subtitleProject {
+        font-size: 14px;
+    }
+
+    .infoMiniTitle {
+        font-size: 20px;
+    }
+
+    /* Couleurs */
+    .logoGrizzlys,
+    .imgLogoGrizzllys,
+    .imgLogoBages {
+        width: 50px;
+        height: 50px;
+    }
+
+    .colorOrangeGrise,
+    .colorBlanc,
+    .colorNoir,
+    .colorVert1,
+    .colorVert2,
+    .colorVert3,
+    .colorJaune1,
+    .colorJaune2,
+    .colorJaune3,
+    .colorRouge1,
+    .colorRouge2,
+    .colorRouge3,
+    .colorOrange,
+    .colorOrange1,
+    .colorBleu1,
+    .colorBleu2,
+    .colorBleu3,
+    .colorTruquoise1,
+    .colorTruquoise2,
+    .colorTruquoise3,
+    .circle {
+        width: 45px;
+        height: 45px;
+    }
+
+    /* Téléphones - cacher sur très petit écran */
+    .iphone {
+        transform: scale(0.8);
+    }
+
+    /* Flyers */
+    .imgFlyerGrizzlys1,
+    .imgFlyerGrizzlys2,
+    .imgFlyerGrizzlys3,
+    .imgFlyerCatalan1,
+    .imgFlyerCatalan3 {
+        width: 150px;
+    }
+
+    /* Grille */
+    .divCreaGrid {
+        width: 250px;
+        height: 310px;
+    }
+
+    .creaGrid {
+        width: 250px;
+    }
+
+    .textHover {
+        font-size: 12px;
+        width: 200px;
+    }
+
+    /* Video */
+    .fullVideoContainer {
+        width: 250px;
+    }
+
+    /* Calendrier */
+    .imageCalendrier {
+        width: 200px;
+    }
+
+    /* Carte cadeau */
+    .imgCarteCadeauCatalattitude {
+        width: 250px;
+    }
+
+    /* Casa Bicicleta */
+    .imageCommuniquer {
+        width: 250px;
+    }
+
+    .motmele {
+        width: 250px;
+    }
+
+    /* Escapix */
+    .imgCarousel {
+        width: 250px;
+    }
+
+    .avionJaune {
+        width: 120px;
+    }
+
+    .logoLarge {
+        width: 250px;
+    }
+}
