@@ -1394,6 +1394,12 @@ body.light-mode .FlecheRoue {
     text-align: center;
     font-size: 20px;
 }
+.textCommuniquerEscapix {
+    font-family: "holiday", sans-serif;
+    text-align: center;
+    font-size: 20px;
+    margin-top: 100px;
+}
 
 .motmele {
     width: 342px;
@@ -1425,6 +1431,16 @@ body.light-mode .FlecheRoue {
 
 }
 
+.lienStratégieEscapix {
+    background-color: #5795c4;
+    padding: 30px 60px;
+    border-radius: 35px;
+    font-size: 20px;
+    font-family: 'Oswald', sans-serif;
+    color: #f1f1f1;
+    margin-bottom: 50px;
+}
+
 .lienStratégie {
     background-color: #c51a2e;
     padding: 30px 60px;
@@ -1435,6 +1451,12 @@ body.light-mode .FlecheRoue {
 }
 
 .buttonStratégie {
+    display: flex;
+    justify-content: center;
+    margin-top: 125px;
+}
+
+.buttonStratégieEscapix {
     display: flex;
     justify-content: center;
     margin-top: 125px;
@@ -1456,4 +1478,48 @@ body.light-mode .logo-light {
 
 body.light-mode .logo-dark {
     display: none;
+}
+
+.escapixCarousel {
+    display: flex;
+    justify-content: center;
+}
+
+.escapixDescription {
+    width: 393px;
+    font-family: 'Oswald', sans-serif;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.imgCarousel {
+    width: 321px;
+    height: auto;
+}
+
+.divEscapixCarousel {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 30px;
+}
+
+.DivAvionJaune{
+    display: flex;
+    justify-content: center;
+    gap: 261px;
+}
+
+.avionJaune {
+    width: 321px;
+    object-fit: cover;
+}
+
+.divEscapixLogoLarge {
+    display: flex;
+    justify-content: center;
+}
+
+.logoLarge {
+    width: 450px;
+    object-fit: cover;
 }

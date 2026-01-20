@@ -279,7 +279,7 @@ function handlerDomContentLoaded() {
         });
     });
 
-    // Sélectionne toutes les cartes
+
     // Sélectionne toutes les cartes
     const cards = document.querySelectorAll('.divCreaGrid');
 
@@ -294,11 +294,6 @@ function handlerDomContentLoaded() {
             textHover.classList.add('hidden');
         });
     });
-
-
-
-
-
 
 }
 
