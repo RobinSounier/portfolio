@@ -639,7 +639,7 @@ button {
     object-fit: cover;
     object-position: top;
     position: relative;
-    transform: rotate(-13.5deg) translateX(51px) translateY(38px);
+    transform: rotate(-13.5deg) translateX(44px) translateY(33px);
     width: 223px;
     z-index: 1;
 }
@@ -660,7 +660,7 @@ button {
     object-fit: cover;
     object-position: top;
     position: relative;
-    transform: rotate(13.5deg) translateX(-51px) translateY(38px);
+    transform: rotate(13.5deg) translateX(-44px) translateY(32px);
     width: 223px;
     z-index: 3;
 }

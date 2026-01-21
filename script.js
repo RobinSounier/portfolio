@@ -246,7 +246,7 @@ function handlerDomContentLoaded() {
     nextButton.addEventListener('click', () => {
         if (currentIndex < slides.length - visibleSlides) {
             currentIndex++;
-            track.style.transform = `translateX(-${slideWidth * currentIndex}px)`;
+            track.style.transform = `translateX(-${66.59 * currentIndex}px)`;
         }
     });
 
