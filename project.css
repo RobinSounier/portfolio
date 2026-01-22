@@ -1509,8 +1509,165 @@ body.light-mode .logo-dark {
     display: none;
 }
 
+
 /* -------------------------------------------
-   30. RESPONSIVE
+   30. CIENFUEGOS
+   ------------------------------------------- */
+.concept-container {
+    display: flex;
+    text-align: center;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+
+.concept-arrow {
+    transform: rotate(236deg) translate(-197px, 266px);
+    filter: invert(1);
+}
+
+body.light-mode .concept-arrow {
+    filter: invert(0);
+}
+
+.concept-text {
+    width: 350px;
+    font-family: 'Oswald', sans-serif;
+}
+
+
+.concept-title {
+    width: 350px;
+    font-family: 'holiday', cursive;
+    margin-bottom: 20px;
+    font-size: 36px;
+}
+
+.concept-icon {
+    width: 350px;
+}
+
+.audio-container {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 100px;
+}
+
+.audio-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.audio-icon {
+    width: 400px;
+}
+
+.audio-title {
+    font-family: 'Holiday', cursive;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 36px;
+}
+
+
+.audio-card {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+
+/* Par défaut : afficher pause, cacher play */
+.audio-pause {
+    display: block;
+}
+
+.audio-play {
+    display: none;
+}
+
+/* Quand ça joue : afficher play, cacher pause */
+.audio-card.playing .audio-pause {
+    display: none;
+}
+
+.audio-card.playing .audio-play {
+    display: block;
+}
+/* -------------------------------------------
+   31. MEETINGPRO
+   ------------------------------------------- */
+.MeetingPro {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 100px;
+}
+
+/* Camera Carousel */
+.camera-carousel-wrapper {
+    position: relative;
+    width: 584px;
+    height: 462px;
+}
+
+.camera-frame {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.camera-carousel {
+    position: absolute;
+    top: 64%;
+    left: 43%;
+    transform: translate(-50%, -50%);
+    width: 52%;
+    height: 43%;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.camera-track {
+    display: flex;
+    flex-direction: column;
+    animation: cameraScroll 18s steps(6) infinite;
+}
+
+.camera-slide {
+    flex: 0 0 100%;
+    width: 100%;
+    height: 198px; /* Ajuste selon la hauteur de ton écran appareil */
+}
+
+.camera-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+@keyframes cameraScroll {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-100%);
+    }
+}
+
+
+.camera-carousel:hover .camera-track {
+    animation-play-state: paused;
+}
+/* -------------------------------------------
+   32. RESPONSIVE
    ------------------------------------------- */
 @media (max-width: 1100px) {
     .informationsProject {

@@ -79,3 +79,29 @@ document.addEventListener('keydown', function(e) {
         closeContactModal();
     }
 });
+
+
+function toggleAudio(audioId) {
+    const audio = document.getElementById(audioId);
+
+    // Arrêter tous les autres audios
+    document.querySelectorAll('audio').forEach(a => {
+        if (a.id !== audioId) {
+            a.pause();
+            a.currentTime = 0;
+            a.parentElement.classList.remove('playing');
+        }
+    });
+
+    // Volume à 50%
+    audio.volume = 0.5;
+
+    // Play ou Pause
+    if (audio.paused) {
+        audio.play();
+        audio.parentElement.classList.add('playing');
+    } else {
+        audio.pause();
+        audio.parentElement.classList.remove('playing');
+    }
+}
