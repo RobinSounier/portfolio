@@ -802,7 +802,7 @@ button {
     display: flex;
     align-items: center;
     justify-content: center;
-    transform: translate(-100px, -80px);
+    transform: translate(-25px, -80px);
 }
 
 /* Mode sombre (par défaut) : afficher img2, cacher img1 */
