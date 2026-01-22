@@ -795,73 +795,347 @@ button {
 /* -------------------------------------------
    17. PAGE CONTACT
    ------------------------------------------- */
-.contactMainContainer {
-    animation: slideInSoft 0.8s ease-out;
-    margin: 60px auto 100px;
-    max-width: 1400px;
-    padding: 0 150px;
+
+.ContactImg1 {
+    transform: rotateZ(183deg) rotateY(178deg) translate(186px, 60px);
+    filter: invert(0);
+}
+.ContactImg2 {
+    transform: rotate(36deg) translate(-107px, -159px);
+    filter: invert(0);
 }
 
-.contactHeader {
-    margin-bottom: 80px;
-    text-align: center;
+.Contact {
+    transform: translate(-109px, -139px);
 }
 
-.contactGrid {
-    display: grid;
-    gap: 30px;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+body.light-mode .ContactImg1 {
+    filter: invert(1);
+}
+body.light-mode .ContactImg2 {
+    filter: invert(1);
 }
 
-.contactCard {
+.passionContact {
     align-items: center;
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 40px;
-    color: inherit;
     display: flex;
     flex-direction: column;
-    padding: 60px 30px;
-    text-align: center;
-    text-decoration: none;
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-.contactCard:not(.no-click):hover {
-    background: rgba(250, 161, 212, 0.08);
-    border-color: #faa1d4;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-    transform: translateY(-12px);
-}
-
-.cardIcon {
-    align-items: center;
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 50%;
-    color: #faa1d4;
-    display: flex;
-    height: 90px;
     justify-content: center;
+}
+
+
+/* Modal Voyage */
+.contact-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(8px);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.contact-modal.active {
+    display: flex;
+}
+
+.contact-modal-content {
+    background: #fff;
+    padding: 40px;
+    border-radius: 24px;
+    text-align: center;
+    position: relative;
+    max-width: 420px;
+    width: 90%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+    animation: modalFlyIn 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+    overflow: hidden;
+}
+
+@keyframes modalFlyIn {
+    from {
+        opacity: 0;
+        transform: translateY(50px) scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Nuages animés */
+.modal-clouds {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.cloud {
+    position: absolute;
+    background: rgba(250, 161, 212, 0.1);
+    border-radius: 50%;
+    filter: blur(20px);
+}
+
+.cloud1 {
+    width: 150px;
+    height: 60px;
+    top: 10%;
+    left: -50px;
+    animation: cloudFloat 15s linear infinite;
+}
+
+.cloud2 {
+    width: 100px;
+    height: 40px;
+    top: 30%;
+    right: -30px;
+    animation: cloudFloat 20s linear infinite reverse;
+}
+
+.cloud3 {
+    width: 120px;
+    height: 50px;
+    bottom: 20%;
+    left: -40px;
+    animation: cloudFloat 18s linear infinite;
+    animation-delay: -5s;
+}
+
+@keyframes cloudFloat {
+    from {
+        transform: translateX(-100px);
+    }
+    to {
+        transform: translateX(calc(100% + 200px));
+    }
+}
+
+/* Header */
+.modal-header {
+    position: relative;
+    z-index: 1;
     margin-bottom: 30px;
-    transition: 0.4s;
-    width: 90px;
 }
 
-.contactCard:hover .cardIcon {
-    background: #faa1d4;
-    color: #000;
-    transform: rotate(10deg);
+.passport-icon {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, #faa1d4, #f06ab0);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    color: #fff;
+    box-shadow: 0 10px 30px rgba(250, 161, 212, 0.4);
+    animation: passportPulse 2s ease-in-out infinite;
 }
 
-.contactValue {
-    font-family: 'Oswald', sans-serif;
-    font-size: 20px;
-    font-weight: 300;
+@keyframes passportPulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+.contact-modal-content h2 {
+    color: #333;
+    font-size: 1.6rem;
+    margin-bottom: 8px;
+    font-weight: 600;
     letter-spacing: 1px;
-    margin-top: 15px;
-    opacity: 0.8;
 }
 
+.modal-subtitle {
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+/* Bouton fermer */
+.close-modal {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 36px;
+    height: 36px;
+    background: rgba(0, 0, 0, 0.05);
+    border: none;
+    border-radius: 50%;
+    color: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+
+.close-modal:hover {
+    background: #faa1d4;
+    color: #fff;
+    transform: rotate(90deg);
+}
+
+/* Boarding pass footer */
+.boarding-pass {
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 2px dashed rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1;
+}
+
+.boarding-pass span {
+    color: rgba(0, 0, 0, 0.4);
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* Découpes style ticket */
+.contact-modal-content::before,
+.contact-modal-content::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 50%;
+    bottom: 85px;
+}
+
+.contact-modal-content::before {
+    left: -10px;
+}
+
+.contact-modal-content::after {
+    right: -10px;
+}
+
+/* Cursor */
+.Contact {
+    cursor: pointer;
+}
+
+/* Boutons contact style ticket */
+.contact-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    position: relative;
+    z-index: 1;
+}
+
+.contact-btn {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 16px 20px;
+    border-radius: 14px;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    position: relative;
+    overflow: hidden;
+    background: #fff;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+.contact-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(250, 161, 212, 0.3), transparent);
+    transition: left 0.5s;
+}
+
+.contact-btn:hover::before {
+    left: 100%;
+}
+
+.contact-btn:hover {
+    background: #faa1d4;
+    border-color: #faa1d4;
+    transform: translateX(8px);
+    box-shadow: 0 8px 25px rgba(250, 161, 212, 0.4);
+}
+
+.btn-icon {
+    width: 44px;
+    height: 44px;
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+    flex-shrink: 0;
+    transition: all 0.3s;
+}
+
+.contact-btn:hover .btn-icon {
+    background: rgba(255, 255, 255, 0.3);
+    color: #fff;
+}
+
+.btn-content {
+    flex: 1;
+    text-align: left;
+}
+
+.btn-destination {
+    display: block;
+    color: #333;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.contact-btn:hover .btn-destination {
+    color: #fff;
+}
+
+.btn-info {
+    display: block;
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 0.8rem;
+    margin-top: 2px;
+    transition: color 0.3s;
+}
+
+.contact-btn:hover .btn-info {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.btn-arrow {
+    font-size: 1.4rem;
+    color: #333;
+    opacity: 0;
+    transform: translateX(-10px);
+    transition: all 0.3s;
+}
+
+.contact-btn:hover .btn-arrow {
+    opacity: 1;
+    transform: translateX(0);
+    color: #fff;
+}
 /* -------------------------------------------
    18. FOOTER
    ------------------------------------------- */

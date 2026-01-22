@@ -56,3 +56,26 @@ document.addEventListener('keydown', function(event) {
         closeModal();
     }
 });
+
+
+function openContactModal() {
+    document.getElementById('contactModal').classList.add('active');
+}
+
+function closeContactModal() {
+    document.getElementById('contactModal').classList.remove('active');
+}
+
+// Fermer en cliquant en dehors
+document.getElementById('contactModal').addEventListener('click', function(e) {
+    if (e.target === this) {
+        closeContactModal();
+    }
+});
+
+// Fermer avec Escape
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+        closeContactModal();
+    }
+});
