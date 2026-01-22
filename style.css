@@ -796,25 +796,33 @@ button {
    17. PAGE CONTACT
    ------------------------------------------- */
 
-.ContactImg1 {
-    transform: rotateZ(183deg) rotateY(178deg) translate(186px, 60px);
-    filter: invert(0);
-}
-.ContactImg2 {
-    transform: rotate(36deg) translate(-107px, -159px);
-    filter: invert(0);
-}
 
 .Contact {
-    transform: translate(-109px, -139px);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translate(-100px, -80px);
 }
 
-body.light-mode .ContactImg1 {
-    filter: invert(1);
+/* Mode sombre (par défaut) : afficher img2, cacher img1 */
+.contactImg1 {
+    display: none;
 }
-body.light-mode .ContactImg2 {
-    filter: invert(1);
+
+.contactImg2 {
+    display: block;
 }
+
+/* Mode clair : afficher img1, cacher img2 */
+body.light-mode .contactImg1 {
+    display: block;
+}
+
+body.light-mode .contactImg2 {
+    display: none;
+}
+
 
 .passionContact {
     align-items: center;
