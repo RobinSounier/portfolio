@@ -549,6 +549,18 @@ h1 {
     width: 413px;
 }
 
+.textUnderPhoneMeetingPro {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Oswald', sans-serif;
+    font-size: 18px;
+    gap: 20px;
+    margin-top: 15px;
+    text-align: center;
+    width: 413px;
+    align-items: center;
+}
+
 .tel {
     pointer-events: none;
     position: absolute;
@@ -1130,15 +1142,23 @@ h1 {
 .imageAprendreoualaisser {
     height: 310px;
     position: relative;
-    top: 38px;
+    top: 27px;
     width: 551px;
     z-index: 10;
+
 }
 
+.textOrdiAcceuil{
+    font-family: 'Oswald', sans-serif;
+}
+
+.textOrdiClick {
+    font-family: 'Oswald', sans-serif;
+}
 .imageOrdiVincenzo {
     height: 309px;
     position: relative;
-    top: 225px;
+    top: 137px;
     width: 551px;
     z-index: 10;
 }
@@ -1153,6 +1173,21 @@ h1 {
 
 .texteOrdi2 {
     font-family: 'Oswald', sans-serif;
+    font-size: 18px;
+    margin-top: 150px;
+    text-align: center;
+    width: 500px;
+}
+
+.imageOrdiEscapix {
+    display: block;
+    margin-top: 200px;
+    position: absolute;
+    width: 600px;
+}
+
+.texteOrdi2Escapix {
+    font-family: "holiday", sans-serif;
     font-size: 18px;
     margin-top: 150px;
     text-align: center;
@@ -1242,6 +1277,7 @@ h1 {
     height: auto;
     object-fit: cover;
     width: 344px;
+    margin-top: 20px;
 }
 
 .textCommuniquer {
@@ -1264,6 +1300,8 @@ h1 {
 .descriptionRoue {
     text-align: center;
     width: 454px;
+    font-family: 'Oswald', sans-serif;
+    margin-top: 50px;
 }
 
 .divimgRoueFleche {
@@ -1275,11 +1313,13 @@ h1 {
 .FlecheRoue {
     filter: invert(1);
     transform: scale(0.5) rotate(229deg) translate(-62px, -36px);
+
 }
 
 .textRoue {
     font-family: 'holiday', cursive;
     font-size: 22px;
+    margin-bottom: 20px;
 }
 
 .textRoueFleche {
@@ -1312,7 +1352,7 @@ h1 {
 
 .descriptionMotMele {
     font-family: 'Oswald', sans-serif;
-    margin-top: 10px;
+    margin-top: 30px;
     text-align: center;
     width: 454px;
 }
@@ -1324,18 +1364,38 @@ h1 {
     display: flex;
     justify-content: center;
     margin-top: 125px;
+    cursor: pointer;
 }
 
 .buttonStratégieEscapix {
     display: flex;
     justify-content: center;
-    margin-top: 125px;
 }
 
-.buttonStratégieAccent {
+.calandrierMeeting {
+    border: 5px solid #191a1c;
+    border-radius: 30px;
+    width: 290px;
+}
+
+.buttonStratégieCienfuegos {
     display: flex;
     justify-content: center;
     margin-top: 250px;
+}
+.buttonStratégieAccent {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.lienStratégieCienfuegos {
+    background-color: #ff731b;
+    border-radius: 35px;
+    color: #f1f1f1;
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px;
+    padding: 30px 60px;
 }
 
 .lienStratégie {
@@ -1345,6 +1405,7 @@ h1 {
     font-family: 'Oswald', sans-serif;
     font-size: 20px;
     padding: 30px 60px;
+    cursor: pointer;
 }
 
 .lienStratégieEscapix {
@@ -1355,6 +1416,7 @@ h1 {
     font-size: 20px;
     margin-bottom: 50px;
     padding: 30px 60px;
+    cursor: pointer;
 }
 
 
@@ -1586,6 +1648,60 @@ h1 {
     background-color: #a91f32;
 }
 
+.ipad-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.imageIpadCatalattitude,
+.imageIpadCatalattitudeNoir {
+    position: relative;
+    z-index: 1;
+    width: 70vw;
+}
+
+/* Par défaut en mode sombre : iPad blanc visible */
+.imageIpadCatalattitude {
+    display: block;
+}
+
+.imageIpadCatalattitudeNoir {
+    display: none;
+}
+
+/* En mode clair : iPad noir visible */
+body.light-mode .imageIpadCatalattitude {
+    display: none;
+}
+
+body.light-mode .imageIpadCatalattitudeNoir {
+    display: block;
+}
+
+/* Image qui se superpose à l'écran de l'iPad */
+.imageContenuIpad {
+    position: absolute;
+    top: 45.1%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 23%;
+    height: 82.3%;
+    object-fit: cover;
+    z-index: 2;
+    border-radius: 5.1%;
+}
+
+.texteIpadCatalattitude {
+    font-family: 'Oswald', sans-serif;
+    font-size: 18px;
+    margin-top: 20px;
+    text-align: center;
+    width: 600px;
+}
+
 /* -------------------------------------------
    28. LOGOS LIGHT/DARK MODE
    ------------------------------------------- */
@@ -1663,7 +1779,18 @@ body.light-mode .logo-dark {
     filter: invert(1);
 }
 
+.concept-arrow-ordi {
+
+    transform: rotate(236deg) translate(-117px, 186px);
+    filter: invert(1);
+
+}
+
 body.light-mode .concept-arrow {
+    filter: invert(0);
+}
+
+body.light-mode .concept-arrow-ordi {
     filter: invert(0);
 }
 
@@ -1837,29 +1964,30 @@ body.light-mode .concept-arrow {
 }
 
 .avion-container {
+    position: relative;
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
+    align-items: center;
     margin-top: 100px;
+
 }
 
+.avion-light,
+.avion-dark {
+    position: relative;
+    width: 70vw;
+    z-index: 1;
+    margin-bottom: 50px;
+    transform: translateX(33px);
+}
+
+/* Gestion du mode clair/sombre */
 .avion-light {
     display: none;
-    width: 1125px;
-    transform: translateX(45px);
 }
 
 .avion-dark {
     display: block;
-    width: 1125px;
-    transform: translateX(45px);
-}
-
-.avion-description {
-    width: 397px;
-    text-align: center;
-    font-family: 'Oswald', sans-serif;
 }
 
 body.light-mode .avion-light {
@@ -1868,6 +1996,28 @@ body.light-mode .avion-light {
 
 body.light-mode .avion-dark {
     display: none;
+}
+
+.avion-description {
+    font-family: 'Oswald', sans-serif;
+    font-size: 18px;
+    text-align: center;
+    width: 600px;
+}
+
+/* Vidéo superposée sur l'écran de l'avion */
+.avion-video {
+    position: absolute;
+    top: 44.4%;
+    left: 47.6%;
+    transform: translate(-42%, -50%);
+    width: 20%;
+    height: 85.5%;
+    object-fit: cover;
+    /* z-index: 2; */
+    border-radius: 10%;
+
+
 }
 /* -------------------------------------------
    32. RESPONSIVE

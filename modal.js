@@ -4,7 +4,7 @@ const modalImg = document.getElementById("img01");
 const captionText = document.getElementById("caption");
 
 // Sélection de toutes les images cliquables
-const images = document.querySelectorAll('.flyers img, .imgGrid img, .imageCalendrier, .creaGrid, .imgCard, .imageCommuniquer, .motmele, .imgCarousel, .passport, .imageBoxAperoCatalan');
+const images = document.querySelectorAll('.flyers img, .imgGrid img, .imageCalendrier, .creaGrid, .imgCard, .imageCommuniquer, .motmele, .imgCarousel, .passport, .imageBoxAperoCatalan, .imageContenuIpad');
 
 // Ouverture de la modal
 images.forEach(img => {

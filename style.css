@@ -360,7 +360,6 @@ button {
     justify-content: center;
     margin: 0 auto;
     max-width: 1535px;
-    padding-top: 34px;
 }
 
 .titleProjectList {
@@ -676,12 +675,37 @@ button {
 
 .avionPresentation {
     filter: invert(1);
-    height: 700px;
+    height: 920px;
     margin: auto 0;
     object-fit: cover;
     width: 90vw;
 }
 
+.subtitleMesProjet{
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px;
+    margin-top: 20px;
+    text-align: center;
+    width: 800px;
+    margin-left: 163px;
+}
+
+.divsubtitleMesProjet{
+    display: flex;
+    justify-content: center;
+}
+
+.imgAvionProjet {
+    height: 160px;
+    object-fit: contain;
+    width: 160px;
+    transform: rotate(349deg) translate(-55px, -40px);
+    filter: invert(1);
+}
+
+body.light-mode .imgAvionProjet {
+    filter: invert(0);
+}
 /* -------------------------------------------
    16. INDISPENSABLES COMMUNICANTE
    ------------------------------------------- */

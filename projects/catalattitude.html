@@ -345,7 +345,7 @@
 
     </div>
 
-<!--    <script async src="//www.instagram.com/embed.js"></script>-->
+    <script async src="//www.instagram.com/embed.js"></script>
 
     </div>
     <h1 class="titreIdentite">Carte Cadeau</h1>
@@ -402,12 +402,20 @@
             </div>
         </div>
     </div>
-<div class="buttonStratégieAccent">
-        <button class="lienStratégieAccent" data-img="../img/catalattitude/calendrierEditorial.png">Lien calendrier éditorial</button>
+
+
+
+<h1 class="titreIdentite">Emailing</h1>
+<div class="ipad-container">
+    <img src="../img/catalattitude/ipad.png" alt="ipad" class="imageIpadCatalattitude">
+    <img src="../img/catalattitude/ipad2png.png" alt="ipad" class="imageIpadCatalattitudeNoir">
+    <img src="../img/catalattitude/Emailing.jpg" alt="contenu écran" class="imageContenuIpad">
+    <p class="texteIpadCatalattitude">Objectif : Rédiger le texte du mail qui s'adressera à des entreprises locales pour leur donner envie de commander chez L'accent Catalan pour Noël.</p>
 </div>
-    <h1 class="grostitre" style="color: #fecf0e; margin-top: 20px">MEETING PRO</h1>
-
-
+<div class="buttonStratégieAccent">
+    <button class="lienStratégieAccent" data-img="../img/catalattitude/calendrierEditorial.png">Lien calendrier éditorial</button>
+</div>
+<h1 class="grostitre" style="color: #fecf0e; margin-top: 20px">MEETING PRO</h1>
 <div class="MeetingPro">
 
     <div class="camera-carousel-wrapper">
@@ -433,9 +441,9 @@
     </div>
 
     <div class="iphone">
-        <div class="textUnderPhone">
-            <img class="tel" src="../img/grizzlys/tel.webp" alt="">
-            <img class="video1 video" src="../img/catalattitude/MeetingProapreilPhoto/mettingProDate.webp" alt="calendrirer">
+        <div class="textUnderPhoneMeetingPro">
+<!--            <img class="tel" src="../img/grizzlys/tel.webp" alt="">-->
+            <img class="calandrierMeeting" src="../img/catalattitude/MeetingProapreilPhoto/mettingProDate.webp" alt="calendrirer">
             <p class="descriptionVideo">Story Instagram présentant les dates des prochaines réunions professionnelles</p>
         </div>
     </div>
@@ -445,6 +453,7 @@
              alt="Création Catal'attitude">
     </div>
 </div>
+
 
 
     <footer>
@@ -507,41 +516,43 @@
     }
 
 
-        // Code existant pour le carrousel calendrier...
-
-        // Gestion de la modal pour le bouton stratégie
-        document.addEventListener('DOMContentLoaded', function() {
+    // Code existant pour le carrousel calendrier...
+    // Gestion de la modal pour le bouton stratégie
+    document.addEventListener('DOMContentLoaded', function () {
         const btnStrategie = document.querySelector('.lienStratégieAccent');
         const modal = document.getElementById('myModal');
         const modalImg = document.getElementById('img01');
         const closeModal = document.querySelector('.close');
 
         if (btnStrategie) {
-        btnStrategie.addEventListener('click', function(e) {
-        e.preventDefault(); // Empêche le lien de s'ouvrir
+            btnStrategie.addEventListener('click', function (e) {
+                e.preventDefault(); // Empêche le lien de s'ouvrir
 
-        const imgSrc = this.getAttribute('data-img');
-        if (imgSrc) {
-        modal.style.display = "block";
-        modalImg.style.marginTop = "100px";
-        modalImg.src = imgSrc;
-    }
-    });
-    }
+                const imgSrc = this.getAttribute('data-img');
+                if (imgSrc) {
+                    modal.style.display = "block";
+                    modalImg.style.marginTop = "100px";
+                    modalImg.src = imgSrc;
+                    document.body.style.overflow = "hidden"; // Bloquer le scroll
+                }
+            });
+        }
 
         // Fermer la modal
         if (closeModal) {
-        closeModal.onclick = function() {
-        modal.style.display = "none";
-    }
-    }
+            closeModal.onclick = function () {
+                modal.style.display = "none";
+                document.body.style.overflow = "auto"; // Remettre le scroll
+            }
+        }
 
         // Fermer en cliquant en dehors de l'image
-        modal.onclick = function(e) {
-        if (e.target === modal) {
-        modal.style.display = "none";
-    }
-    }
+        modal.onclick = function (e) {
+            if (e.target === modal) {
+                modal.style.display = "none";
+                document.body.style.overflow = "auto"; // Remettre le scroll
+            }
+        }
     });
 
 
