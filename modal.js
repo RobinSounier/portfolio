@@ -105,3 +105,36 @@ function toggleAudio(audioId) {
         audio.parentElement.classList.remove('playing');
     }
 }
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    let calendrierIndex = 0;
+    const calendrierSlides = document.querySelectorAll('.calendrier-slide');
+    const calendrierDots = document.querySelectorAll('.calendrier-dot');
+
+    function showCalendrierSlide(index) {
+        if (index >= calendrierSlides.length) calendrierIndex = 0;
+        if (index < 0) calendrierIndex = calendrierSlides.length - 1;
+
+        calendrierSlides.forEach(slide => slide.classList.remove('active'));
+        calendrierDots.forEach(dot => dot.classList.remove('active'));
+
+        calendrierSlides[calendrierIndex].classList.add('active');
+        calendrierDots[calendrierIndex].classList.add('active');
+    }
+
+    window.changeCalendrierSlide = function(direction) {
+        calendrierIndex += direction;
+        showCalendrierSlide(calendrierIndex);
+    }
+
+    window.goToCalendrierSlide = function(index) {
+        calendrierIndex = index;
+        showCalendrierSlide(calendrierIndex);
+    }
+
+    // Défilement automatique
+    setInterval(() => {
+        changeCalendrierSlide(1);
+    }, 4000);
+});

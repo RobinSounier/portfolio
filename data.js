@@ -18,7 +18,7 @@ Projet = [
         id: 4,
         title: "CATAL'ATTITUDE",
         description: "Communication commerciale",
-        imageUrl: "./img/Catal’attitude/projet.jpeg",
+        imageUrl: "./img/catalattitude/projet.jpeg",
         link: "./projects/catalattitude.html"
     },
     {

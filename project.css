@@ -1089,6 +1089,11 @@ h1 {
     flex-direction: column;
 }
 
+.lienOrdiCatalattitude {
+    margin-left: 300px;
+}
+
+
 .ordiVincenzo {
     align-items: center;
     display: flex;
@@ -1098,10 +1103,28 @@ h1 {
 
 .imageOrdiCatalattitude {
     display: block;
-    margin-top: 200px;
+    margin-top: 143px;
     position: absolute;
     width: 600px;
 }
+
+.imageOrdiCienfuegos{
+    display: block;
+    margin-top: 13px;
+    position: absolute;
+    width: 600px;
+}
+
+.concept-description-container {
+    margin-top: 145px;
+}
+
+.diapo-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+
 
 .imageAprendreoualaisser {
     height: 310px;
@@ -1122,7 +1145,6 @@ h1 {
 .texteOrdi {
     font-family: 'Oswald', sans-serif;
     font-size: 18px;
-    margin-top: 277px;
     text-align: center;
     width: 500px;
 }
@@ -1308,6 +1330,12 @@ h1 {
     margin-top: 125px;
 }
 
+.buttonStratégieAccent {
+    display: flex;
+    justify-content: center;
+    margin-top: 250px;
+}
+
 .lienStratégie {
     background-color: #c51a2e;
     border-radius: 35px;
@@ -1325,6 +1353,18 @@ h1 {
     font-size: 20px;
     margin-bottom: 50px;
     padding: 30px 60px;
+}
+
+
+.lienStratégieAccent {
+    background-color: #a91f32;
+    border-radius: 35px;
+    color: #f1f1f1;
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px;
+    margin-bottom: 50px;
+    padding: 30px 60px;
+    cursor: pointer;
 }
 
 /* -------------------------------------------
@@ -1449,6 +1489,99 @@ h1 {
 .closeGrizzly:focus {
     color: #bbb;
     text-decoration: none;
+}
+
+
+/* -------------------------------------------
+   CARROUSEL CALENDRIER
+   ------------------------------------------- */
+.calendrier-carousel-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.calendrier-carousel {
+    position: relative;
+    width: 300px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.calendrier-track {
+    position: relative;
+    width: 100%;
+    height: 400px;
+}
+
+.calendrier-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.calendrier-slide.active {
+    opacity: 1;
+}
+
+.calendrier-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 15px 10px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s;
+    z-index: 10;
+}
+
+.calendrier-btn:hover {
+    background-color: rgba(169, 31, 50, 0.8);
+}
+
+.calendrier-btn.prev {
+    left: 0;
+    border-radius: 0 5px 5px 0;
+}
+
+.calendrier-btn.next {
+    right: 0;
+    border-radius: 5px 0 0 5px;
+}
+
+.calendrier-dots {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 15px 0;
+}
+
+.calendrier-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #666;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.calendrier-dot:hover {
+    transform: scale(1.2);
+}
+
+.calendrier-dot.active {
+    background-color: #a91f32;
 }
 
 /* -------------------------------------------
@@ -1596,6 +1729,35 @@ body.light-mode .concept-arrow {
 .audio-card.playing .audio-play {
     display: block;
 }
+
+
+.ipod-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.ipod-screen {
+    position: absolute;
+    top: 35px;
+    left: 199px;
+    transform: translateX(-50%);
+    width: 337px;
+    height: 331px;
+    border-radius: 14px;
+    pointer-events: none;
+    object-fit: cover;
+}
+
+
+.ipod-text{
+    position: absolute;
+    top: 393px;
+    color: white;
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    left: 102px;
+}
 /* -------------------------------------------
    31. MEETINGPRO
    ------------------------------------------- */
@@ -1665,6 +1827,43 @@ body.light-mode .concept-arrow {
 
 .camera-carousel:hover .camera-track {
     animation-play-state: paused;
+}
+
+
+
+
+.avion-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 100px;
+}
+
+.avion-light {
+    display: none;
+    width: 1125px;
+    transform: translateX(45px);
+}
+
+.avion-dark {
+    display: block;
+    width: 1125px;
+    transform: translateX(45px);
+}
+
+.avion-description {
+    width: 397px;
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+}
+
+body.light-mode .avion-light {
+    display: block;
+}
+
+body.light-mode .avion-dark {
+    display: none;
 }
 /* -------------------------------------------
    32. RESPONSIVE
