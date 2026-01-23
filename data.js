@@ -7,13 +7,13 @@ Projet = [
         imageUrl: "./img/Capture%20d’écran%202025-10-30%20223154.png",
         link: "./projects/grizzlys.html"
     },
-    {
-        id: 2,
-        title: "UNION BASKET DES ASPRES",
-        description: "Communication association sportive",
-        imageUrl: "./img/bages/projet.JPG",
-        link: "./projects/basket.html"
-    },
+    //{
+        //id: 2,
+        //title: "UNION BASKET DES ASPRES",
+        //description: "Communication association sportive",
+       // imageUrl: "./img/bages/projet.JPG",
+     //   link: "./projects/basket.html"
+   // },
     {
         id: 4,
         title: "CATAL'ATTITUDE",

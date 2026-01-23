@@ -345,7 +345,7 @@
 
     </div>
 
-    <script async src="//www.instagram.com/embed.js"></script>
+<!--    <script async src="//www.instagram.com/embed.js"></script>-->
 
     </div>
     <h1 class="titreIdentite">Carte Cadeau</h1>
@@ -370,10 +370,7 @@
         <a href="https://www.canva.com/design/DAG5msaExoY/QY0Vc937T0UXlQONpgzoyA/view?utm_content=DAG5msaExoY&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h823f403eb0"
            target="_blank" class="lienOrdiCatalattitude">
             <div class="ordi">
-                <p class="texteOrdi">Mis en ligne pour décembre, ce calendrier de l’avent proposait un jeu chaque jour
-                    sur le site : après avoir cliqué sur la date, il fallait choisir la bonne boîte pour gagner une
-                    surprise ou retenter sa chance le lendemain. Le site affichait une page pour demander de patienter
-                    si le jour n'était pas encore arrivé, ou une page "trop tard" pour les jours déjà passés.</p>
+                <p class="texteOrdi">Mis en ligne en décembre, ce calendrier de l’Avent proposait un jeu quotidien : cliquer sur la date, choisir la bonne boîte et tenter de gagner une surprise. Trop tôt ou trop tard ?   Le site l’indiquait clairement.</p>
                 <img src="../img/catalattitude/ordi.webp" alt="ordiCatalattitude" class="imageOrdiCatalattitude">
                 <img src="../img/catalattitude/calendrier/aprendreoualaisser.png" alt="aprendreoualaisser"
                      class="imageAprendreoualaisser">
@@ -406,11 +403,9 @@
         </div>
     </div>
 <div class="buttonStratégieAccent">
-    <a href="https://www.canva.com/design/DAGTehBh2hc/2nUzZXHWaoFZlwjUbUHI9w/view?utm_content=DAGTehBh2hc&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=ha20f49b47f">
-        <button class="lienStratégieAccent">Lien Stratégie</button>
-    </a>
+        <button class="lienStratégieAccent" data-img="../img/catalattitude/calendrierEditorial.png">Lien calendrier éditorial</button>
 </div>
-    <h1 class="grostitre" style="color: #fecf0e">MEETING PRO</h1>
+    <h1 class="grostitre" style="color: #fecf0e; margin-top: 20px">MEETING PRO</h1>
 
 
 <div class="MeetingPro">
@@ -510,6 +505,45 @@
         slides[calendrierIndex].classList.add('active');
         dots[calendrierIndex].classList.add('active');
     }
+
+
+        // Code existant pour le carrousel calendrier...
+
+        // Gestion de la modal pour le bouton stratégie
+        document.addEventListener('DOMContentLoaded', function() {
+        const btnStrategie = document.querySelector('.lienStratégieAccent');
+        const modal = document.getElementById('myModal');
+        const modalImg = document.getElementById('img01');
+        const closeModal = document.querySelector('.close');
+
+        if (btnStrategie) {
+        btnStrategie.addEventListener('click', function(e) {
+        e.preventDefault(); // Empêche le lien de s'ouvrir
+
+        const imgSrc = this.getAttribute('data-img');
+        if (imgSrc) {
+        modal.style.display = "block";
+        modalImg.style.marginTop = "100px";
+        modalImg.src = imgSrc;
+    }
+    });
+    }
+
+        // Fermer la modal
+        if (closeModal) {
+        closeModal.onclick = function() {
+        modal.style.display = "none";
+    }
+    }
+
+        // Fermer en cliquant en dehors de l'image
+        modal.onclick = function(e) {
+        if (e.target === modal) {
+        modal.style.display = "none";
+    }
+    }
+    });
+
 
 </script>
 </body>
