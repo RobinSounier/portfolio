@@ -676,7 +676,6 @@ button {
 
 .avionPresentation {
     filter: invert(1);
-    height: 920px;
     margin: auto 0;
     object-fit: cover;
     width: 90vw;
