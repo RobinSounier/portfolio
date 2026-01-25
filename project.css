@@ -1142,7 +1142,7 @@ h1 {
 .imageAprendreoualaisser {
     height: 310px;
     position: relative;
-    top: 27px;
+    top: 39px;
     width: 551px;
     z-index: 10;
 
@@ -1656,6 +1656,15 @@ h1 {
     justify-content: center;
 }
 
+.imageAprendreoualaisserEscapix {
+    height: 310px;
+    position: relative;
+    top: 27px;
+    width: 551px;
+    z-index: 10;
+
+}
+
 .imageIpadCatalattitude,
 .imageIpadCatalattitudeNoir {
     position: relative;
@@ -1684,7 +1693,7 @@ body.light-mode .imageIpadCatalattitudeNoir {
 /* Image qui se superpose à l'écran de l'iPad */
 .imageContenuIpad {
     position: absolute;
-    top: 45.1%;
+    top: 44.3%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 23%;
@@ -2008,11 +2017,11 @@ body.light-mode .avion-dark {
 /* Vidéo superposée sur l'écran de l'avion */
 .avion-video {
     position: absolute;
-    top: 44.4%;
-    left: 47.6%;
-    transform: translate(-42%, -50%);
+    top: 42.6%;
+    left: 50.3%;
+    transform: translate(-50%, -50%);
     width: 20%;
-    height: 85.5%;
+    height: 82%;
     object-fit: cover;
     /* z-index: 2; */
     border-radius: 10%;

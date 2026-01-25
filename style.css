@@ -575,6 +575,7 @@ button {
 #nomLogo {
     display: flex;
     justify-content: center;
+    font-family: 'Oswald', sans-serif;
 }
 
 /* -------------------------------------------
