@@ -1693,11 +1693,11 @@ body.light-mode .imageIpadCatalattitudeNoir {
 /* Image qui se superpose à l'écran de l'iPad */
 .imageContenuIpad {
     position: absolute;
-    top: 45.3%;
+    top: 44.4%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 22.6%;
-    height: 81.9%;
+    height: 80.3%;
     object-fit: cover;
     z-index: 2;
     border-radius: 5.1%;
