@@ -1988,6 +1988,7 @@ body.light-mode .concept-arrow-ordi {
     z-index: 1;
     margin-bottom: 50px;
     transform: translateX(33px);
+    pointer-events: none;
 }
 
 /* Gestion du mode clair/sombre */
