@@ -258,26 +258,51 @@ function handlerDomContentLoaded() {
     });
 
 
+const elnomLogo = document.getElementById('nomLogo');
+const elPreviewImg = document.getElementById('previewImg');
 
-    const elnomLogo = document.getElementById('nomLogo');
+const previewImages = {
+    Photoshop:   './img/preview/3.png',
+    Indesign:    './img/preview/2.png',
+    Illustrator: './img/preview/2.png',
+    Canva:       './img/preview/5.png',
+};
 
-// Sélectionne toutes les images
-    const logos = document.querySelectorAll('#Photoshop, #Indesign, #Illustrator, #Word, #Excel, #Wordpress, #Drive, #Trello, #Capcut, #Canva, #Pinterest, #Linkedin, #Tiktok, #Instagram, #Facebook');
+const previewImagesBlanc = {
+    Photoshop:   './img/preview/3-blanc.png',
+    Indesign:    './img/preview/2-blanc.png',
+    Illustrator: './img/preview/2-blanc.png',
+    Canva:       './img/preview/5-blanc.png',
+};
 
-// Pour chaque logo, ajoute un event listener
-    logos.forEach(logo => {
-        logo.addEventListener('mouseover', () => {
-            elnomLogo.textContent = logo.id; // Affiche l’ID du logo sur hover
-            elcarouselbtnprev.style.transform = 'translateY(-87%)';
-            elcarouselbtnnext.style.transform = 'translateY(-87%)';
-        });
+const logos = document.querySelectorAll('#Photoshop, #Indesign, #Illustrator, #Word, #Excel, #Wordpress, #Drive, #Trello, #Capcut, #Canva, #Pinterest, #Linkedin, #Tiktok, #Instagram, #Facebook, #Brevo');
 
-        logo.addEventListener('mouseout', () => {
-            elnomLogo.textContent = ''; // Efface le texte quand la souris part
-            elcarouselbtnprev.style.transform = 'translateY(-50%)';
-            elcarouselbtnnext.style.transform = 'translateY(-50%)';
-        });
+logos.forEach(logo => {
+    logo.addEventListener('mouseover', () => {
+        elnomLogo.textContent = logo.id;
+        elcarouselbtnprev.style.transform = 'translateY(-87%)';
+        elcarouselbtnnext.style.transform = 'translateY(-87%)';
+
+        const isLightMode = document.body.classList.contains('light-mode');
+        const images = isLightMode ? previewImages : previewImagesBlanc;
+
+        const src = images[logo.id];
+        if (src) {
+            elPreviewImg.src = src;
+            elPreviewImg.alt = logo.id;
+            elPreviewImg.style.display = 'block';
+        }
     });
+
+    logo.addEventListener('mouseout', () => {
+        elnomLogo.textContent = '';
+        elcarouselbtnprev.style.transform = 'translateY(-50%)';
+        elcarouselbtnnext.style.transform = 'translateY(-50%)';
+
+        elPreviewImg.style.display = 'none';
+        elPreviewImg.src = '';
+    });
+});
 
 
     // Sélectionne toutes les cartes

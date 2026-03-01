@@ -7,6 +7,7 @@ Projet = [
         imageUrl: "./img/Capture%20d’écran%202025-10-30%20223154.png",
         link: "./projects/grizzlys.html"
     },
+    
     //{
         //id: 2,
         //title: "UNION BASKET DES ASPRES",
@@ -55,6 +56,13 @@ Projet = [
         description: "Communication commerciale",
         imageUrl: "./img/escapix/imagePrincipal.png",
         link: "./projects/escapix.html"
+    },
+    {
+        id: 2,
+        title: "PORTES ARIÈGE PYRÉNÉES",
+        description: "Communication publique",
+        imageUrl: "./img/communaute_de_communes/image.jpg",
+        link: "./projects/PORTES-ARIEGE-PYRENEES.html"
     }
 
 
