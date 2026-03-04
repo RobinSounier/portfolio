@@ -2321,3 +2321,30 @@ body.light-mode .flecheCommunique {
     text-align: center;
     width: 600px;
 }
+
+/* Mode sombre (défaut) : noire visible, blanche cachée */
+.competenceNoir {
+    display: none;
+    width: 60vw;
+}
+
+.competenceBlanc {
+    display: block;
+    width: 60vw;
+}
+
+/* Mode clair : noire visible, blanche cachée */
+body.light-mode .competenceNoir {
+    display: block;
+}
+
+body.light-mode .competenceBlanc {
+    display: none;
+}
+
+.competence {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    margin-top: 150px;
+}
