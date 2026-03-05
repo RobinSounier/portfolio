@@ -2348,3 +2348,124 @@ body.light-mode .competenceBlanc {
     width: 100vw;
     margin-top: 150px;
 }
+
+.moodboardContainer{
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    gap: 50px;
+    align-items: center;
+}
+
+.moodboardCienfuegos{
+    width: 400px;
+    height: auto;
+    object-fit: cover;
+    border: 5px solid #191a1c;
+    border-radius: 10px;
+}
+
+.moodboardText{
+    font-family: "Oswald", sans-serif;
+    font-size: 20px;
+    margin-top: 20px;
+    text-align: center;
+    width: 600px;
+}
+
+.moodboardArrow{
+    filter: invert(1);
+    transform: rotate(279deg) rotateY(0deg) translateX(87px);
+    width: 40px;
+}
+
+body.light-mode .moodboardArrow{
+    filter: invert(0);
+}
+
+.FlexStat{
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    align-items: center;
+    gap: 70px;
+    flex-direction: column;
+}
+
+.imgGridStat{
+    display: flex;
+    margin: 0 auto;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+}
+
+.textStat{
+    font-family: "Oswald", sans-serif;
+    font-size: 20px;
+    margin-top: 20px;
+    text-align: center;
+    width: 600px;
+}
+
+.textStatP{
+    font-family: "Oswald", sans-serif;
+    font-size: 20px;
+    margin-top: 20px;
+    text-align: center;
+    width: 600px;
+}
+
+.imgStat{
+    width: 15vw;
+    height: auto;
+    object-fit: cover;
+    border: 5px solid #191a1c;
+    border-radius: 10px;
+}
+
+.flecheCadeau{
+    filter: invert(1);
+    transform: rotate(321deg) rotateY(180deg) translate(90px, -55px);
+    width: 40px;
+}
+body.light-mode .flecheCadeau{
+    filter: invert(0);
+}
+
+.flecheStat{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.kakemonosContainer{
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    gap: 150px;
+    align-items: center;
+}
+
+
+.imgKakemono{
+    width: 300px;
+    height: auto;
+    object-fit: cover;
+    border: 5px solid #191a1c;
+    border-radius: 10px;
+}
+
+.kakemono1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.textKakemono{
+    font-family: "Oswald", sans-serif;
+    font-size: 20px;
+    margin-top: 20px;
+    text-align: center;
+    width: 600px;
+}
