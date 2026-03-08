@@ -533,7 +533,7 @@ h1 {
     width: 8vw;
 }
 
-.flecheCadeau {
+.flecheCadeauCatalatitude {
     filter: invert(1);
     transform: rotateZ(260deg) scale(0.5) translateX(71px);
 }
