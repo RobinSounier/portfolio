@@ -3,21 +3,15 @@ Projet = [
     {
         id: 1,
         title: "GRIZZLYS CATALANS",
+        subtitle: "CLUB FOOTBALL AMÉRICAIN ",
         description: "Communication association sportive professionnelle",
-        imageUrl: "./img/Capture%20d’écran%202025-10-30%20223154.png",
+        imageUrl: "./img/Capture.png",
         link: "./projects/grizzlys.html"
     },
-    
-    //{
-        //id: 2,
-        //title: "UNION BASKET DES ASPRES",
-        //description: "Communication association sportive",
-       // imageUrl: "./img/bages/projet.JPG",
-     //   link: "./projects/basket.html"
-   // },
     {
         id: 4,
         title: "CATAL'ATTITUDE",
+        subtitle: "GROUPE MULTI-ACTIVITÉS CATALAN",
         description: "Communication commerciale",
         imageUrl: "./img/catalattitude/projet.jpeg",
         link: "./projects/catalattitude.html"
@@ -25,6 +19,7 @@ Projet = [
     {
         id: 5,
         title: "FESTIVAL CIENFUEGOS",
+        subtitle: "FESTIVAL CUBAIN",
         description: "Communication évènementielle",
         imageUrl: "./img/cienfuegos/imagePrincipal.webp",
         link: "./projects/cienfuegos.html"
@@ -32,6 +27,7 @@ Projet = [
     {
         id: 3,
         title: "RESTAURANT VINCENZO",
+        subtitle: "",
         description: "Communication commerciale",
         imageUrl: "./img/vincenzo/projet.jpeg",
         link: "./projects/vincenzo.html"
@@ -39,6 +35,7 @@ Projet = [
     {
         id: 3,
         title: "LYCEE ARISTIDE MAILLOL",
+        subtitle: "",
         description: "Communication publique",
         imageUrl: "./img/lycee/projet.png",
         link: "./projects/lycee.html"
@@ -46,6 +43,7 @@ Projet = [
     {
         id: 6,
         title: "CASA BICICLETA",
+        subtitle: "ASSOCIATION DE MOBILITÉ DOUCE À VÉLO ",
         description: "Communication association",
         imageUrl: "./img/casbicicleta/projet.png",
         link: "./projects/casabicicleta.html"
@@ -53,6 +51,7 @@ Projet = [
     {
         id: 7,
         title: "ESCAPIX",
+        subtitle: "ESCAPE GAME",
         description: "Communication commerciale",
         imageUrl: "./img/escapix/imagePrincipal.png",
         link: "./projects/escapix.html"
@@ -60,15 +59,11 @@ Projet = [
     {
         id: 2,
         title: "PORTES ARIÈGE PYRÉNÉES",
+        subtitle: "COMMUNAUTÉ DE COMMUNES",
         description: "Communication publique",
         imageUrl: "./img/communaute_de_communes/image.jpg",
         link: "./projects/PORTES-ARIEGE-PYRENEES.html"
     }
-
-
-
-
-
 ]
 
 imageListe = [

@@ -122,9 +122,11 @@ function handlerDomContentLoaded() {
         descDiv.className = 'descriptionProjet';
         const h2 = document.createElement('h2');
         h2.textContent = proj.title;
+        const soustitre = document.createElement('h4');
+        soustitre.textContent = proj.subtitle;
         const p = document.createElement('p');
         p.textContent = proj.description;
-        descDiv.append(h2, p);
+        descDiv.append(h2, soustitre, p);
 
         innerDiv.append(imageDiv, descDiv);
         projetDiv.appendChild(innerDiv);

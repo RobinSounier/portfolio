@@ -166,7 +166,7 @@ button {
 }
 
 .navbarElement > p:hover {
-    color: #faa1d4;
+    color: #fda1c2;
     cursor: pointer;
     transform: scale(1.1);
 }
@@ -188,7 +188,7 @@ button {
 #progress {
     animation: grow-progress auto linear;
     animation-timeline: --page-scroll;
-    background: #faa1d4;
+    background: #fda1c2;
     height: .2em;
     left: 0;
     position: fixed;
@@ -275,13 +275,23 @@ button {
 }
 
 .title {
-    color: #faa1d4;
+    color: #fda1c2;
     font-size: 70px;
     text-align: center;
     width: 1fr;
+    display: flex;
+    align-content: stretch;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
 }
 
 .title h1 {
+    animation: fadeInUp 3s ease-out;
+}
+
+.title img {
     animation: fadeInUp 3s ease-out;
 }
 
@@ -445,7 +455,7 @@ button {
 }
 
 .portfolio:hover {
-    color: #faa1d4;
+    color: #fda1c2;
     cursor: pointer;
     transform: scale(1.1);
 }
@@ -502,7 +512,7 @@ button {
 }
 
 .h2pres {
-    color: #faa1d4;
+    color: #fda1c2;
     font-family: 'Oswald', sans-serif;
     margin: 10px 0;
     text-align: center;
@@ -591,7 +601,7 @@ button {
 }
 
 .passionTitle {
-    color: #faa1d4;
+    color: #fda1c2;
     font-size: 120px;
 }
 
@@ -964,7 +974,7 @@ body.light-mode .contactImg2 {
 .passport-icon {
     width: 70px;
     height: 70px;
-    background: linear-gradient(135deg, #faa1d4, #f06ab0);
+    background: linear-gradient(135deg, #fda1c2, #f06ab0);
     border-radius: 16px;
     display: flex;
     align-items: center;
@@ -1018,7 +1028,7 @@ body.light-mode .contactImg2 {
 }
 
 .close-modal:hover {
-    background: #faa1d4;
+    background: #fda1c2;
     color: #fff;
     transform: rotate(90deg);
 }
@@ -1103,8 +1113,8 @@ body.light-mode .contactImg2 {
 }
 
 .contact-btn:hover {
-    background: #faa1d4;
-    border-color: #faa1d4;
+    background: #fda1c2;
+    border-color: #fda1c2;
     transform: translateX(8px);
     box-shadow: 0 8px 25px rgba(250, 161, 212, 0.4);
 }
@@ -1201,7 +1211,7 @@ footer {
 }
 
 .footerLink:hover {
-    color: #faa1d4;
+    color: #fda1c2;
     transform: translateX(5px);
 }
 
@@ -1237,7 +1247,7 @@ body.light-mode .footerLink {
 }
 
 body.light-mode .footerLink:hover {
-    color: #faa1d4;
+    color: #fda1c2;
 }
 
 body.light-mode .btn {
@@ -1288,7 +1298,7 @@ body.light-mode .cardIcon {
 
 body.light-mode .contactCard:not(.no-click):hover {
     background: #fff;
-    border-color: #faa1d4;
+    border-color: #fda1c2;
     box-shadow: 0 20px 40px rgba(250, 161, 212, 0.15);
 }
 
@@ -1331,4 +1341,11 @@ body.light-mode .contactValue {
         flex-direction: column;
         gap: 20px;
     }
+}
+
+.logoPrenom {
+    width: 7vw;
+    /* height: 17vh; */
+    object-fit: contain;
+    margin-top: 50px;
 }
