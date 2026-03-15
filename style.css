@@ -166,7 +166,7 @@ button {
 }
 
 .navbarElement > p:hover {
-    color: #fda1c2;
+    color: #faa1d4;
     cursor: pointer;
     transform: scale(1.1);
 }
@@ -188,7 +188,7 @@ button {
 #progress {
     animation: grow-progress auto linear;
     animation-timeline: --page-scroll;
-    background: #fda1c2;
+    background: #faa1d4;
     height: .2em;
     left: 0;
     position: fixed;
@@ -275,7 +275,7 @@ button {
 }
 
 .title {
-    color: #fda1c2;
+    color: #faa1d4;
     font-size: 70px;
     text-align: center;
     width: 1fr;
@@ -455,7 +455,7 @@ button {
 }
 
 .portfolio:hover {
-    color: #fda1c2;
+    color: #faa1d4;
     cursor: pointer;
     transform: scale(1.1);
 }
@@ -512,7 +512,7 @@ button {
 }
 
 .h2pres {
-    color: #fda1c2;
+    color: #faa1d4;
     font-family: 'Oswald', sans-serif;
     margin: 10px 0;
     text-align: center;
@@ -601,7 +601,7 @@ button {
 }
 
 .passionTitle {
-    color: #fda1c2;
+    color: #faa1d4;
     font-size: 120px;
 }
 
@@ -974,7 +974,7 @@ body.light-mode .contactImg2 {
 .passport-icon {
     width: 70px;
     height: 70px;
-    background: linear-gradient(135deg, #fda1c2, #f06ab0);
+    background: linear-gradient(135deg, #faa1d4, #f06ab0);
     border-radius: 16px;
     display: flex;
     align-items: center;
@@ -1028,7 +1028,7 @@ body.light-mode .contactImg2 {
 }
 
 .close-modal:hover {
-    background: #fda1c2;
+    background: #faa1d4;
     color: #fff;
     transform: rotate(90deg);
 }
@@ -1113,8 +1113,8 @@ body.light-mode .contactImg2 {
 }
 
 .contact-btn:hover {
-    background: #fda1c2;
-    border-color: #fda1c2;
+    background: #faa1d4;
+    border-color: #faa1d4;
     transform: translateX(8px);
     box-shadow: 0 8px 25px rgba(250, 161, 212, 0.4);
 }
@@ -1211,7 +1211,7 @@ footer {
 }
 
 .footerLink:hover {
-    color: #fda1c2;
+    color: #faa1d4;
     transform: translateX(5px);
 }
 
@@ -1247,7 +1247,7 @@ body.light-mode .footerLink {
 }
 
 body.light-mode .footerLink:hover {
-    color: #fda1c2;
+    color: #faa1d4;
 }
 
 body.light-mode .btn {
@@ -1298,7 +1298,7 @@ body.light-mode .cardIcon {
 
 body.light-mode .contactCard:not(.no-click):hover {
     background: #fff;
-    border-color: #fda1c2;
+    border-color: #faa1d4;
     box-shadow: 0 20px 40px rgba(250, 161, 212, 0.15);
 }
 
@@ -1344,8 +1344,7 @@ body.light-mode .contactValue {
 }
 
 .logoPrenom {
-    width: 7vw;
-    /* height: 17vh; */
+    width: 125px;
     object-fit: contain;
     margin-top: 50px;
 }
