@@ -2073,7 +2073,7 @@ body.light-mode .avion-dark {
     width: 335px;
     height: 700px;
     object-fit: cover;
-    border-radius: 3%;
+    border-radius: 3% 3% 13% 3%;
 
 
 }
