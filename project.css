@@ -1621,6 +1621,32 @@ h1 {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
+.calendrier-carousel-grizzlys {
+    position: relative;
+    width: 600px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.divCarousellGrizzlys {
+    width: 99vw;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pCarousellGrizlys{
+    font-family: 'Oswald', sans-serif;
+    font-size: 18px;
+    margin-top: 20px;
+    text-align: center;
+    width: 600px;
+}
+
+
 .calendrier-track {
     position: relative;
     width: 100%;
@@ -1692,6 +1718,24 @@ h1 {
 
 .calendrier-dot.active {
     background-color: #a91f32;
+}
+
+
+.calendrier-dot-grizzlys {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #666;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.calendrier-dot-grizzlys:hover {
+    transform: scale(1.2);
+}
+
+.calendrier-dot-grizzlys.active {
+    background-color: #d5bd8f;
 }
 
 .ipad-container {
