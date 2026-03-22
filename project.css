@@ -1759,7 +1759,7 @@ h1 {
 .imageIpadCatalattitudeNoir {
     position: relative;
     z-index: 1;
-    width: 70vw;
+    width: 1200px;
 }
 
 /* Par défaut en mode sombre : iPad blanc visible */
@@ -1783,11 +1783,9 @@ body.light-mode .imageIpadCatalattitudeNoir {
 /* Image qui se superpose à l'écran de l'iPad */
 .imageContenuIpad {
     position: absolute;
-    top: 43.9%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 22.6%;
-    height: 79.8%;
+    top: 25px;
+    width: 393px;
+    height: 595px;
     object-fit: cover;
     z-index: 2;
     border-radius: 5.1%;
@@ -2081,7 +2079,7 @@ body.light-mode .concept-arrow-ordi {
 .avion-light,
 .avion-dark {
     position: relative;
-    width: 70vw;
+    width: 1200px;
     z-index: 1;
     margin-bottom: 50px;
     transform: translateX(33px);
@@ -2115,14 +2113,11 @@ body.light-mode .avion-dark {
 /* Vidéo superposée sur l'écran de l'avion */
 .avion-video {
     position: absolute;
-    top: 42.6%;
-    left: 50.3%;
-    transform: translate(-50%, -50%);
-    width: 20%;
-    height: 82%;
+    top: 21px;
+    width: 335px;
+    height: 700px;
     object-fit: cover;
-    /* z-index: 2; */
-    border-radius: 10%;
+    border-radius: 3% 3% 13% 3%;
 
 
 }
